@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Scout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #EAEDE7;
+    --paper: #FBFBF8;
+    --ink: #171D1B;
+    --ink-soft: #565F5A;
+    --ink-faint: #8B928C;
+    --line: #DBDED5;
+    --line-soft: #E7E9E2;
+    --amber: #C2872F;
+    --amber-ink: #6B4A19;
+    --amber-bg: #F6E7CC;
+    --teal: #3E6259;
+    --teal-ink: #21403A;
+    --teal-bg: #DCE8E3;
+    --red: #B4483A;
+    --red-ink: #7A281E;
+    --red-bg: #F5DEDA;
+    font-family: 'Inter', sans-serif;
+  }
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html, body{ height: 100%; }
+  body{ background: var(--bg); color: var(--ink); }
+
+  /* ---------- Top bar ---------- */
+  .topbar{ background: var(--ink); color: var(--paper); padding: 18px 28px; display:flex; align-items:center; justify-content:space-between; flex-wrap: wrap; gap: 14px; }
+  .brand{ display:flex; align-items:center; gap: 10px; }
+  .brand svg{ flex-shrink:0; }
+  .brand-text{ font-family:'Fraunces', serif; font-weight: 600; font-size: 20px; letter-spacing: -0.01em; }
+  .brand-sub{ font-family:'JetBrains Mono', monospace; font-size: 10.5px; color: #9BA69F; text-transform: uppercase; letter-spacing: 0.08em; margin-top: -2px; }
+
+  .stats{ display:flex; gap: 10px; flex-wrap: wrap; }
+  .stat{ background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 7px 14px; text-align: center; min-width: 78px; }
+  .stat-num{ font-family:'JetBrains Mono', monospace; font-size: 17px; font-weight: 500; }
+  .stat-label{ font-size: 10px; color: #9BA69F; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 1px; }
+  .stat.hot .stat-num{ color: #E8A99C; }
+  .stat.warm .stat-num{ color: #ECC988; }
+
+  /* ---------- Layout ---------- */
+  .app{ display:grid; grid-template-columns: 380px 1fr; min-height: calc(100vh - 76px); }
+  @media (max-width: 860px){ .app{ grid-template-columns: 1fr; } }
+
+  /* ---------- List pane ---------- */
+  .list-pane{ background: var(--paper); border-right: 1px solid var(--line); display:flex; flex-direction: column; }
+  .list-controls{ padding: 16px 16px 12px; border-bottom: 1px solid var(--line-soft); }
+  .search{ width: 100%; font-family:'Inter'; font-size: 13.5px; padding: 9px 12px; border-radius: 9px; border: 1px solid var(--line); background: var(--bg); margin-bottom: 10px; color: var(--ink); }
+  .search:focus{ outline: none; border-color: var(--amber); }
+  .chips{ display:flex; gap: 6px; flex-wrap: wrap; }
+  .chip{ font-family:'Inter'; font-size: 12px; font-weight: 500; padding: 5px 11px; border-radius: 100px; border: 1px solid var(--line); background: var(--paper); color: var(--ink-soft); cursor: pointer; }
+  .chip:hover{ border-color: var(--ink-faint); }
+  .chip.active{ background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+  .status-toggle{ display:flex; gap: 4px; padding: 10px 16px 0; }
+  .status-toggle button{ flex:1; font-family:'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.03em; padding: 7px 4px; border-radius: 7px; border: 1px solid transparent; background: transparent; color: var(--ink-faint); cursor: pointer; text-transform: uppercase; }
+  .status-toggle button.active{ background: var(--bg); border-color: var(--line); color: var(--ink); }
+
+  .rows{ flex:1; overflow-y: auto; padding: 8px; }
+  .row{ display:flex; align-items:flex-start; gap: 11px; padding: 12px 10px; border-radius: 10px; cursor: pointer; border: 1px solid transparent; opacity: 0; animation: rise .35s ease forwards; }
+  .row:hover{ background: var(--bg); }
+  .row.selected{ background: var(--amber-bg); border-color: #E4C68C; }
+  .row.contacted{ opacity: 0.55 !important; }
+  .row-body{ flex:1; min-width: 0; }
+  .row-top{ display:flex; justify-content:space-between; gap: 8px; }
+  .row-company{ font-family:'Inter'; font-weight: 600; font-size: 13.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .row-days{ font-family:'JetBrains Mono', monospace; font-size: 10.5px; color: var(--ink-faint); flex-shrink: 0; }
+  .row-industry{ font-size: 11px; color: var(--ink-faint); margin: 1px 0 4px; }
+  .row-brief{ font-size: 12px; color: var(--ink-soft); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+
+  @keyframes rise{ from{ opacity:0; transform: translateY(6px); } to{ opacity:1; transform: translateY(0); } }
+
+  /* ---------- Score ring ---------- */
+  .ring{ flex-shrink: 0; position: relative; width: 34px; height: 34px; }
+  .ring svg{ transform: rotate(-90deg); }
+  .ring-num{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 500; }
+  .ring.large{ width: 64px; height: 64px; }
+  .ring.large .ring-num{ font-size: 18px; }
+
+  /* ---------- Detail pane ---------- */
+  .detail-pane{ padding: 32px 40px; overflow-y: auto; }
+  .empty{ display:flex; flex-direction: column; align-items:center; justify-content:center; height: 60vh; color: var(--ink-faint); text-align:center; gap: 8px; }
+
+  .d-header{ display:flex; gap: 18px; align-items:flex-start; margin-bottom: 22px; }
+  .d-name{ font-family:'Fraunces', serif; font-weight: 600; font-size: 30px; letter-spacing: -0.01em; line-height: 1.1; }
+  .d-tags{ display:flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+  .tag{ font-family:'JetBrains Mono', monospace; font-size: 11px; padding: 4px 10px; border-radius: 100px; border: 1px solid var(--line); color: var(--ink-soft); }
+  .tag.state{ font-weight: 500; }
+  .tag.hot{ background: var(--red-bg); color: var(--red-ink); border-color: #E7BDB5; }
+  .tag.warm{ background: var(--amber-bg); color: var(--amber-ink); border-color: #E4C68C; }
+  .tag.cool{ background: var(--teal-bg); color: var(--teal-ink); border-color: #B9D2C9; }
+  .tag.contacted{ background: var(--teal-bg); color: var(--teal-ink); border-color: #B9D2C9; }
+
+  .signal-box{ display:flex; gap: 10px; align-items:flex-start; background: var(--amber-bg); border: 1px solid #E4C68C; border-radius: 12px; padding: 13px 16px; margin-bottom: 22px; }
+  .signal-box svg{ flex-shrink:0; margin-top: 2px; }
+  .signal-box p{ font-size: 13.5px; color: var(--amber-ink); line-height: 1.5; }
+  .signal-label{ font-family:'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--amber-ink); opacity: 0.75; display:block; margin-bottom: 2px; }
+
+  .section{ margin-bottom: 24px; }
+  .section-label{ font-family:'JetBrains Mono', monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ink-faint); margin-bottom: 10px; }
+  .brief-text{ font-size: 14.5px; line-height: 1.65; color: var(--ink); max-width: 60ch; }
+
+  .contact-card{ background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; display:flex; flex-direction:column; gap: 10px; max-width: 420px; }
+  .contact-row{ display:flex; align-items:center; gap: 10px; font-size: 13.5px; }
+  .contact-row svg{ flex-shrink:0; color: var(--ink-faint); }
+  .contact-row a{ color: var(--ink); text-decoration:none; font-family:'JetBrains Mono', monospace; font-size: 13px; }
+  .contact-row a:hover{ text-decoration: underline; }
+
+  .source-link{ display:inline-flex; align-items:center; gap: 6px; font-size: 13px; color: var(--teal-ink); text-decoration: none; }
+  .source-link:hover{ text-decoration: underline; }
+
+  .actions{ display:flex; gap: 10px; flex-wrap: wrap; margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--line); }
+  .btn{ font-family:'Inter'; font-size: 13.5px; font-weight: 500; padding: 10px 16px; border-radius: 9px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; }
+  .btn:hover{ border-color: var(--ink-faint); }
+  .btn.primary{ background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .btn.done{ background: var(--teal); color: var(--paper); border-color: var(--teal); }
+  .btn.subtle{ color: var(--ink-soft); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect x="1" y="4" width="24" height="22" rx="3" stroke="#C2872F" stroke-width="1.6"/><rect x="5" y="1" width="24" height="22" rx="3" fill="#171D1B" stroke="#EAEDE7" stroke-width="1.2"/><path d="M10 8h14M10 12.5h14M10 17h9" stroke="#C2872F" stroke-width="1.4" stroke-linecap="round"/></svg>
+    <div>
+      <div class="brand-text">Scout</div>
+      <div class="brand-sub" id="today-date">today's briefing</div>
+    </div>
+    <span id="source-badge" class="tag" style="margin-left:6px; border-color: rgba(255,255,255,0.2); color:#9BA69F;"></span>
+  </div>
+  <div class="stats" id="stats"></div>
+</div>
+
+<div class="app">
+  <div class="list-pane">
+    <div class="list-controls">
+      <input class="search" id="search" placeholder="Search company or industry" />
+      <div class="chips" id="filters"></div>
+    </div>
+    <div class="status-toggle" id="status-toggle"></div>
+    <div class="rows" id="rows"></div>
+  </div>
+  <div class="detail-pane" id="detail"></div>
+</div>
+
+<script>
+// ---------- Live data config ----------
+// Paste your published Google Sheet CSV url here once it's set up.
+// File > Share > Publish to web > select the leads tab > CSV > copy link.
+const CONFIG = {
+  SHEET_CSV_URL: "../data/leads.csv"
+};
+
+const sampleLeads = [
+  { id:1, company:"Kumpulan Serantau Bank", industry:"Banks", score:88, training:"Communication Skills",
+    brief:"Regional bank rolling out a new digital branch model across 40 outlets.",
+    signal:"Job postings for 'customer experience trainer' up sharply this month",
+    fitNote:"Same sector as existing bank clients (Affin, Agrobank, Bank Muamalat)",
+    contactName:"Nur Aisyah Rahman", contactRole:"Head of L&D",
+    phone:"+60 3-2178 4420", email:"aisyah.rahman@ksbank.com.my",
+    sourceLabel:"LinkedIn job listing, 3 days ago", sourceUrl:"https://www.linkedin.com/jobs/",
+    dealValue:"RM 12,000–18,000", days:0,
+    fullBrief:"Mid-size regional bank with 40 branches nationwide, mid-way through a digital-first customer service overhaul. Front-line staff need retraining on new systems and softer, more consultative service scripts.", contacted:false },
+  { id:2, company:"Alderton Manufacturing Sdn Bhd", industry:"Manufacturing", score:62, training:"AI Tools for Workplace Productivity",
+    brief:"Mid-size factory automating shop-floor reporting, staff pushing back on new AI tools.",
+    signal:"New plant manager appointed, announced digitalisation drive",
+    fitNote:"Same sector as existing manufacturing clients (Siemens, Nippon Paints, Panasonic, Infineon)",
+    contactName:"Chen Wei Loong", contactRole:"Operations Director",
+    phone:"+60 4-556 2201", email:"wlchen@alderton-mfg.com",
+    sourceLabel:"Company press release, 1 week ago", sourceUrl:"https://example.com",
+    dealValue:"RM 6,000–9,000", days:1,
+    fullBrief:"Manufacturer of industrial components, 300+ staff. Recently introduced AI-assisted quality reporting and is seeing slow adoption on the floor. Leadership has flagged a need for practical 'AI for non-technical staff' training.", contacted:false },
+  { id:3, company:"Nusantara Petrochemical Services", industry:"Oil & Gas", score:91, training:"Professional Business Writing",
+    brief:"Upstream services contractor tightening report and tender-writing standards group-wide.",
+    signal:"New group compliance directive on written reporting standards, issued this month",
+    fitNote:"Direct sector match to existing oil & gas clients (Petronas, Velesto, Deleum)",
+    contactName:"Farah Izzati", contactRole:"HR & Training Manager",
+    phone:"+60 3-7890 1123", email:"farah.izzati@nusantarapetro.my",
+    sourceLabel:"Internal memo referenced in job listing, today", sourceUrl:"https://www.jobstreet.com.my",
+    dealValue:"RM 15,000–22,000", days:0,
+    fullBrief:"Oilfield services contractor supporting upstream operators. A new internal compliance directive requires all technical and commercial reports to meet a higher writing standard, creating an immediate need for a business-writing workshop across departments.", contacted:false },
+  { id:4, company:"Damansara Autohaus", industry:"Automotive", score:58, training:"Communication Skills",
+    brief:"Multi-brand dealership group retraining showroom staff after a customer satisfaction dip.",
+    signal:"Founder posted on LinkedIn about slipping showroom NPS scores",
+    fitNote:"Same sector as existing auto clients (Federal Auto, Sime Motors, Proton, Mitsubishi)",
+    contactName:"Marcus Tan", contactRole:"Group Sales Training Lead",
+    phone:"+60 12-345 6789", email:"marcus@damansaraautohaus.my",
+    sourceLabel:"LinkedIn post, 2 days ago", sourceUrl:"https://www.linkedin.com/",
+    dealValue:"RM 4,000–7,000", days:2,
+    fullBrief:"Multi-brand dealership group across the Klang Valley. NPS scores have dipped and the founder has flagged showroom communication as the likely cause, ahead of a wider sales-team retraining push.", contacted:false },
+  { id:5, company:"Mercy Bantu Foundation", industry:"NGO", score:34, training:"Critical Thinking and Problem Solving",
+    brief:"Regional relief NGO scaling its programme team, wants structured decision-making training.",
+    signal:"Grant-funded expansion announced, new programme officer roles opening",
+    fitNote:"Same sector as existing NGO client (Mercy Malaysia)",
+    contactName:"Encik Rosli Ahmad", contactRole:"Programme & People Lead",
+    phone:"+60 3-8888 2200", email:"rosli.ahmad@mercybantu.org",
+    sourceLabel:"Grant announcement + hiring page", sourceUrl:"https://example.com",
+    dealValue:"RM 5,000+", days:4,
+    fullBrief:"Relief and development NGO scaling its field programme team on new grant funding. Leadership wants newer programme officers trained in structured problem-solving for field decisions, not just process compliance.", contacted:false },
+  { id:6, company:"Lestari Health Group", industry:"Healthcare", score:71, training:"Critical Thinking and Problem Solving",
+    brief:"Private healthcare group standardising clinical-to-admin escalation decisions.",
+    signal:"Patient complaint volume mentioned in latest board update",
+    fitNote:"Same sector as existing healthcare clients (KPJ Group, Smith & Nephew)",
+    contactName:"Priya Sundram", contactRole:"Group Training Manager",
+    phone:"+60 3-2211 9087", email:"priya.s@lestarihealth.my",
+    sourceLabel:"Board update summary, this week", sourceUrl:"https://example.com",
+    dealValue:"RM 8,000–12,000", days:1,
+    fullBrief:"Private healthcare group operating several clinics and one hospital. A rise in patient complaints tied to slow front-desk to clinical escalation has pushed leadership to look at structured problem-solving training for admin staff.", contacted:false },
+  { id:7, company:"Cendekia International School", industry:"Education", score:45, training:"Professional Business Writing",
+    brief:"Private education group professionalising parent and stakeholder correspondence.",
+    signal:"New 'digital communications' unit announced internally",
+    fitNote:"Same sector as existing education clients (Newcastle University, Curtin University, College UEM)",
+    contactName:"Suresh Kumar", contactRole:"HR Manager",
+    phone:"+60 7-224 1190", email:"suresh.k@cendekia.edu.my",
+    sourceLabel:"Company LinkedIn page update", sourceUrl:"https://www.linkedin.com/",
+    dealValue:"RM 5,000–8,000", days:3,
+    fullBrief:"Private international school group setting up a dedicated communications function. Early signal, worth a warm intro on business writing for parent and board-facing correspondence rather than a hard pitch.", contacted:false },
+  { id:8, company:"Vantage Systems Integrators", industry:"IT Solutions", score:79, training:"AI Tools for Workplace Productivity",
+    brief:"IT solutions reseller pushing AI-assisted workflows into non-technical teams.",
+    signal:"Customer support team AI rollout mentioned in latest quarterly update",
+    fitNote:"Same sector as existing IT clients (NCR, Hitachi Vantara)",
+    contactName:"Wong Mei Ling", contactRole:"Learning & Development Lead",
+    phone:"+60 3-4041 7788", email:"meiling.wong@vantagesys.my",
+    sourceLabel:"Quarterly update, this week", sourceUrl:"https://example.com",
+    dealValue:"RM 10,000–14,000", days:0,
+    fullBrief:"Mid-size IT solutions reseller rolling out AI-assisted tools to support and sales staff. Quarterly update flagged uneven adoption outside the engineering team, a direct fit for a practical AI-tools-at-work workshop.", contacted:false },
+  { id:9, company:"Segar FMCG Holdings", industry:"FMCG", score:66, training:"Communication Skills",
+    brief:"Consumer goods distributor retraining trade sales reps ahead of a retail push.",
+    signal:"Hiring wave for 'trade marketing executive' roles, 8 open listings",
+    fitNote:"Same sector as existing FMCG clients (Lam Soon, Tesco)",
+    contactName:"Aiman Haziq", contactRole:"Sales Training Coordinator",
+    phone:"+60 3-5566 7788", email:"aiman.haziq@segarfmcg.my",
+    sourceLabel:"JobStreet, 2 days ago", sourceUrl:"https://www.jobstreet.com.my",
+    dealValue:"RM 6,000–10,000", days:2,
+    fullBrief:"FMCG distributor scaling its trade sales team ahead of a retail chain expansion. Hiring wave signals an onboarding gap in retailer-facing communication and negotiation for new trade reps.", contacted:false }
+];
+
+let leads = sampleLeads;
+let dataSource = "demo";
+
+function parseCSV(text){
+  const rows = [];
+  let row = [], field = "", inQuotes = false;
+  for (let i = 0; i < text.length; i++){
+    const c = text[i], next = text[i+1];
+    if (inQuotes){
+      if (c === '"' && next === '"'){ field += '"'; i++; }
+      else if (c === '"'){ inQuotes = false; }
+      else { field += c; }
+    } else {
+      if (c === '"'){ inQuotes = true; }
+      else if (c === ','){ row.push(field); field = ""; }
+      else if (c === '\n' || c === '\r'){
+        if (field.length || row.length){ row.push(field); rows.push(row); row = []; field = ""; }
+        if (c === '\r' && next === '\n') i++;
+      } else { field += c; }
+    }
+  }
+  if (field.length || row.length){ row.push(field); rows.push(row); }
+  const headers = rows.shift().map(h => h.trim());
+  return rows.filter(r => r.length > 1 || r[0]).map(r => {
+    const obj = {};
+    headers.forEach((h, i) => obj[h] = (r[i] || "").trim());
+    return obj;
+  });
+}
+
+async function loadLiveLeads(){
+  if (!CONFIG.SHEET_CSV_URL){ return false; }
+  try{
+    const res = await fetch(CONFIG.SHEET_CSV_URL);
+    if (!res.ok) throw new Error("Sheet fetch failed");
+    const text = await res.text();
+    const rows = parseCSV(text);
+    if (!rows.length) throw new Error("Sheet is empty");
+    leads = rows.map((r, i) => ({
+      id: Number(r.id) || i + 1,
+      company: r.company || "Unnamed company",
+      industry: r.industry || "Uncategorised",
+      training: r.training || "",
+      fitNote: r.fitNote || "",
+      score: Math.max(0, Math.min(100, Number(r.score) || 50)),
+      brief: r.brief || "",
+      signal: r.signal || "",
+      contactName: r.contactName || "",
+      contactRole: r.contactRole || "",
+      phone: r.phone || "",
+      email: r.email || "",
+      sourceLabel: r.sourceLabel || "Source",
+      sourceUrl: r.sourceUrl || "#",
+      dealValue: r.dealValue || "",
+      days: Number(r.days) || 0,
+      fullBrief: r.fullBrief || r.brief || "",
+      contacted: false
+    }));
+    dataSource = "live";
+    return true;
+  } catch(err){
+    console.warn("Falling back to demo data:", err.message);
+    leads = sampleLeads;
+    dataSource = "demo";
+    return false;
+  }
+}
+
+let activeFilter = "All";
+let statusFilter = "active";
+let searchTerm = "";
+let selectedId = leads[0].id;
+
+let industries = ["All", ...new Set(leads.map(l => l.industry))];
+function refreshIndustries(){ industries = ["All", ...new Set(leads.map(l => l.industry))]; if (!industries.includes(activeFilter)) activeFilter = "All"; }
+
+function band(score){ return score >= 80 ? "hot" : score >= 50 ? "warm" : "cool"; }
+function bandLabel(score){ return score >= 80 ? "Hot lead" : score >= 50 ? "Worth a call" : "Slow burn"; }
+function bandColor(score){ return { hot: "#B4483A", warm: "#C2872F", cool: "#3E6259" }[band(score)]; }
+
+function ringSVG(score, large){
+  const size = large ? 64 : 34, stroke = large ? 5 : 3.5, r = (size - stroke) / 2, c = 2 * Math.PI * r;
+  const offset = c - (score/100) * c;
+  const color = bandColor(score);
+  return `<div class="ring${large ? ' large':''}">
+    <svg width="${size}" height="${size}">
+      <circle cx="${size/2}" cy="${size/2}" r="${r}" stroke="var(--line)" stroke-width="${stroke}" fill="none"/>
+      <circle cx="${size/2}" cy="${size/2}" r="${r}" stroke="${color}" stroke-width="${stroke}" fill="none"
+        stroke-dasharray="${c}" stroke-dashoffset="${offset}" stroke-linecap="round"/>
+    </svg>
+    <div class="ring-num">${score}</div>
+  </div>`;
+}
+
+function renderStats(){
+  const active = leads.filter(l => !l.contacted);
+  const hot = active.filter(l => band(l.score) === "hot").length;
+  const warm = active.filter(l => band(l.score) === "warm").length;
+  const contacted = leads.filter(l => l.contacted).length;
+  document.getElementById("stats").innerHTML = `
+    <div class="stat"><div class="stat-num">${active.length}</div><div class="stat-label">New today</div></div>
+    <div class="stat hot"><div class="stat-num">${hot}</div><div class="stat-label">Hot</div></div>
+    <div class="stat warm"><div class="stat-num">${warm}</div><div class="stat-label">Worth a call</div></div>
+    <div class="stat"><div class="stat-num">${contacted}</div><div class="stat-label">Contacted</div></div>
+  `;
+}
+
+function renderFilters(){
+  document.getElementById("filters").innerHTML = industries.map(ind =>
+    `<button class="chip${ind===activeFilter?' active':''}" data-ind="${ind}">${ind}</button>`
+  ).join("");
+  document.querySelectorAll("[data-ind]").forEach(b => b.onclick = () => { activeFilter = b.dataset.ind; renderFilters(); renderRows(); });
+}
+
+function renderStatusToggle(){
+  const opts = [["active","Active"],["contacted","Contacted"],["all","All"]];
+  document.getElementById("status-toggle").innerHTML = opts.map(([k,l]) =>
+    `<button class="${statusFilter===k?'active':''}" data-status="${k}">${l}</button>`
+  ).join("");
+  document.querySelectorAll("[data-status]").forEach(b => b.onclick = () => { statusFilter = b.dataset.status; renderStatusToggle(); renderRows(); });
+}
+
+function visibleLeads(){
+  return leads.filter(l =>
+    (activeFilter === "All" || l.industry === activeFilter) &&
+    (l.company.toLowerCase().includes(searchTerm) || l.industry.toLowerCase().includes(searchTerm)) &&
+    (statusFilter === "all" || (statusFilter === "active" ? !l.contacted : l.contacted))
+  ).sort((a,b) => b.score - a.score);
+}
+
+function renderRows(){
+  const list = visibleLeads();
+  const rowsEl = document.getElementById("rows");
+  if (list.length === 0){
+    rowsEl.innerHTML = `<div style="padding:32px 16px; text-align:center; color:var(--ink-faint); font-size:13px;">No leads match right now.</div>`;
+  } else {
+    rowsEl.innerHTML = list.map((l, i) => `
+      <div class="row${l.id===selectedId?' selected':''}${l.contacted?' contacted':''}" data-id="${l.id}" style="animation-delay:${i*35}ms">
+        ${ringSVG(l.score, false)}
+        <div class="row-body">
+          <div class="row-top"><div class="row-company">${l.company}</div><div class="row-days">${l.days===0?'today':l.days+'d'}</div></div>
+          <div class="row-industry">${l.industry}</div>
+          <div class="row-brief">${l.brief}</div>
+        </div>
+      </div>
+    `).join("");
+  }
+  document.querySelectorAll(".row[data-id]").forEach(r => r.onclick = () => { selectedId = Number(r.dataset.id); renderRows(); renderDetail(); });
+  if (!list.find(l => l.id === selectedId) && list.length){ selectedId = list[0].id; }
+}
+
+const icons = {
+  user: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>',
+  phone: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>',
+  mail: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>',
+  spark: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18"/></svg>',
+  link: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg>'
+};
+
+function renderDetail(){
+  const l = leads.find(x => x.id === selectedId);
+  const detailEl = document.getElementById("detail");
+  if (!l){ detailEl.innerHTML = `<div class="empty"><div>No lead selected</div></div>`; return; }
+  detailEl.innerHTML = `
+    <div class="d-header">
+      ${ringSVG(l.score, true)}
+      <div>
+        <div class="d-name">${l.company}</div>
+        <div class="d-tags">
+          <span class="tag state ${band(l.score)}">${bandLabel(l.score)}</span>
+          <span class="tag">${l.industry}</span>
+          ${l.training ? `<span class="tag">${l.training}</span>` : ''}
+          <span class="tag">${l.dealValue}</span>
+          ${l.contacted ? '<span class="tag contacted">Contacted</span>' : ''}
+        </div>
+      </div>
+    </div>
+
+    ${l.fitNote ? `<div class="section" style="margin-bottom:18px;"><div style="font-size:13px; color:var(--teal-ink); background:var(--teal-bg); border:1px solid #B9D2C9; border-radius:10px; padding:9px 14px; display:inline-block;">${l.fitNote}</div></div>` : ''}
+
+    <div class="signal-box">
+      ${icons.spark}
+      <p><span class="signal-label">Why now</span>${l.signal}</p>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Company brief</div>
+      <div class="brief-text">${l.fullBrief}</div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Contact</div>
+      <div class="contact-card">
+        ${l.contactName ? `
+          <div class="contact-row">${icons.user}<span>${l.contactName} &middot; ${l.contactRole}</span></div>
+          ${l.phone ? `<div class="contact-row">${icons.phone}<a href="tel:${l.phone.replace(/\s/g,'')}">${l.phone}</a></div>` : ''}
+          ${l.email ? `<div class="contact-row">${icons.mail}<a href="mailto:${l.email}">${l.email}</a></div>` : ''}
+        ` : `
+          <div class="contact-row" style="color:var(--ink-faint);">${icons.user}<span>Not yet identified &mdash; a 60-second LinkedIn or company-site check will find the right HR/L&amp;D contact</span></div>
+        `}
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Source</div>
+      <a class="source-link" href="${l.sourceUrl}" target="_blank" rel="noopener">${icons.link}${l.sourceLabel}</a>
+    </div>
+
+    <div class="actions">
+      ${l.phone ? `<a class="btn primary" href="tel:${l.phone.replace(/\s/g,'')}">${icons.phone} Call now</a>` : ''}
+      ${l.email ? `<a class="btn" href="mailto:${l.email}">${icons.mail} Email</a>` : ''}
+      ${(!l.phone && !l.email) ? `<a class="btn primary" href="${l.sourceUrl}" target="_blank" rel="noopener">${icons.link} Find contact</a>` : ''}
+      <button class="btn ${l.contacted ? '' : 'done'}" id="toggle-contacted">${l.contacted ? 'Move back to active' : 'Mark contacted'}</button>
+      <button class="btn subtle" id="dismiss">Dismiss</button>
+    </div>
+  `;
+  document.getElementById("toggle-contacted").onclick = () => { l.contacted = !l.contacted; renderStats(); renderRows(); renderDetail(); };
+  document.getElementById("dismiss").onclick = () => {
+    const idx = leads.findIndex(x => x.id === l.id);
+    leads.splice(idx, 1);
+    renderStats(); renderRows(); renderDetail();
+  };
+}
+
+document.getElementById("search").addEventListener("input", (e) => { searchTerm = e.target.value.toLowerCase(); renderRows(); });
+document.getElementById("today-date").textContent = new Date().toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'long' });
+
+async function init(){
+  const badge = document.getElementById("source-badge");
+  badge.textContent = "Connecting…";
+  await loadLiveLeads();
+  badge.textContent = dataSource === "live" ? "Live" : "Demo data";
+  selectedId = leads.length ? leads[0].id : null;
+  refreshIndustries();
+  renderStats();
+  renderFilters();
+  renderStatusToggle();
+  renderRows();
+  renderDetail();
+}
+
+init();
+</script>
+</body>
+</html>

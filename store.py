@@ -39,16 +39,24 @@ def _compute_priority_tier(lead):
     blocker here, not budget, so levySignal doesn't change this tier.
     "unclassified": not enough information either way.
     """
+    if str(lead.get("industry", "")).strip().lower() in ("banks", "banking", "ngo", "government", "training providers"):
+        return "unclassified"
     size = lead.get("sizeTier", "Unknown")
     levy = lead.get("levySignal", "unclear")
 
     if size == "Enterprise":
         return "enterprise"
-    if size == "SME" and levy in ("confirmed", "likely"):
+    if (size == "SME" and levy == "confirmed"
+            and lead.get("sizeEvidence") and lead.get("levyEvidence")):
         return "top"
     if size == "SME":
         return "good"
     return "unclassified"
+
+
+def is_qualified(lead):
+    """Evidence-backed SME employer only; eligibility still checked before sale."""
+    return _compute_priority_tier(lead) == "top"
 
 
 def load_existing():
@@ -98,6 +106,12 @@ def merge_new_leads(new_leads, added_by="auto"):
         added.append(lead)
 
     all_leads = existing + added
+    for lead in all_leads:
+        lead["priorityTier"] = _compute_priority_tier(lead)
+        lead["qualificationStatus"] = (
+            "Public evidence — confirm current levy balance and delivery route"
+            if is_qualified(lead) else "Needs verification — not qualified"
+        )
     save_all(all_leads)
     return added, all_leads
 

@@ -10,7 +10,7 @@ load_dotenv()
 # --- API key ---
 # Get a free key at https://aistudio.google.com/apikey — no card required.
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
-GEMINI_MODEL = "gemini-2.0-flash"
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.1-flash-lite")
 GEMINI_URL = (
     f"https://generativelanguage.googleapis.com/v1beta/models/"
     f"{GEMINI_MODEL}:generateContent"
@@ -27,21 +27,9 @@ def _news_feed(query):
 
 
 ALERT_FEEDS = [
-    _news_feed('"learning and development" OR "training manager" oil gas Malaysia'),
-    _news_feed('"training tender" OR "training RFP" Petronas OR Deleum OR "oil and gas" Malaysia'),
-    _news_feed('"sales training" OR "dealership training" automotive Malaysia'),
-    _news_feed('"customer experience" OR "service training" bank Malaysia'),
-    _news_feed('"trade marketing" hiring FMCG Malaysia'),
-    _news_feed('manufacturing Malaysia "digitalisation" OR "AI adoption" staff'),
-    _news_feed('healthcare Malaysia "patient experience" training'),
-    _news_feed('"AI tools" workshop staff IT solutions Malaysia'),
-    _news_feed('NGO Malaysia "capacity building" training grant'),
-    _news_feed('education Malaysia "staff development" OR "professional development"'),
-    _news_feed('"corporate training" Malaysia tender OR RFP'),
-    _news_feed('"business writing workshop" OR "critical thinking training" Malaysia'),
-    _news_feed('"HRDF claimable" OR "HRD Corp claimable" Malaysia training'),
-    _news_feed('"appointed" OR "joins as" "Head of HR" OR "Head of L&D" OR "CHRO" Malaysia'),
-    _news_feed('MDEC OR "SME Corp" "training grant" OR "upskilling" Malaysia SME'),
+    _news_feed(f'Malaysia {sector} ({signal}) when:7d')
+    for sector in ('SME', 'manufacturer', 'logistics', 'software company', 'engineering company', 'private healthcare')
+    for signal in ('"HRD levy"', '"HRDF" training', '"HRD Corp" employer', '"SBL-Khas"', '"staff training"')
 ]
 
 # --- Storage ---
@@ -76,4 +64,5 @@ LEAD_FIELDS = [
     "sourceLabel", "sourceUrl", "dealValue", "days", "fullBrief",
     "training", "fitNote", "levySignal",
     "sizeTier", "accessNote", "priorityTier", "addedBy",
+    "sizeEvidence", "levyEvidence", "qualificationStatus",
 ]

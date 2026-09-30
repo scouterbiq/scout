@@ -33,10 +33,12 @@ MOCK_ENTRIES = [
 MOCK_LEADS_ROUND_1 = [
     {
         # SME + confirmed levy -> should become "top"
-        "company": "Test Bank Bhd", "industry": "Banks", "training": "Communication Skills",
+        "company": "Test Packaging Co", "industry": "Manufacturing", "training": "Communication Skills",
         "score": 85, "brief": "Small regional bank branch expanding.", "signal": "Hiring L&D trainer, HRDF claimable course listed",
         "fitNote": "Same sector as existing bank clients - Affin Bank, Agrobank",
         "levySignal": "confirmed", "sizeTier": "SME", "accessNote": "",
+        "sizeEvidence": "Independent employer with 25 employees",
+        "levyEvidence": "Employer used its own HRD Corp levy for staff training",
         "contactName": "", "contactRole": "", "phone": "", "email": "",
         "sourceLabel": "Job listing", "sourceUrl": "https://example.com/job/1",
         "dealValue": "RM 8,000-12,000",
@@ -114,11 +116,11 @@ def test_full_pipeline_with_dedupe_and_priority_tiers():
             assert col in header, f"{col} missing from CSV export"
 
     stored = {l["company"]: l for l in load_existing()}
-    assert stored["Test Bank Bhd"]["priorityTier"] == "top", \
+    assert stored["Test Packaging Co"]["priorityTier"] == "top", \
         "SME + confirmed levy should be 'top' priority"
     assert stored["Test Oilco Sdn Bhd"]["priorityTier"] == "enterprise", \
         "Enterprise sizeTier should always be 'enterprise' tier regardless of levy signal"
-    assert stored["Test Bank Bhd"]["addedBy"] == "auto"
+    assert stored["Test Packaging Co"]["addedBy"] == "auto"
 
     with patch("enrich.enrich", return_value=MOCK_LEADS_ROUND_2):
         from enrich import enrich as en2

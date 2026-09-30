@@ -278,9 +278,9 @@ async function loadLiveLeads(){
     if (!res.ok) throw new Error("Sheet fetch failed");
     const text = await res.text();
     const rows = parseCSV(text);
-    if (!rows.length) throw new Error("Sheet is empty");
-    leads = rows.map((r, i) => ({
-      id: Number(r.id) || i + 1,
+
+    leads = rows.filter(r => r.priorityTier === "top").map((r, i) => ({
+      id: r.id || String(i + 1),
       company: r.company || "Unnamed company",
       industry: r.industry || "Uncategorised",
       training: r.training || "",
@@ -299,6 +299,9 @@ async function loadLiveLeads(){
       fullBrief: r.fullBrief || r.brief || "",
       contacted: false
     }));
+    if (!leads.length) {
+      leads = [{id:"awaiting-verification",company:"No evidence-backed SME employers yet",industry:"Verification pending",score:0,brief:"Company discovery is separate from employer levy verification.",signal:"The research queue is available as prospects.csv. No candidate is approved without SME and employer levy evidence.",fitNote:"Only independent SME employers belong on this shortlist.",contactName:"",contactRole:"",phone:"",email:"",sourceLabel:"Download research queue",sourceUrl:"../data/prospects.csv",training:"",dealValue:"",days:0,fullBrief:"The pipeline screens sources for company size and employer-specific HRD Corp levy evidence. Confirm current registration, usable balance and an eligible delivery route before offering claimable training.",contacted:false}];
+    }
     dataSource = "live";
     return true;
   } catch(err){
@@ -336,12 +339,12 @@ function ringSVG(score, large){
 }
 
 function renderStats(){
-  const active = leads.filter(l => !l.contacted);
+  const active = leads.filter(l => l.id !== "awaiting-verification" && !l.contacted);
   const hot = active.filter(l => band(l.score) === "hot").length;
   const warm = active.filter(l => band(l.score) === "warm").length;
-  const contacted = leads.filter(l => l.contacted).length;
+  const contacted = leads.filter(l => l.id !== "awaiting-verification" && l.contacted).length;
   document.getElementById("stats").innerHTML = `
-    <div class="stat"><div class="stat-num">${active.length}</div><div class="stat-label">New today</div></div>
+    <div class="stat"><div class="stat-num">${active.length}</div><div class="stat-label">Qualified shortlist</div></div>
     <div class="stat hot"><div class="stat-num">${hot}</div><div class="stat-label">Hot</div></div>
     <div class="stat warm"><div class="stat-num">${warm}</div><div class="stat-label">Worth a call</div></div>
     <div class="stat"><div class="stat-num">${contacted}</div><div class="stat-label">Contacted</div></div>
@@ -388,7 +391,7 @@ function renderRows(){
       </div>
     `).join("");
   }
-  document.querySelectorAll(".row[data-id]").forEach(r => r.onclick = () => { selectedId = Number(r.dataset.id); renderRows(); renderDetail(); });
+  document.querySelectorAll(".row[data-id]").forEach(r => r.onclick = () => { selectedId = leads.find(l => String(l.id) === r.dataset.id)?.id; renderRows(); renderDetail(); });
   if (!list.find(l => l.id === selectedId) && list.length){ selectedId = list[0].id; }
 }
 

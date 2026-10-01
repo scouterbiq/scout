@@ -29,7 +29,7 @@ def _news_feed(query):
 ALERT_FEEDS = [
     _news_feed(f'Malaysia {sector} ({signal}) when:7d')
     for sector in ('SME', 'manufacturer', 'logistics', 'software company', 'engineering company', 'private healthcare')
-    for signal in ('"HRD levy"', '"HRDF" training', '"HRD Corp" employer', '"SBL-Khas"', '"staff training"')
+    for signal in ('"employees"', '"expansion"', '"hiring"', '"staff training"', '"HRD Corp"')
 ]
 
 # --- Storage ---

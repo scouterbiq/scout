@@ -301,7 +301,7 @@ async function loadLiveLeads(){
       contacted: false
     }));
     if (!leads.length) {
-      leads = [{id:"awaiting-verification",company:"No evidence-backed SME employers yet",industry:"Verification pending",score:0,brief:"Company discovery is separate from employer levy verification.",signal:"The research queue is available as prospects.csv. No candidate is approved without SME and employer levy evidence.",fitNote:"Only independent SME employers belong on this shortlist.",contactName:"",contactRole:"",phone:"",email:"",sourceLabel:"Download research queue",sourceUrl:"../data/prospects.csv",training:"",dealValue:"",days:0,fullBrief:"The pipeline screens sources for company size and employer-specific HRD Corp levy evidence. Confirm current registration, usable balance and an eligible delivery route before offering claimable training.",contacted:false}];
+      leads = [{id:"awaiting-verification",company:"No evidence-backed SMEs yet",industry:"Verification pending",score:0,brief:"Company discovery is separate from SME verification. HRD Corp participation is optional.",signal:"The research queue is available as prospects.csv. Qualification requires SME evidence; HRD Corp participation is an optional bonus.",fitNote:"SME businesses belong on this shortlist; HRD Corp participation is optional.",contactName:"",contactRole:"",phone:"",email:"",sourceLabel:"Download research queue",sourceUrl:"../data/prospects.csv",training:"",dealValue:"",days:0,fullBrief:"The pipeline screens sources for company size and employer-specific HRD Corp levy evidence. Confirm current registration, usable balance and an eligible delivery route before offering claimable training.",contacted:false}];
     }
     dataSource = "live";
     return true;

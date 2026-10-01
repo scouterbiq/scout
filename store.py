@@ -30,24 +30,15 @@ def _stable_id(lead):
 
 
 def _compute_priority_tier(lead):
-    """
-    Deterministic, not left to the LLM to decide inconsistently run to run.
-    "top": right-size company AND actively spending training budget.
-    "good": right-size company, budget situation just unclear (still a real
-    lead — paying out of pocket is always possible even without levy funds).
-    "enterprise": set aside per accessNote — vendor registration is the
-    blocker here, not budget, so levySignal doesn't change this tier.
-    "unclassified": not enough information either way.
-    """
-    if str(lead.get("industry", "")).strip().lower() in ("banks", "banking", "ngo", "government", "training providers"):
+    """Evidence-backed SME status is required; employer levy evidence is a bonus."""
+    if lead.get("verificationStatus") == "excluded":
+        return "unclassified"
+    if str(lead.get("industry", "")).strip().lower() in ("banks", "banking", "ngo", "government"):
         return "unclassified"
     size = lead.get("sizeTier", "Unknown")
-    levy = lead.get("levySignal", "unclear")
-
     if size == "Enterprise":
         return "enterprise"
-    if (size == "SME" and levy == "confirmed"
-            and lead.get("sizeEvidence") and lead.get("levyEvidence")):
+    if size == "SME" and lead.get("sizeEvidence"):
         return "top"
     if size == "SME":
         return "good"
@@ -55,7 +46,7 @@ def _compute_priority_tier(lead):
 
 
 def is_qualified(lead):
-    """Evidence-backed SME employer only; eligibility still checked before sale."""
+    """Evidence-backed SME only; HRD Corp participation is optional."""
     return _compute_priority_tier(lead) == "top"
 
 
@@ -109,7 +100,7 @@ def merge_new_leads(new_leads, added_by="auto"):
     for lead in all_leads:
         lead["priorityTier"] = _compute_priority_tier(lead)
         lead["qualificationStatus"] = (
-            "Public evidence — confirm current levy balance and delivery route"
+            "SME evidence-backed — HRD Corp participation optional"
             if is_qualified(lead) else "Needs verification — not qualified"
         )
     save_all(all_leads)

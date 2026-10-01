@@ -1,13 +1,11 @@
-# Scout targeting and weekly research
+# Scout targeting
 
-Main shortlist: independent Malaysian SME employers with public evidence about both company size and employer-specific HRD Corp registration or levy usage. Confirm current employer registration, available balance, grant approval and the applicable trainer/provider/course delivery route before any claimable offer. Small companies do not automatically waive claim requirements.
+Required: Malaysian SME businesses with public evidence of SME status/size and suitable training fit. HRD Corp registration, levy payment and balance are not required. Keep them as optional, separately evidenced bonus fields.
 
-Discovery screen: Malaysian HQ and Apollo 11-50 employee range. This is a database filter, not independently verified headcount, Malaysian employee count, ownership or legal SME status. Exclude public bodies, NGOs, banks, training vendors and listed/MNC/GLC subsidiaries. data/prospects.json and .csv contain a RESEARCH QUEUE, never a confirmed levy-employer list. No private contact information is included.
+Include small SMEs and SME training providers that may engage a freelance trainer. Exclude public bodies, NGOs, banks, large companies and listed/MNC/GLC subsidiaries. Company form and Apollo filters alone do not verify SME status. Manufacturing up to 200 employees and services up to 75 are conservative discovery screens; reliable SME designation or turnover evidence may support assessment.
 
-Weekly task: Monday morning Malaysia time; aim to research 300 new companies using free lookup/public sources. Output actual discovered and evidence-backed counts. Availability, source coverage and verification limit yield; no fixed qualified-lead guarantee. Existing records are deduplicated.
+Handoff target: at least 100 new ready SME leads per month, researched with free sources. A ready record needs SME evidence, a published company business contact/source, location, industry and suggested training fit. Missing levy evidence never blocks a handoff. Do not invent contacts, size, intent or budgets; report actual counts and shortfalls.
 
-Daily scan: 30 seven-day news feeds, up to 100 distinct unseen articles, four batches of 25. Uses gemini-3.1-flash-lite with no search grounding or paid enrichment. A Google free-tier project must remain on the free tier to guarantee zero API charges; rate limits can stop a run. Failed scans are reported as failed and their report is retained.
+Recurring research: Monday, Wednesday and Friday mornings, Malaysia time. Daily news scan now includes employees, expansion, hiring and staff training, plus optional HRD Corp signals.
 
-The dashboard reads the evidence-backed shortlist from leads.csv. Unknown, likely and enterprise records stay outside it. Each evidence excerpt must match the exact supplied source text; public evidence is still a research assessment and requires checking against the employer.
-
-Sources for eligibility research: https://hrdcorp.gov.my/registered-employers ; https://smecorp.gov.my/index.php/en/policies/2020-02-11-08-01-24/sme-definition ; https://supportcentre.hrdcorp.gov.my/portal/en/kb/articles/general-faqs-grant-application
+Only a levy-funded offer requires separate confirmation of employer registration, available balance, grant approval and applicable trainer/provider/course rules. No outreach is sent by Scout. Browser CRM notes remain on the user's device.

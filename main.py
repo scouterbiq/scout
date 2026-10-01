@@ -32,7 +32,7 @@ def run():
     report = {"date": str(date.today()), "rawArticles": len(entries), "uniqueArticles": len(unique),
               "newEmployerRecords": len(added), "uniqueEmployerNamesLast7Days": len(weekly),
               "publicEvidenceShortlist": len(qualified), "screeningErrors": errors,
-              "note": "Discovery is not qualification. Current levy balance and claim delivery route require confirmation."}
+              "note": "SME evidence is required. HRD Corp participation is optional; confirm balance and delivery route only for levy-funded offers."}
     os.makedirs(DATA_DIR, exist_ok=True)
     with open(os.path.join(DATA_DIR, "scan-report.json"), "w") as f:
         json.dump(report, f, indent=2)

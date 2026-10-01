@@ -13,8 +13,7 @@
     "Group Engineers Malaysia Sdn. Bhd."
   ],
   "readinessRequirements": [
-    "Current independent SME evidence",
-    "Employer-specific HRD Corp registration or levy participation evidence",
+    "Evidence-backed SME status",
     "Published company business contact and source",
     "Location, industry and suggested training fit"
   ],
@@ -23,5 +22,8 @@
     "Buying interest",
     "Contact deliverability"
   ],
-  "status": "Target not met. Four better-evidenced research candidates added; no unverified company counted as ready."
+  "status": "SME evidence required; HRD Corp participation optional. Existing unresolved SME statuses remain in research.",
+  "hrdCorpRequired": false,
+  "hrdCorpRole": "Optional side bonus",
+  "providerExclusionsReopened": 6
 }

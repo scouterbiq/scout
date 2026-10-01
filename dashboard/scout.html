@@ -286,7 +286,7 @@ async function loadLiveLeads(){
       industry: r.industry || "Uncategorised",
       training: r.training || "",
       fitNote: r.fitNote || "",
-      score: Math.max(0, Math.min(100, Number(r.score) || 50)),
+      score: Math.max(0, Math.min(100, Number(r.score) || 0)),
       brief: r.brief || "",
       signal: r.signal || "",
       contactName: r.contactName || "",
@@ -322,7 +322,7 @@ let industries = ["All", ...new Set(leads.map(l => l.industry))];
 function refreshIndustries(){ industries = ["All", ...new Set(leads.map(l => l.industry))]; if (!industries.includes(activeFilter)) activeFilter = "All"; }
 
 function band(score){ return score >= 80 ? "hot" : score >= 50 ? "warm" : "cool"; }
-function bandLabel(score){ return score >= 80 ? "Hot lead" : score >= 50 ? "Worth a call" : "Slow burn"; }
+function bandLabel(score){ return score === 0 ? "Not scored" : score >= 80 ? "Hot lead" : score >= 50 ? "Worth a call" : "Slow burn"; }
 function bandColor(score){ return { hot: "#B4483A", warm: "#C2872F", cool: "#3E6259" }[band(score)]; }
 
 function ringSVG(score, large){

@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-10-01",
+  "baselineRecords": 352,
+  "totalCompanyRecords": 380,
+  "existingNonExcludedWebsitesRechecked": 336,
+  "usableWebsiteRechecks": 241,
+  "websiteRechecksUnavailable": 95,
+  "companyOwnedProfilesWithSizeEvidence": 88,
+  "smallCompanyProfiles": 72,
+  "readyForIntroductoryOutreach": 55,
+  "newReadyThisMonth": 55,
+  "monthlyTarget": 100,
+  "shortfall": 45,
+  "excludedCount": 18,
+  "researchQueueCount": 307,
+  "criteria": {
+    "required": "Malaysian SME-size screening evidence and a published business contact",
+    "hrdCorp": "Optional; unverified employer participation is not treated as a confirmed bonus",
+    "employeeEvidence": "Company-owned public LinkedIn range 2\u201310 or 11\u201350. Self-reported and potentially stale; not government SME certification.",
+    "ownership": "Public company type and visible parent/subsidiary information screened, without a paid registry audit. Explicit listed/foreign multinational subsidiaries excluded.",
+    "contact": "Email address or telephone published by the company, checked against the cited source. No emails guessed."
+  },
+  "limitations": [
+    "Official SME certification or current exact headcount",
+    "Full ownership registry verification",
+    "Buying interest or budget",
+    "Email delivery or telephone response",
+    "HRD Corp employer registration or available levy balance"
+  ],
+  "heldBackExamples": [
+    {
+      "company": "Awatra",
+      "reason": "Conflicting profile size and approximately 150 linked employee profiles."
+    },
+    {
+      "company": "Tapway",
+      "reason": "Own contact page identifies ITMAX System Berhad subsidiary."
+    },
+    {
+      "company": "Tuahvet",
+      "reason": "51\u2013200 published range does not establish service-sector SME headcount."
+    }
+  ],
+  "noOutreachSent": true,
+  "paidSourcesUsed": false
+}

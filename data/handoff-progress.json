@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-01",
+  "monthlyTarget": 100,
+  "month": "2026-10",
+  "newReadyThisMonth": 0,
+  "shortfall": 100,
+  "totalReady": 0,
+  "totalProspects": 352,
+  "newPriorityResearchCandidates": [
+    "Tuahvet Sdn. Bhd.",
+    "Winner Food Industries Sdn. Bhd.",
+    "HADIS Childrens Therapy Centre",
+    "Group Engineers Malaysia Sdn. Bhd."
+  ],
+  "readinessRequirements": [
+    "Current independent SME evidence",
+    "Employer-specific HRD Corp registration or levy participation evidence",
+    "Published company business contact and source",
+    "Location, industry and suggested training fit"
+  ],
+  "notGuaranteed": [
+    "Current levy balance",
+    "Buying interest",
+    "Contact deliverability"
+  ],
+  "status": "Target not met. Four better-evidenced research candidates added; no unverified company counted as ready."
+}

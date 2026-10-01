@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-01",
+  "totalLeads": 55,
+  "companyDescriptions": 55,
+  "publishedBusinessPhones": 50,
+  "potentialPersonLinkedInMatches": 48,
+  "directlyOpenedAffiliationMatches": 1,
+  "indexedPublicProfileMatches": 47,
+  "missingPhone": [
+    "Capcon",
+    "Caspian Digital Solutions",
+    "Krenovator",
+    "MindHive | AI Workforce Automation, AI Forecasting and AI Chatbots",
+    "WISE AI"
+  ],
+  "missingPersonProfile": [
+    "Ace Solutions Training & Consultancy PLT",
+    "Eco Essential Technologies (M)",
+    "Exalt Training & Consultancy Sdn Bhd",
+    "Hirehub",
+    "Indoleads.com",
+    "Inspire Asia",
+    "Mumtaz Energy"
+  ],
+  "limitations": [
+    "Most LinkedIn profile pages could not be opened; profile matches use publicly indexed self-reported affiliation.",
+    "Current role, purchasing authority and phone response have not been independently confirmed.",
+    "Published phones are business contact routes, not necessarily the selected person\u2019s direct number.",
+    "Company email may reach a different employee from the LinkedIn contact."
+  ],
+  "noOutreachSent": true,
+  "paidToolsUsed": false
+}

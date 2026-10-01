@@ -72,7 +72,7 @@
   .row-company{ font-family:'Inter'; font-weight: 600; font-size: 13.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .row-days{ font-family:'JetBrains Mono', monospace; font-size: 10.5px; color: var(--ink-faint); flex-shrink: 0; }
   .row-industry{ font-size: 11px; color: var(--ink-faint); margin: 1px 0 4px; }
-  .row-brief{ font-size: 12px; color: var(--ink-soft); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+  .row-brief{ font-size: 12px; color: var(--ink-soft); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
   @keyframes rise{ from{ opacity:0; transform: translateY(6px); } to{ opacity:1; transform: translateY(0); } }
 
@@ -121,6 +121,7 @@
   .btn.primary{ background: var(--ink); color: var(--paper); border-color: var(--ink); }
   .btn.done{ background: var(--teal); color: var(--paper); border-color: var(--teal); }
   .btn.subtle{ color: var(--ink-soft); }
+.company-description{font-size:13px;line-height:1.5;color:var(--ink-soft);margin-top:9px;max-width:640px}.contact-note{font-size:12px;line-height:1.5;color:var(--ink-soft);padding:5px 0}.contact-row small{font-size:11px;color:var(--ink-faint)}
 </style>
 </head>
 <body>
@@ -142,9 +143,10 @@
   <div class="list-pane">
     <div class="list-controls">
       <input class="search" id="search" placeholder="Search company or industry" />
-      <div class="chips" id="filters"></div>
+
     </div>
-    <div class="status-toggle" id="status-toggle"></div>
+    <div class="chips" id="filters"><button class="chip active" type="button" aria-pressed="true">All</button></div>
+<div class="status-toggle" id="status-toggle"></div>
     <div class="rows" id="rows"></div>
   </div>
   <div class="detail-pane" id="detail"></div>
@@ -291,6 +293,9 @@ async function loadLiveLeads(){
       signal: r.signal || "",
       contactName: r.contactName || "",
       contactRole: r.contactRole || "",
+      contactLinkedIn: r.contactLinkedIn || "",
+      contactEvidenceStatus: r.contactEvidenceStatus || "",
+      companyDescription: r.companyDescription || r.brief || "",
       phone: r.phone || "",
       email: r.email || "",
       sourceLabel: r.sourceLabel || "Source",
@@ -318,8 +323,8 @@ let statusFilter = "active";
 let searchTerm = "";
 let selectedId = leads[0].id;
 
-let industries = ["All", ...new Set(leads.map(l => l.industry))];
-function refreshIndustries(){ industries = ["All", ...new Set(leads.map(l => l.industry))]; if (!industries.includes(activeFilter)) activeFilter = "All"; }
+let industries = ["All"];
+function refreshIndustries(){ industries = ["All"]; activeFilter = "All"; }
 
 function band(score){ return score >= 80 ? "hot" : score >= 50 ? "warm" : "cool"; }
 function bandLabel(score){ return score === 0 ? "Not scored" : score >= 80 ? "Hot lead" : score >= 50 ? "Worth a call" : "Slow burn"; }
@@ -352,13 +357,6 @@ function renderStats(){
   `;
 }
 
-function renderFilters(){
-  document.getElementById("filters").innerHTML = industries.map(ind =>
-    `<button class="chip${ind===activeFilter?' active':''}" data-ind="${ind}">${ind}</button>`
-  ).join("");
-  document.querySelectorAll("[data-ind]").forEach(b => b.onclick = () => { activeFilter = b.dataset.ind; renderFilters(); renderRows(); });
-}
-
 function renderStatusToggle(){
   const opts = [["active","Active"],["contacted","Contacted"],["all","All"]];
   document.getElementById("status-toggle").innerHTML = opts.map(([k,l]) =>
@@ -375,6 +373,8 @@ function visibleLeads(){
   ).sort((a,b) => b.score - a.score);
 }
 
+function escapeHtml(value){ return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function personProfileUrl(value){ try{ const u=new URL(value); return u.protocol==='https:' && /(^|\.)linkedin\.com$/.test(u.hostname) && u.pathname.startsWith('/in/') ? u.href : ''; }catch{return '';} }
 function renderRows(){
   const list = visibleLeads();
   const rowsEl = document.getElementById("rows");
@@ -385,9 +385,8 @@ function renderRows(){
       <div class="row${l.id===selectedId?' selected':''}${l.contacted?' contacted':''}" data-id="${l.id}" style="animation-delay:${i*35}ms">
         ${ringSVG(l.score, false)}
         <div class="row-body">
-          <div class="row-top"><div class="row-company">${l.company}</div><div class="row-days">${l.days===0?'today':l.days+'d'}</div></div>
-          <div class="row-industry">${l.industry}</div>
-          <div class="row-brief">${l.brief}</div>
+          <div class="row-top"><div class="row-company">${escapeHtml(l.company)}</div><div class="row-days">${l.days===0?'today':l.days+'d'}</div></div>
+          <div class="row-brief">${escapeHtml(l.companyDescription || l.brief)}</div>
         </div>
       </div>
     `).join("");
@@ -412,10 +411,10 @@ function renderDetail(){
     <div class="d-header">
       ${ringSVG(l.score, true)}
       <div>
-        <div class="d-name">${l.company}</div>
+        <div class="d-name">${escapeHtml(l.company)}</div>
+        <p class="company-description">${escapeHtml(l.companyDescription || l.brief)}</p>
         <div class="d-tags">
           <span class="tag state ${band(l.score)}">${bandLabel(l.score)}</span>
-          <span class="tag">${l.industry}</span>
           ${l.training ? `<span class="tag">${l.training}</span>` : ''}
           <span class="tag">${l.dealValue}</span>
           ${l.contacted ? '<span class="tag contacted">Contacted</span>' : ''}
@@ -438,13 +437,10 @@ function renderDetail(){
     <div class="section">
       <div class="section-label">Contact</div>
       <div class="contact-card">
-        ${l.contactName ? `
-          <div class="contact-row">${icons.user}<span>${l.contactName} &middot; ${l.contactRole}</span></div>
-          ${l.phone ? `<div class="contact-row">${icons.phone}<a href="tel:${l.phone.replace(/\s/g,'')}">${l.phone}</a></div>` : ''}
-          ${l.email ? `<div class="contact-row">${icons.mail}<a href="mailto:${l.email}">${l.email}</a></div>` : ''}
-        ` : `
-          <div class="contact-row" style="color:var(--ink-faint);">${icons.user}<span>Not yet identified &mdash; a 60-second LinkedIn or company-site check will find the right HR/L&amp;D contact</span></div>
-        `}
+        <div class="contact-row">${icons.user}<span>${escapeHtml(l.contactName || 'Contact person not yet verified')}${l.contactName && l.contactRole ? ' · '+escapeHtml(l.contactRole) : ''}</span></div>
+        ${personProfileUrl(l.contactLinkedIn) ? `<div class="contact-row">${icons.link}<a href="${escapeHtml(personProfileUrl(l.contactLinkedIn))}" target="_blank" rel="noopener noreferrer">Contact LinkedIn profile</a></div><p class="contact-note">${escapeHtml(l.contactEvidenceStatus || 'Public professional profile; confirm role before outreach.')}</p>` : '<p class="contact-note">Person LinkedIn profile not yet verified.</p>'}
+        ${l.phone ? `<div class="contact-row">${icons.phone}<a href="tel:${escapeHtml(l.phone.replace(/[^+0-9]/g,''))}">${escapeHtml(l.phone)}</a><small>Published business phone</small></div>` : '<p class="contact-note">No verified public phone found; use the company email.</p>'}
+        ${l.email ? `<div class="contact-row">${icons.mail}<a href="mailto:${escapeHtml(l.email)}">${escapeHtml(l.email)}</a></div>` : ''}
       </div>
     </div>
 
@@ -480,7 +476,6 @@ async function init(){
   selectedId = leads.length ? leads[0].id : null;
   refreshIndustries();
   renderStats();
-  renderFilters();
   renderStatusToggle();
   renderRows();
   renderDetail();

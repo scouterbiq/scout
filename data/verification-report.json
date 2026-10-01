@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-10-01",
+  "totalRecords": 348,
+  "publicPagesRetrieved": 665,
+  "companiesWithUsablePages": 299,
+  "companiesWithoutUsablePages": 49,
+  "statusCounts": {
+    "needs_verification": 277,
+    "excluded": 22,
+    "source_unavailable": 49
+  },
+  "fullyQualified": 0,
+  "employerFundEvidenceCandidates": 1,
+  "scope": "Every current record screened; up to 3 public company pages. This is not complete registry verification. No evidence is not proof of non-registration. Unresolved companies need further evidence or employer confirmation.",
+  "evidenceCandidate": "Bufori Motor Car Company (M) Sdn Bhd",
+  "qualifiedClaim": "No company was promoted to qualified based only on keywords, directory size filters or provider badges."
+}

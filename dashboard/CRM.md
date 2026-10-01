@@ -1,7 +1,13 @@
-# Scout CRM
+# Scout sections
 
-Open crm.html from the lead briefing. It loads prospects.json and leads.json and keeps qualification based on pipeline evidence. Deal stages never change qualification.
+Prospects: unverified research records, with review results and evidence URLs. Excluded records are retained and available via the Excluded filter.
 
-Stages: New, Researching, Contacted, Meeting booked, Proposal sent, Won, Lost. Company/contact details, notes and follow-up dates are editable. Search, qualification/stage filters and due follow-ups narrow the list. Export visible records to CSV; download JSON backups and restore them to transfer edits between browsers.
+Qualified leads: employer records with pipeline SME and levy evidence; deal stages cannot confer qualification.
 
-Edits are held in localStorage on this browser/device, not committed to GitHub. There is no login or shared backend. The website and source data remain public; private notes stay in the browser unless you share a backup. Backup restore merges saved edits and replaces matching records. New source records appear on refresh. No outreach is sent.
+Clients: records explicitly marked Client or deals marked Won. Client status does not verify levy qualification.
+
+CRM: records with a stage beyond New, notes or a follow-up date. Start tracking from a prospect by editing its stage.
+
+All pages share browser-local saved edits using the existing scout-crm-v1 storage key. Back up and restore JSON to move edits; CSV export includes visible records. Nothing syncs edits to the public repository. Source research data remains public.
+
+The 2026-10-01 review screened all 348 current records and retrieved up to three public company pages per record. It is not a registry verification. Missing evidence or blocked websites do not prove non-registration. See data/verification-report.json for counts and scope.

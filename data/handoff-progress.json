@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-10-01",
+  "checkedAt": "2026-10-02",
   "monthlyTarget": 100,
   "month": "2026-10",
-  "newReadyThisMonth": 55,
-  "shortfall": 45,
-  "totalReady": 55,
-  "totalProspects": 380,
+  "newReadyThisMonth": 78,
+  "shortfall": 22,
+  "totalReady": 78,
+  "totalProspects": 430,
   "newPriorityResearchCandidates": [
     "Tuahvet Sdn. Bhd.",
     "Winner Food Industries Sdn. Bhd.",
@@ -24,12 +24,34 @@
     "Email delivery or telephone response",
     "HRD Corp employer registration or available levy balance"
   ],
-  "status": "55 SMEs passed public-source size/contact screening and are ready for introductory outreach. Target 100 remains unmet. HRD Corp optional.",
+  "status": "78 handoff-ready SMEs; 78 first became ready in October. Target 100 remains unmet by 22. HRD Corp optional; unresolved SME evidence or missing company contacts cause the remaining research queue.",
   "hrdCorpRequired": false,
   "hrdCorpRole": "Optional side bonus",
   "providerExclusionsReopened": 6,
-  "totalResearchQueue": 307,
-  "totalExcluded": 18,
-  "trainingProviderPartners": 17,
-  "qualificationScope": "Public-source screening only; these are potential prospects, not confirmed buyers."
+  "totalResearchQueue": 333,
+  "totalExcluded": 19,
+  "trainingProviderPartners": 19,
+  "qualificationScope": "Public-source screening only; these are potential prospects, not confirmed buyers.",
+  "totalSMEQualified": 80,
+  "unresolvedSMEEvidence": 318,
+  "lastRun": {
+    "date": "2026-10-02",
+    "discoveredNew": 50,
+    "newDiscoveredSMEQualified": 23,
+    "existingProspectsPromotedReady": 2,
+    "newHandoffReady": 23,
+    "newDiscoveredHandoffReady": 21,
+    "newDiscoveredContactPendingSMEs": 2,
+    "newDiscoveredUnresolvedSME": 26,
+    "newDiscoveredExcluded": 1,
+    "discoverySourceUrl": "https://www.e50.com.my/alumni-e50/",
+    "discoverySourceYear": 2024,
+    "levyUnknownBlockedCount": 0
+  },
+  "unresolvedSMEEvidenceNote": "Research-only entries require current sector-appropriate size/turnover and ownership support; historical awards alone do not qualify.",
+  "shortfallCauses": [
+    "Current SME-size or ownership evidence unresolved",
+    "Company-owned published business contact missing"
+  ],
+  "dataScope": "Repository public research only; browser CRM records untouched."
 }

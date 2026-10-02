@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-01",
-  "rawArticles": 14,
-  "uniqueArticles": 8,
-  "newEmployerRecords": 0,
-  "uniqueEmployerNamesLast7Days": 0,
-  "publicEvidenceShortlist": 0,
+  "date": "2026-10-02",
+  "rawArticles": 272,
+  "uniqueArticles": 216,
+  "newEmployerRecords": 4,
+  "uniqueEmployerNamesLast7Days": 4,
+  "publicEvidenceShortlist": 80,
   "screeningErrors": [],
-  "note": "Discovery is not qualification. Current levy balance and claim delivery route require confirmation."
+  "note": "SME evidence is required. HRD Corp participation is optional; confirm balance and delivery route only for levy-funded offers."
 }

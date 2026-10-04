@@ -6435,5 +6435,33 @@
     "addedBy": "auto",
     "priorityTier": "unclassified",
     "qualificationStatus": "Needs verification \u2014 not qualified"
+  },
+  {
+    "company": "Exabytes",
+    "industry": "Technology/Digital Services",
+    "training": "Workflow optimization and agentic AI implementation",
+    "score": 60,
+    "brief": "Exabytes founder advises Malaysian SMEs on reworking workflows to leverage agentic AI.",
+    "signal": "The company is identified as a technology provider offering guidance to SMEs on AI adoption.",
+    "fitNote": "Exabytes is a well-known Malaysian SME in the digital services space, fitting the service-based SME criteria.",
+    "levySignal": "unclear",
+    "sizeTier": "Unknown",
+    "accessNote": "",
+    "contactName": "",
+    "contactRole": "",
+    "phone": "",
+    "email": "",
+    "sourceLabel": "Digital News Asia",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPM0wtVGdRWlJPSnNNT1JXRVd4YlM4UVV0aVR2MDk4eEJqVzRBcHZQb3MtMWZ2dEdIcTR5dGM5ZldtaXdBellEZWVNRl9lR0NlcWl2dnJLN1U2a1ZXcHBaWVdOb1dtVkRxS09SZTBlWDlPUUhnOUpwMGd5YjE1S2MteU4tV2VfcmhBbFFlT1VZNWpwaHlSYzBld3pSMVJRZGktc2RzU0FudENyaDBac3pUQ3JtbEViLS1mX1l5QQ?oc=5",
+    "dealValue": "",
+    "fullBrief": "Exabytes founder says Malaysian SMEs must rework workflows to get value from agentic AI",
+    "sizeEvidence": "",
+    "levyEvidence": "",
+    "id": "ff58faac13",
+    "days": 0,
+    "_dateFound": "2026-10-04",
+    "addedBy": "auto",
+    "priorityTier": "unclassified",
+    "qualificationStatus": "Needs verification \u2014 not qualified"
   }
 ]

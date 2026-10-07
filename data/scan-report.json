@@ -1,12 +1,10 @@
 {
-  "date": "2026-10-06",
-  "rawArticles": 279,
-  "uniqueArticles": 227,
-  "newEmployerRecords": 0,
-  "uniqueEmployerNamesLast7Days": 8,
-  "publicEvidenceShortlist": 102,
-  "screeningErrors": [
-    "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)"
-  ],
+  "date": "2026-10-07",
+  "rawArticles": 319,
+  "uniqueArticles": 261,
+  "newEmployerRecords": 3,
+  "uniqueEmployerNamesLast7Days": 9,
+  "publicEvidenceShortlist": 108,
+  "screeningErrors": [],
   "note": "SME evidence is required. HRD Corp participation is optional; confirm balance and delivery route only for levy-funded offers."
 }

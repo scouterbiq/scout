@@ -8848,5 +8848,33 @@
     "addedBy": "auto",
     "priorityTier": "unclassified",
     "qualificationStatus": "Needs verification \u2014 not qualified"
+  },
+  {
+    "company": "CJ Bio Malaysia",
+    "industry": "Manufacturing",
+    "training": "",
+    "score": 40,
+    "brief": "Plant closure and employee assistance following business operations cessation.",
+    "signal": "",
+    "fitNote": "Manufacturing plant closure; likely an SME or mid-sized entity based on the context of plant operations, though exact employee count is not provided.",
+    "levySignal": "unclear",
+    "sizeTier": "Unknown",
+    "accessNote": "",
+    "contactName": "",
+    "contactRole": "",
+    "phone": "",
+    "email": "",
+    "sourceLabel": "BusinessToday Malaysia",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOeFkxRjltS01Jai1GLTk0NnpIcjBETmpDNE5KdFMtV3ZxTEU5OVJCLVZ0ME51MlRqcndYLVhMRkx6WEtGaElPRnN5NE5yN2FjbENfNG5fYmZ1M3RYSkxRMmo4a3VpdHBROUpjVS0zMjRUdzdheVlFVnJRdEd3TEhUY1hZM2NaSlZFbnFrWV8ydU1mLUtLQlZDZ3VlR3kxdUF6SWUxRnlueVE?oc=5",
+    "dealValue": "",
+    "fullBrief": "MOHR To Assist CJ Bio Malaysia Employees As Plant Shuts Down",
+    "sizeEvidence": "",
+    "levyEvidence": "",
+    "id": "acd98be1bf",
+    "days": 0,
+    "_dateFound": "2026-10-08",
+    "addedBy": "auto",
+    "priorityTier": "unclassified",
+    "qualificationStatus": "Needs verification \u2014 not qualified"
   }
 ]

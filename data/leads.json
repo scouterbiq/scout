@@ -10209,5 +10209,33 @@
     "addedBy": "auto",
     "priorityTier": "unclassified",
     "qualificationStatus": "Needs verification \u2014 not qualified"
+  },
+  {
+    "company": "Tuhu Car Care",
+    "industry": "Automotive Services",
+    "training": "",
+    "score": 40,
+    "brief": "Automotive service provider expanding operations in Penang.",
+    "signal": "Expansion activity",
+    "fitNote": "Independent service provider, potential for professional development training.",
+    "levySignal": "unclear",
+    "sizeTier": "Unknown",
+    "accessNote": "",
+    "contactName": "",
+    "contactRole": "",
+    "phone": "",
+    "email": "",
+    "sourceLabel": "NST Online",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQU3BlUW5WS1hUbzhrdThSdk13ZzRIa2VzeFo5TjZwUGNMZlF0N1ROdjREbHgyR2IyZVRmWTZMMFkzVHJabkJqWmVyYlVsdlVIT0RvbTdNODlsYnBpLTRWbXNRMnpkM0NVeE0wbzhqSGpfU3Z5Z0lVZkNrZlhvaEFVNnRNX1ktNEdhLVhiM2p1SzNqQkRrOTc1NUhFQk5oNEFDOTU5azByYU0wU0lrUmxjV2FEOHZId9IBuwFBVV95cUxQRzB6RFhtY3Rfa3NidVdiejB3NmpXcG13bGlwQ2NMc0NwMDFrZ3NEZlg4Wk1Ybjk1T29FVGxOWEdVMHdwSmUtSVYyZTlkZlc0bW0zNVRMSkJOMlhLR3h2R29QOUFkQWVUMW9hcTloVU1lUjdJYVY2cWZ0aFh6RW82bnVfVURtTERhSDkzME1SczhDYXU3WFpNOEpneF9VODZjZnpKWTNNQTlTeF90eDc1cnlLVFJMckwyM25J?oc=5",
+    "dealValue": "",
+    "fullBrief": "High car ownership drives Tuhu Car Care's Penang expansion",
+    "sizeEvidence": "",
+    "levyEvidence": "",
+    "id": "3e7d22b555",
+    "days": 0,
+    "_dateFound": "2026-10-15",
+    "addedBy": "auto",
+    "priorityTier": "unclassified",
+    "qualificationStatus": "Needs verification \u2014 not qualified"
   }
 ]

@@ -10417,5 +10417,33 @@
     "contactProfileStatus": "not_found",
     "contactRouteNote": "Company-published route; no delivery or response test.",
     "_dateFound": "2026-10-16"
+  },
+  {
+    "company": "Pepper Labs",
+    "industry": "Technology",
+    "training": "Sovereign AI",
+    "score": 60,
+    "brief": "Pepper Labs is advancing sovereign AI solutions for the public sector and MSMEs.",
+    "signal": "Identified as a company working with MSMEs, potentially an SME itself.",
+    "fitNote": "Likely an SME based on the nature of the business and focus on MSME support.",
+    "levySignal": "unclear",
+    "sizeTier": "Unknown",
+    "accessNote": "",
+    "contactName": "",
+    "contactRole": "",
+    "phone": "",
+    "email": "",
+    "sourceLabel": "SME & Entrepreneurship Magazine",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNT1VfaHByQWZrZGVIZkRHSy1RMHdqWnFjQTJoZHhjc0RlUV9xV0tqSURJRFlaS3NMQnRnY2IwWlZsOU1yMmJZWEt5Q3NsRFJqdVJOamZBLTdRb1RjWE5EZVh0LXZzaEJ4TlB6VmYzRnB4TkY4MEc0NkRuUzh4czR6bXl2dk53dDF1aDM3d0l2RnlqTXVfVVJpMW1hMXhWa0hITjdQNXc4TWlHZ1Y5bVJNbjlOZjdMb2N1Y0F5ZlBCWXE1REpDalE?oc=5",
+    "dealValue": "",
+    "fullBrief": "From AI Talent to Malaysian-Built Solutions: Pepper Labs Advances Sovereign AI for the Public Sector and MSMEs",
+    "sizeEvidence": "",
+    "levyEvidence": "",
+    "id": "911dffa90e",
+    "days": 0,
+    "_dateFound": "2026-10-17",
+    "addedBy": "auto",
+    "priorityTier": "unclassified",
+    "qualificationStatus": "Needs verification \u2014 not qualified"
   }
 ]

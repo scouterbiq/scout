@@ -16,6 +16,7 @@
 .row-detail{padding:18px 0 3px 20px;animation:appear .15s ease}.d-header{display:none}.section{margin-bottom:16px}.section-label,.signal-label{display:block;font:10px 'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-faint);margin-bottom:5px}.signal-box{margin-bottom:16px}.signal-box>svg{display:none}.signal-box p,.brief-text{font-size:13px;line-height:1.65;color:var(--ink-soft)}.brief-text{max-width:65ch}.contact-card{display:flex;flex-direction:column;gap:10px}.contact-row{display:flex;gap:9px;align-items:center;flex-wrap:wrap;font-size:13px;line-height:1.5;overflow-wrap:anywhere}.contact-row svg{flex-shrink:0;color:var(--ink-faint)}.contact-row a,.source-link{font-size:12px;color:var(--indigo);text-decoration:none;overflow-wrap:anywhere}.contact-row a:hover,.source-link:hover{text-decoration:underline}.contact-row small,.contact-note{font-size:11.5px;line-height:1.5;color:var(--ink-soft)}.source-link{display:inline-flex;align-items:center;gap:6px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.btn{font:500 12px Inter,sans-serif;display:inline-flex;align-items:center;gap:6px;padding:8px 11px;border:1px solid var(--line);border-radius:7px;background:white;color:var(--ink);text-decoration:none;cursor:pointer}.btn:hover{border-color:var(--ink-faint)}.btn.primary{background:var(--indigo);border-color:var(--indigo);color:white}.btn.done,.btn.subtle{color:var(--ink-soft)}.empty{padding:40px 10px;text-align:center;font-size:13px;color:var(--ink-soft)}
 @keyframes appear{from{opacity:0;transform:translateY(-3px)}to{opacity:1;transform:translateY(0)}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}@media(max-width:520px){.topbar{padding:24px 18px 0}.app{padding:0 18px 70px}.row-top{align-items:flex-start}.row-days{padding-top:3px}.row-detail{padding-left:20px}.brand-sub{font-size:10px}.contact-row small{width:100%;padding-left:24px}}
 .location-control{margin:12px 0;display:grid;gap:7px}.location-control label,#location-count{font-size:12px;color:var(--ink-soft)}.row-location{display:block;font-size:11px;color:var(--ink-faint);margin-top:6px}select:focus-visible{outline:2px solid var(--indigo)}
+.category-nav{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0 24px}.category-button{font:600 13px Inter,sans-serif;line-height:1.5;padding:14px 10px;background:var(--paper);border:1px solid var(--line);border-radius:10px;color:var(--ink-soft);cursor:pointer;text-align:left}.category-button[aria-pressed="true"]{border-color:var(--indigo);background:var(--indigo-bg);color:var(--indigo)}.category-button .tab-count{display:inline-block;margin-top:3px}.category-title{font-size:18px;letter-spacing:-.02em;margin-bottom:6px}.category-description{font-size:12px;line-height:1.6;color:var(--ink-soft);margin-bottom:18px}
 </style>
 </head>
 <body>
@@ -32,13 +33,15 @@
 </div>
 
 <div class="app">
+  <nav class="category-nav" id="category-nav" aria-label="Lead categories"></nav>
   <div class="list-pane">
+    <h1 class="category-title" id="category-title"></h1>
+    <p class="category-description" id="category-description"></p>
     <div class="list-controls">
       <input class="search" id="search" placeholder="Search company or training" aria-label="Search leads" />
 
     </div>
     <div class="location-control"><label for="state-filter">State / federal territory</label><select id="state-filter" class="search"></select><span id="location-count" aria-live="polite"></span></div>
-    <div class="chips" id="filters"><button class="chip active" type="button" aria-pressed="true">All</button></div>
 <div class="status-toggle" id="status-toggle"></div>
     <div class="rows" id="rows"></div>
   </div>
@@ -149,6 +152,33 @@ let activeFilter = "All";
 let statusFilter = "active";
 let searchTerm = "";
 let selectedId = null;
+let activeCategory = 'regular';
+const categoryViews = {};
+const CATEGORIES = [
+ {key:'regular',title:'Regular SMEs',description:'Companies to approach about training for their staff.'},
+ {key:'training',title:'Training companies / providers',description:'Companies offering training, for freelance trainer and delivery partnerships.'}
+];
+function matchesCategory(lead){ return isTrainingProvider(lead)===(activeCategory==='training'); }
+function switchCategory(key){
+ if(!CATEGORIES.some(c=>c.key===key)) return;
+ categoryViews[activeCategory]={searchTerm,stateFilter,statusFilter};
+ activeCategory=key;
+ const saved=categoryViews[key] || {searchTerm:'',stateFilter:'All',statusFilter:'active'};
+ ({searchTerm,stateFilter,statusFilter}=saved);
+ selectedId=null;
+ document.getElementById('search').value=searchTerm;
+ renderCategoryNav();renderRegionFilter();renderStats();renderStatusToggle();renderRows();
+}
+function renderCategoryNav(){
+ document.getElementById('category-nav').innerHTML=CATEGORIES.map(category=>{
+  const count=leads.filter(l=>isTrainingProvider(l)===(category.key==='training')).length;
+  return `<button type="button" class="category-button" data-category="${category.key}" aria-pressed="${activeCategory===category.key}" aria-controls="rows">${category.title} <span class="tab-count">${count}</span></button>`;
+ }).join('');
+ document.querySelectorAll('[data-category]').forEach(button=>button.onclick=()=>switchCategory(button.dataset.category));
+ const category=CATEGORIES.find(c=>c.key===activeCategory);
+ document.getElementById('category-title').textContent=category.title;
+ document.getElementById('category-description').textContent=category.description;
+}
 
 let industries = ["All"];
 function refreshIndustries(){ industries = ["All"]; activeFilter = "All"; }
@@ -173,16 +203,17 @@ function ringSVG(score, large){
 
 
 function renderStats(){
- const active=leads.filter(l=>!l.contacted).length;
- document.getElementById("stats").textContent=dataSource==="live" ? active+" active SME leads · Company briefs and public business contacts" : "Lead data could not be loaded. Refresh to try again.";
+ const active=leads.filter(matchesCategory).filter(l=>!l.contacted).length;
+ document.getElementById("stats").textContent=dataSource==="live" ? active+" active leads in this category · Company briefs and public business contacts" : "Lead data could not be loaded. Refresh to try again.";
 }
 function renderStatusToggle(){
  const opts=[["active","Active"],["contacted","Contacted"],["all","All"]];
- document.getElementById("status-toggle").innerHTML=opts.map(([key,label])=>{const count=leads.filter(l=>matchesRegion(l)).filter(l=>key==="all" || (key==="active"?!l.contacted:l.contacted)).length;return '<button type="button" class="'+(statusFilter===key?'active':'')+'" aria-pressed="'+(statusFilter===key)+'" data-status="'+key+'">'+label+' <span class="tab-count">'+count+'</span></button>';}).join("");
+ document.getElementById("status-toggle").innerHTML=opts.map(([key,label])=>{const count=leads.filter(matchesCategory).filter(l=>matchesRegion(l)).filter(l=>key==="all" || (key==="active"?!l.contacted:l.contacted)).length;return '<button type="button" class="'+(statusFilter===key?'active':'')+'" aria-pressed="'+(statusFilter===key)+'" data-status="'+key+'">'+label+' <span class="tab-count">'+count+'</span></button>';}).join("");
  document.querySelectorAll("[data-status]").forEach(b=>b.onclick=()=>{statusFilter=b.dataset.status;selectedId=null;renderStatusToggle();renderRows();});
 }
 function visibleLeads(){
   return leads.filter(l =>
+    matchesCategory(l) &&
     matchesRegion(l) &&
     (activeFilter === "All" || l.industry === activeFilter) &&
     (l.company.toLowerCase().includes(searchTerm) || l.training.toLowerCase().includes(searchTerm) || l.companyDescription.toLowerCase().includes(searchTerm)) &&
@@ -219,11 +250,7 @@ function renderRows(){
  </span></button>
  ${l.id===selectedId?'<div class="row-detail" id="detail"></div>':''}
  </article>`;
- const groups=[
-   {id:'regular-companies',title:'Regular companies',description:'SMEs to approach about training for their staff.',items:list.filter(l=>!isTrainingProvider(l))},
-   {id:'training-providers',title:'Training providers',description:'Companies offering training — potential trainer partnerships for your dad.',items:list.filter(isTrainingProvider)}
- ];
- el.innerHTML=list.length ? groups.map(group=>`<section class="lead-group" aria-labelledby="${group.id}"><h2 class="group-heading" id="${group.id}">${group.title}<span class="tab-count">${group.items.length}</span></h2><p class="group-description">${group.description}</p>${group.items.length?group.items.map(rowHtml).join(''):'<p class="group-empty">No matching leads in this section.</p>'}</section>`).join('') : '<div class="empty">'+(dataSource==='live'?'No leads match right now.':'Could not load leads. Please refresh to try again.')+'</div>';
+ el.innerHTML=list.length ? list.map(rowHtml).join('') : '<div class="empty">'+(dataSource==='live'?'No leads match in this category.':'Could not load leads. Please refresh to try again.')+'</div>';
  document.querySelectorAll("[data-id]").forEach(b=>b.onclick=()=>{const id=leads.find(l=>String(l.id)===b.dataset.id)?.id;selectedId=selectedId===id?null:id;renderRows();});
  renderDetail();
 }
@@ -294,6 +321,7 @@ function renderDetail(){
   document.getElementById("dismiss").onclick = () => {
     const idx = leads.findIndex(x => x.id === l.id);
     leads.splice(idx, 1);
+    renderCategoryNav();
     renderStats(); renderStatusToggle(); renderRows();
   };
 }
@@ -308,6 +336,7 @@ async function init(){
   badge.textContent = dataSource === "live" ? "Live briefing" : "Unavailable";
   selectedId = null;
   refreshIndustries();
+  renderCategoryNav();
   renderRegionFilter();
   renderStats();
   renderStatusToggle();

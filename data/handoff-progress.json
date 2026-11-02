@@ -1,16 +1,24 @@
 {
-  "checkedAt": "2026-10-30",
+  "checkedAt": "2026-11-02",
   "monthlyTarget": 100,
-  "month": "2026-10",
-  "newReadyThisMonth": 145,
-  "shortfall": 0,
-  "totalReady": 145,
-  "totalProspects": 433,
+  "month": "2026-11",
+  "newReadyThisMonth": 7,
+  "shortfall": 93,
+  "totalReady": 152,
+  "totalProspects": 477,
   "newPriorityResearchCandidates": [
-    "hiredNOW",
-    "Language Talent Solutions Sdn Bhd",
-    "VHR Consultancy",
-    "Nasi Lemak Saleha Sdn. Bhd."
+    "Benithem Sdn Bhd",
+    "Eskayvie Sdn Bhd",
+    "Bubbles O2 Sdn Bhd",
+    "Palm Fiber Sdn Bhd",
+    "TLC Houseware Sdn Bhd",
+    "Tishas Food Manufacturing Sdn Bhd",
+    "Armila Berhad",
+    "Velson Packagings Sdn Bhd",
+    "FUSIPIM Sdn Bhd",
+    "Usaha Jana Sdn Bhd",
+    "Emerald Auto Parts Sdn Bhd",
+    "Bio Harvest Sdn Bhd"
   ],
   "readinessRequirements": [
     "Published public SME-size and ownership context",
@@ -24,28 +32,37 @@
     "Email delivery or telephone response",
     "HRD Corp employer registration or available levy balance"
   ],
-  "status": "145 handoff-ready SMEs; 145 first became ready in October. Monthly target exceeded through public SME and contact verification; HRD Corp participation remains optional.",
+  "status": "7/100 new ready leads for November. Historical E50 2022 discovery supplemented with current public SME evidence; unresolved companies stay research-only.",
   "hrdCorpRequired": false,
   "hrdCorpRole": "Optional side bonus",
   "providerExclusionsReopened": 6,
-  "totalResearchQueue": 269,
-  "totalExcluded": 19,
-  "trainingProviderPartners": 37,
+  "totalResearchQueue": 305,
+  "totalExcluded": 20,
+  "trainingProviderPartners": 39,
   "qualificationScope": "Public-source screening only; these are potential prospects, not confirmed buyers.",
-  "totalSMEQualified": 145,
-  "unresolvedSMEEvidence": 265,
+  "totalSMEQualified": 157,
+  "unresolvedSMEEvidence": 300,
   "lastRun": {
-    "date": "2026-10-30",
-    "discoveredNew": 0,
-    "newDiscoveredSMEQualified": 0,
+    "date": "2026-11-02",
+    "discoveredNew": 44,
+    "newDiscoveredSMEQualified": 8,
     "existingProspectsNewlySMEQualified": 0,
-    "newHandoffReady": 0,
-    "discoverySourceUrl": "https://www.e50.com.my/alumni-e50/",
-    "discoverySourceYear": 2024,
+    "newHandoffReady": 7,
+    "discoverySourceUrl": "https://www.e50.com.my/en/alumni-e50-en/",
+    "discoverySourceYear": 2022,
+    "latestCohortReviewed": 2024,
     "levyUnknownBlockedCount": 0,
-    "note": "Official E50 alumni page checked; latest listed cohort remains 2024. No additional current SME/contact verifications completed; existing records preserved."
+    "note": "2024 cohort already present. Discovered 2022 alumni, merged shared GSE operating domain, qualified current public evidence, preserved all existing JSON records and CSV rows. No app/CRM code changes or outreach."
   },
   "unresolvedSMEEvidenceNote": "Research-only entries require current sector-appropriate size/turnover and ownership support; historical awards alone do not qualify.",
-  "shortfallCauses": [],
-  "dataScope": "Repository public research only; browser CRM records untouched."
+  "shortfallCauses": [
+    "Current SME size/turnover/ownership verification incomplete for research candidates; historical awards alone insufficient."
+  ],
+  "dataScope": "Repository public research only; browser CRM records untouched.",
+  "previousMonthSummary": {
+    "month": "2026-10",
+    "newReadyThisMonth": 145,
+    "shortfall": 0,
+    "totalReady": 145
+  }
 }

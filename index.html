@@ -1,1 +1,58 @@
-<!doctype html><html lang="en" class="scout-locked"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Scout — Access</title><link rel="stylesheet" href="dashboard/access.css"><script src="dashboard/access.js"></script></head><body data-scout-destination="dashboard/scout.html"><noscript class="scout-noscript">Enable JavaScript to enter the Scout access code.</noscript></body></html>
+<!doctype html>
+<html lang="en" class="scout-locked">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Scout — your Malaysian SME lead workspace. Explore company briefs, training partners and public business contacts.">
+<meta name="theme-color" content="#f6f8fb"><title>Scout — Your next conversation</title>
+<link rel="icon" href="assets/scout-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="dashboard/access.css"><link rel="stylesheet" href="assets/home.css">
+<script src="dashboard/access.js"></script>
+</head>
+<body>
+<header class="site-header wrap">
+ <a class="brand" href="./" aria-label="Scout home"><img src="assets/scout-mark.svg" width="34" height="34" alt=""><span>scout<span class="brand-period">.</span></span></a>
+ <nav aria-label="Main navigation"><a href="./" aria-current="page">Overview</a><a href="dashboard/scout.html">Lead briefing <span aria-hidden="true">↗</span></a></nav>
+ <div class="header-right"><span class="country-dot"></span> MALAYSIA <span class="header-divider"></span><time id="today">Your workspace</time></div>
+</header>
+<main class="wrap" id="main">
+ <section class="hero" aria-labelledby="welcome-title">
+  <div class="hero-copy">
+   <div class="eyebrow"><span class="tiny-rule"></span> YOUR BUSINESS DEVELOPMENT WORKSPACE</div>
+   <h1 id="welcome-title" tabindex="-1">Good leads.<br>Better <span>conversations.</span></h1>
+   <p class="hero-intro">Find the right companies. Know who to contact.<br class="desktop-break"> Turn your next introduction into an opportunity.</p>
+   <div class="hero-actions"><a class="button primary" href="#lead-categories">Explore your leads <span aria-hidden="true">↗</span></a><a class="quiet-link" href="data/dad-handoff.csv" download>Download handoff <span aria-hidden="true">↓</span></a></div>
+   <div class="data-status" id="data-status" role="status"><span class="status-dot"></span> Connecting to your briefing…</div>
+   <div class="metrics" aria-label="Briefing totals" aria-live="polite">
+    <div><strong id="total-count">—</strong><span>Briefing leads</span></div>
+    <div><strong id="ready-count">—</strong><span>In Dad’s handoff</span></div>
+    <div><strong id="region-count">—</strong><span>States &amp; territories</span></div>
+   </div>
+  </div>
+  <div class="map-panel" id="map-panel">
+   <div class="map-top"><div><span class="map-kicker">THE OPPORTUNITY MAP</span><h2>Across Malaysia.</h2></div><span class="live-pill"><i></i> LIVE DATA</span></div>
+   <div class="map-stage" id="map-stage" role="img" aria-label="Interactive 3D map of Malaysia with lead clusters by listed state or federal territory">
+    <img class="map-fallback" id="map-fallback" src="assets/malaysia-fallback.svg" alt="Map showing Peninsular Malaysia, Sabah and Sarawak">
+    <div class="map-label peninsula">PENINSULAR MALAYSIA</div><div class="map-label borneo">EAST MALAYSIA</div>
+    <div class="map-tooltip" id="map-tooltip" hidden></div>
+   </div>
+   <div class="map-controls"><span id="map-hint">Loading your 3D map…</span><div><button id="rotate-map" type="button" aria-pressed="true" disabled aria-label="Pause map rotation">Ⅱ</button><button id="reset-map" type="button" disabled aria-label="Reset map view">↺</button></div></div>
+   <div class="map-footer"><span><i></i> Lead clusters</span><span>By listed state · approximate positions</span></div>
+  </div>
+ </section>
+ <section class="category-section" id="lead-categories" aria-labelledby="category-heading">
+  <div class="section-head"><div><span class="eyebrow">YOUR NEXT MOVE</span><h2 id="category-heading">Who are we reaching out to?</h2></div><p>Two routes. One place to start.</p></div>
+  <div class="category-grid">
+   <a class="category-card" href="dashboard/scout.html?category=regular"><div class="category-card-top"><span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 21V8h7v13M11 21V3h9v18M2 21h20M7 11v2m0 3v2m7-12h3m-3 4h3m-3 4h3m-3 4h3"/></svg></span><span class="category-count"><b id="regular-count">—</b> leads</span></div><h3>Regular SMEs <span aria-hidden="true">↗</span></h3><p>Meet businesses that could benefit from your dad’s training. Company briefs, staff training angles and public contacts.</p><span class="card-link">Explore companies <span aria-hidden="true">→</span></span></a>
+   <a class="category-card training-card" href="dashboard/scout.html?category=training"><div class="category-card-top"><span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h18v12H3zM12 15v5m-5 2 5-2 5 2M7 11l3-4 3 2 4-4"/></svg></span><span class="category-count"><b id="training-count">—</b> leads</span></div><h3>Training providers <span aria-hidden="true">↗</span></h3><p>Find training companies to approach for freelance assignments, delivery partnerships and future collaborations.</p><span class="card-link">Explore partners <span aria-hidden="true">→</span></span></a>
+  </div>
+ </section>
+ <section class="lower-grid">
+  <div class="coverage" aria-labelledby="coverage-heading"><div class="section-head compact"><div><span class="eyebrow">A CLOSER LOOK</span><h2 id="coverage-heading">Start somewhere familiar.</h2></div></div><p>Choose a state or federal territory to open its regular SME leads.</p><div id="region-links" class="region-links" aria-live="polite"><span class="muted">Loading locations…</span></div><p class="coverage-note" id="coverage-note">Businesses with several listed locations may appear in more than one area.</p></div>
+  <div class="handoff-panel" aria-labelledby="handoff-heading"><span class="eyebrow">READY FOR THE NEXT CALL</span><h2 id="handoff-heading">A useful brief.<br>A stronger introduction.</h2><p>Your handoff brings the company, training fit and published contact route together.</p><a class="quiet-link" href="data/dad-handoff.csv" download>Download Dad’s list <span aria-hidden="true">↓</span></a><div class="handoff-note">Public-source screening. Contact details, buying interest and budgets still need direct confirmation.</div></div>
+ </section>
+ <div id="load-error" class="load-error" hidden><p>Scout couldn’t load the live briefing. Your existing lead files are unchanged.</p><button type="button" id="retry-data">Try again</button><a href="dashboard/scout.html">Open briefing →</a></div>
+</main>
+<footer class="site-footer wrap"><span>SCOUT <span class="footer-slash">/</span> Built for the next conversation.</span><span>SMEs first. HRD Corp participation is a bonus.</span></footer>
+<script type="application/scout-locked" data-scout-type="module" data-scout-src="assets/home.js"></script>
+<noscript class="scout-noscript">Enable JavaScript to enter the Scout access code.</noscript>
+</body></html>

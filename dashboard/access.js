@@ -17,6 +17,7 @@
     if (destination) { location.replace(destination); return; }
     for (const original of document.querySelectorAll('script[type="application/scout-locked"]')) {
       const script = document.createElement('script');
+      if (original.dataset.scoutType === 'module') script.type = 'module';
       if (original.dataset.scoutSrc) {
         script.src = original.dataset.scoutSrc;
         await new Promise((resolve, reject) => {

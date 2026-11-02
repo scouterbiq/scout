@@ -43,6 +43,7 @@ async function loadData() {
   }
   for (const row of regular) for (const region of leadRegions(row.location)) regularCounts.set(region,(regularCounts.get(region) || 0)+1);
   $('total-count').textContent = leads.length;
+  $('directory-count').textContent = leads.length;
   $('regular-count').textContent = regular.length;
   $('training-count').textContent = training.length;
   $('ready-count').textContent = handoff ? handoff.length : '—';

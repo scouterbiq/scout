@@ -1,0 +1,231 @@
+{
+  "checkedAt": "2026-11-04",
+  "priority": [
+    "Selangor",
+    "Kuala Lumpur"
+  ],
+  "newReady": 55,
+  "newReadyByRegion": {
+    "Selangor": 30,
+    "Kuala Lumpur": 26
+  },
+  "newResearchOnly": 29,
+  "contactEnrichedCompanies": 32,
+  "addedContactEntries": 71,
+  "newCompanyContactEntries": 121,
+  "existingPromoted": [],
+  "dedupSkipped": [],
+  "totals": {
+    "leads": 272,
+    "prospects": 561,
+    "dad-handoff": 207
+  },
+  "newReadyThisMonth": 62,
+  "newCompanies": [
+    "SHL Industries Engineering Sdn Bhd",
+    "Ideal Consulting Sdn Bhd",
+    "GenBijakdotMy Sdn Bhd",
+    "Irshad HR Consulting Sdn Bhd",
+    "Lestari Global Sdn Bhd",
+    "Quantige Industry Sdn Bhd",
+    "SMK Research & Technology Sdn Bhd",
+    "Job Motivated Training & Consultancy PLT",
+    "MMTC Asia Sdn Bhd",
+    "NT Business Consulting and Training",
+    "System & Skills Training Concept Sdn Bhd",
+    "EFXCO Academy",
+    "ADLA Group Sdn Bhd",
+    "EA Max Solutions Sdn Bhd",
+    "Packaging Sales & Service (M) Sdn Bhd (PSS Malaysia)",
+    "SMI Electric Automation Sdn Bhd",
+    "Enprotrade Sdn Bhd",
+    "Liquidflo Engineering Sdn Bhd",
+    "Ideasparq Robotics Sdn Bhd",
+    "G-nix Technologies Sdn Bhd",
+    "Software Dynamics Sdn Bhd",
+    "Ascentrio Sdn Bhd",
+    "Generic Exception Sdn Bhd (CodeTinker)",
+    "IOT SATA Sdn Bhd",
+    "Easun Engineering Sdn Bhd",
+    "Codigenius",
+    "CPro Solutions Sdn Bhd",
+    "Netquest Solutions",
+    "Noels IT Solutions Sdn Bhd",
+    "Artisan IT Solution Sdn Bhd",
+    "Knight Connections Sdn Bhd",
+    "C.K. Wong & Co.",
+    "Global NN Group Sdn Bhd",
+    "CapM Group",
+    "AKH & Partners PLT",
+    "Kancil Partners",
+    "IMRAN Chartered Accountants",
+    "ThriveOn Consulting (M) Sdn Bhd",
+    "Synergy Knowledge (M) Sdn Bhd",
+    "Macro Corporate Services",
+    "KHLC PLT",
+    "DPI Strategic Consultants Sdn Bhd",
+    "K Squared Sdn Bhd",
+    "YC Consultancy",
+    "Kiat & Associates PLT",
+    "BLWN Sdn Bhd",
+    "Bespoke Marketing Sdn Bhd",
+    "PTS Advertising Sdn Bhd",
+    "KM Cargo & Logistics Sdn Bhd",
+    "AMR Digital Marketing Sdn Bhd",
+    "SENTRALOG GLOBAL SDN BHD",
+    "Human Equation Sdn Bhd",
+    "GOFLEX EVENTS (M) SDN BHD",
+    "OFNIR Engineering Sdn Bhd",
+    "DK Perunding"
+  ],
+  "unresolvedCandidates": [
+    {
+      "company": "PFT Manufacturing Sdn Bhd",
+      "reason": "Small privately held manufacturing profile found, but Malaysia business phone was only found in secondary directory; current primary website emphasises overseas distributors. Verify Malaysian contact."
+    },
+    {
+      "company": "Unistar Industries Sdn Bhd",
+      "reason": "Company-owned LinkedIn size evidence found, but current company website inaccessible and contact evidence located in an old government filing and business directory."
+    },
+    {
+      "company": "SAM Consulting Malaysia",
+      "reason": "Small privately held profile found; official website inaccessible, and published contact routes are in secondary directories/older consultant listing. Confirm current contact and business identity."
+    },
+    {
+      "company": "Skill Solutions Sdn Bhd",
+      "reason": "Size is 2-10 but LinkedIn type says Public Company. Verify ownership/listing status rather than assuming private SME."
+    },
+    {
+      "company": "TRAIENT Experience Sdn Bhd",
+      "reason": "LinkedIn type says Public Company while an employer profile describes Individual Business; current ownership classification needs clarification."
+    },
+    {
+      "company": "Orangeleaf Consulting",
+      "reason": "Company profile discloses 2026 strategic investment by Japanese Macnica and becoming part of a global family. Ownership/control condition for SME classification unresolved."
+    },
+    {
+      "company": "YNY Technology Sdn Bhd",
+      "reason": "Current company-owned sources identify it as a PC Group subsidiary. Group ownership and aggregate size need review before SME qualification."
+    },
+    {
+      "company": "Tozzhin Enterprise Sdn Bhd",
+      "reason": "Thai Tozzhin International identifies Malaysian company as an associate. Foreign ownership/control and aggregate group size require verification."
+    },
+    {
+      "company": "Rymnet Solutions Sdn Bhd",
+      "reason": "Listed Radiant Globaltech completed acquisition of 80% on 23 January 2025; exclude from SME-only active list as listed-company subsidiary."
+    },
+    {
+      "company": "Dynaweld Sdn Bhd",
+      "reason": "Official about page calls it multinational and a subsidiary of Sohadu Industries/Perniagaan Seng Dee group; not independently qualified as SME."
+    },
+    {
+      "company": "AfterOffice.com Sdn Bhd",
+      "reason": "Company transferred products/services to Lookafter IT in 2022; official SSM schedule dated 19 June 2024 includes same company name/registration. Current active entity/status needs checking."
+    },
+    {
+      "company": "Evlos Sdn Bhd",
+      "reason": "Small manufacturing profile and contacts found, but Kumpulan Modal Perdana government-owned VC investment is disclosed; shareholding/control conditions need verification. Minority VC investment alone is not assumed to make it a GLC."
+    },
+    {
+      "company": "Impresstech Engineering Sdn Bhd",
+      "reason": "Official group pages give inconsistent name and registration pairing for Engineering/Automation. Verify legal entity and group size before adding one canonical SME lead."
+    },
+    {
+      "company": "Mobius Digital Systems Sdn Bhd",
+      "reason": "Small privately held company profile found; public website has no readable contact information and current contacts are secondary directory only."
+    },
+    {
+      "company": "Websight Sdn Bhd",
+      "reason": "Small privately held company profile found; current contact routes not verified from primary company pages."
+    },
+    {
+      "company": "RNC Consulting Group / Rafidah & Co.",
+      "reason": "Research only — current SME size/ownership or business contact requires verification"
+    },
+    {
+      "company": "InspireNow Sdn Bhd",
+      "reason": "Research only — current SME size/ownership or business contact requires verification"
+    },
+    {
+      "company": "GL Business Advisory Sdn Bhd",
+      "reason": "Research only — current SME size/ownership or business contact requires verification"
+    },
+    {
+      "company": "Capital DK Consulting Sdn Bhd",
+      "reason": "Research only — current SME size/ownership or business contact requires verification"
+    },
+    {
+      "company": "AGD IT Solution Sdn Bhd",
+      "reason": "Research only — current SME size/ownership or business contact requires verification"
+    },
+    {
+      "company": "People Advisory Group",
+      "reason": "Research only — current SME size/ownership or business contact requires verification"
+    },
+    {
+      "company": "KCOM Academy Sdn Bhd",
+      "reason": "Research only — current SME size/ownership or business contact requires verification"
+    },
+    {
+      "company": "Talent Development (M) Sdn Bhd",
+      "reason": "Research only — current SME size/ownership or business contact requires verification"
+    },
+    {
+      "company": "Mega Asia Training Academy (MATA)",
+      "reason": "Research only — current SME size/ownership or business contact requires verification"
+    },
+    {
+      "company": "K.K. GOH & CO. Chartered Accountants",
+      "reason": "Research only — current SME size/ownership or business contact requires verification"
+    },
+    {
+      "company": "CKS Advisory",
+      "reason": "Research only — current SME size/ownership or business contact requires verification"
+    },
+    {
+      "company": "TC Training Center Sdn Bhd",
+      "reason": "Research only — current SME size/ownership or business contact requires verification"
+    },
+    {
+      "company": "Veloce Global Logistics",
+      "reason": "Research only — current SME size/ownership or business contact requires verification"
+    },
+    {
+      "company": "AIngineer Sdn Bhd",
+      "reason": "Research only — current SME size/ownership or business contact requires verification"
+    }
+  ],
+  "enrichmentFlags": [
+    {
+      "domain": "postco.co",
+      "type": "entity_location_review",
+      "sourceUrl": "https://postco.co/privacy/",
+      "evidenceExcerpt": "Data controller for merchant data: Postal Connection PTE. LTD., Singapore."
+    },
+    {
+      "domain": "malgaz.com.my",
+      "type": "newly_published_general_phone",
+      "sourceUrl": "https://www.malgaz.com.my/contact/",
+      "evidenceExcerpt": "Call Malgaz +603 7832 3742",
+      "previousRecordPhone": "+60378599013"
+    },
+    {
+      "domain": "elawyer.com.my",
+      "type": "related_company_contact_domain",
+      "sourceUrl": "https://www.elawyer.com.my/contact-us/",
+      "evidenceExcerpt": "Email Address lisa@peoplelake.asia"
+    }
+  ],
+  "limitations": [
+    "Company-reported size and bounded public ownership review, not registry certification.",
+    "Published business routes; no deliverability, response, training requirement or buying-interest test.",
+    "Company LinkedIn pages are not named decision makers.",
+    "Private favourite records remain only in BIQ Training HQ."
+  ],
+  "regionCountNote": "Listing matches can overlap because one company reports both Kuala Lumpur and Selangor.",
+  "newReadyPrimaryRegion": {
+    "Selangor": 29,
+    "Kuala Lumpur": 26
+  }
+}

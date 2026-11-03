@@ -17,6 +17,7 @@
 @keyframes appear{from{opacity:0;transform:translateY(-3px)}to{opacity:1;transform:translateY(0)}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}@media(max-width:520px){.topbar{padding:24px 18px 0}.app{padding:0 18px 70px}.row-top{align-items:flex-start}.row-days{padding-top:3px}.row-detail{padding-left:20px}.brand-sub{font-size:10px}.contact-row small{width:100%;padding-left:24px}}
 .location-control{margin:12px 0;display:grid;gap:7px}.location-control label,#location-count{font-size:12px;color:var(--ink-soft)}.row-location{display:block;font-size:11px;color:var(--ink-faint);margin-top:6px}select:focus-visible{outline:2px solid var(--indigo)}
 .category-nav{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0 24px}.category-button{font:600 13px Inter,sans-serif;line-height:1.5;padding:14px 10px;background:var(--paper);border:1px solid var(--line);border-radius:10px;color:var(--ink-soft);cursor:pointer;text-align:left}.category-button[aria-pressed="true"]{border-color:var(--indigo);background:var(--indigo-bg);color:var(--indigo)}.category-button .tab-count{display:inline-block;margin-top:3px}.category-title{font-size:18px;letter-spacing:-.02em;margin-bottom:6px}.category-description{font-size:12px;line-height:1.6;color:var(--ink-soft);margin-bottom:18px}
+.favourite-controls{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:14px 0}.favourite-controls>.selected{color:var(--amber-ink);border-color:#d8b66e;background:var(--amber-bg)}#favourite-sync-status{font-size:11px;color:var(--ink-soft);line-height:1.6}.row-summary{display:flex;align-items:flex-start;gap:10px}.row-heading{flex:1;min-width:0}.favourite-star{width:36px;height:36px;flex-shrink:0;border:0;border-radius:7px;background:none;color:var(--ink-faint);display:grid;place-items:center;cursor:pointer}.favourite-star:hover{background:var(--amber-bg);color:var(--amber-ink)}.favourite-star.selected{color:var(--amber-ink)}.favourite-star:disabled{opacity:.45;cursor:wait}.extra-contact{padding:12px 0;border-bottom:1px solid var(--line);font-size:12px;line-height:1.7;overflow-wrap:anywhere}.extra-contact>strong,.extra-contact>small{display:block}.extra-contact>small{color:var(--ink-soft)}.extra-contact>div{display:flex;gap:7px 13px;flex-wrap:wrap;margin-top:6px}.extra-contact a{color:var(--indigo);font-size:12px;text-decoration:none}
 </style>
 </head>
 <body>
@@ -42,11 +43,13 @@
 
     </div>
     <div class="location-control"><label for="state-filter">State / federal territory</label><select id="state-filter" class="search"></select><span id="location-count" aria-live="polite"></span></div>
+<div class="favourite-controls"><button class="btn" type="button" id="favourite-filter" aria-pressed="false">☆ Favourites</button><button class="btn" type="button" id="connect-favourites">Connect favourites</button><span id="favourite-sync-status" role="status">Sign in to sync with Training HQ.</span></div>
 <div class="status-toggle" id="status-toggle"></div>
     <div class="rows" id="rows"></div>
   </div>
 </div>
 
+<script type="application/scout-locked" data-scout-src="favourites.js"></script>
 <script type="application/scout-locked">
 // ---------- Live data config ----------
 // Paste your published Google Sheet CSV url here once it's set up.
@@ -59,6 +62,11 @@ const sampleLeads = [];
 
 let leads = sampleLeads;
 let dataSource = "demo";
+let favouritesOnly=false;
+const favouriteSync=window.createScoutFavouriteSync(()=>{renderFavouriteControls();renderStatusToggle();renderRows();});
+function renderFavouriteControls(){const button=document.getElementById("favourite-filter");button.setAttribute("aria-pressed",String(favouritesOnly));button.classList.toggle("selected",favouritesOnly);document.getElementById("favourite-sync-status").textContent=favouriteSync.state;document.getElementById("connect-favourites").textContent=favouriteSync.connected?"Refresh favourites":"Connect favourites";}
+document.getElementById("connect-favourites").onclick=()=>favouriteSync.connect();
+document.getElementById("favourite-filter").onclick=()=>{favouritesOnly=!favouritesOnly;if(favouritesOnly&&!favouriteSync.loaded)favouriteSync.connect();selectedId=null;renderFavouriteControls();renderStatusToggle();renderRows();};
 
 function parseCSV(text){
   const rows = [];
@@ -90,10 +98,9 @@ function parseCSV(text){
 async function loadLiveLeads(){
   if (!CONFIG.SHEET_CSV_URL){ return false; }
   try{
-    const res = await fetch(CONFIG.SHEET_CSV_URL);
-    if (!res.ok) throw new Error("Sheet fetch failed");
-    const text = await res.text();
-    const rows = parseCSV(text);
+    let rows=[];
+    try{const response=await fetch('../data/leads.json',{cache:'no-store'});if(!response.ok)throw new Error('JSON unavailable');rows=await response.json();if(!Array.isArray(rows))throw new Error('Invalid JSON');}
+    catch{const response=await fetch(CONFIG.SHEET_CSV_URL,{cache:'no-store'});if(!response.ok)throw new Error('Lead data unavailable');rows=parseCSV(await response.text());}
     let handoff = [];
     try {
       const details = await fetch('../data/dad-handoff.csv');
@@ -107,6 +114,9 @@ async function loadLiveLeads(){
     leads = rows.filter(r => r.priorityTier === "top").map((r, i) => ({
       id: r.id || String(i + 1),
       company: r.company || "Unnamed company",
+      domain:r.domain||"",
+      companyLinkedIn:r.companyLinkedIn||"",
+      contacts:parseContactRoutes(r.contacts),
       location: r.location || "",
       industry: r.industry || "Uncategorised",
       leadType: r.leadType || "",
@@ -149,6 +159,9 @@ function leadRegions(location){
  if(/\bpetaling jaya\b/.test(text) && !found.includes('Selangor')) found.push('Selangor');
  return found.length ? found : ['Unknown'];
 }
+function parseContactRoutes(value){try{const rows=typeof value==='string'?JSON.parse(value):value;return Array.isArray(rows)?rows.filter(c=>c&&typeof c==='object'&&c.sourceUrl&&(c.email||c.phone||c.linkedin)).slice(0,40):[];}catch{return [];}}
+function safeWebUrl(value){try{const u=new URL(value);return ['https:','http:'].includes(u.protocol)?u.href:'';}catch{return '';}}
+function extraContactHTML(lead){return (lead.contacts||[]).map(c=>`<div class="extra-contact"><strong>${escapeHtml(c.name||c.label||'Company business contact')}</strong><small>${escapeHtml(c.role||'Published business route')}</small><div>${c.email?`<a href="mailto:${escapeHtml(c.email)}">${escapeHtml(c.email)}</a>`:''}${c.phone?`<a href="tel:${escapeHtml(String(c.phone).replace(/[^+0-9]/g,''))}">${escapeHtml(c.phone)}</a>`:''}${safeWebUrl(c.linkedin)?`<a href="${escapeHtml(safeWebUrl(c.linkedin))}" target="_blank" rel="noopener">LinkedIn</a>`:''}${safeWebUrl(c.sourceUrl)?`<a href="${escapeHtml(safeWebUrl(c.sourceUrl))}" target="_blank" rel="noopener">Source</a>`:''}</div></div>`).join('');}
 function matchesRegion(lead){ return stateFilter==='All' || leadRegions(lead.location).includes(stateFilter); }
 function renderRegionFilter(){
  const select=document.getElementById('state-filter');
@@ -219,13 +232,14 @@ function renderStats(){
 }
 function renderStatusToggle(){
  const opts=[["active","Active"],["contacted","Contacted"],["all","All"]];
- document.getElementById("status-toggle").innerHTML=opts.map(([key,label])=>{const count=leads.filter(matchesCategory).filter(l=>matchesRegion(l)).filter(l=>key==="all" || (key==="active"?!l.contacted:l.contacted)).length;return '<button type="button" class="'+(statusFilter===key?'active':'')+'" aria-pressed="'+(statusFilter===key)+'" data-status="'+key+'">'+label+' <span class="tab-count">'+count+'</span></button>';}).join("");
+ document.getElementById("status-toggle").innerHTML=opts.map(([key,label])=>{const count=leads.filter(matchesCategory).filter(l=>matchesRegion(l)).filter(l=>!favouritesOnly||favouriteSync.has(l)).filter(l=>key==="all" || (key==="active"?!l.contacted:l.contacted)).length;return '<button type="button" class="'+(statusFilter===key?'active':'')+'" aria-pressed="'+(statusFilter===key)+'" data-status="'+key+'">'+label+' <span class="tab-count">'+count+'</span></button>';}).join("");
  document.querySelectorAll("[data-status]").forEach(b=>b.onclick=()=>{statusFilter=b.dataset.status;selectedId=null;renderStatusToggle();renderRows();});
 }
 function visibleLeads(){
   return leads.filter(l =>
     matchesCategory(l) &&
     matchesRegion(l) &&
+    (!favouritesOnly || favouriteSync.has(l)) &&
     (activeFilter === "All" || l.industry === activeFilter) &&
     (l.company.toLowerCase().includes(searchTerm) || l.training.toLowerCase().includes(searchTerm) || l.companyDescription.toLowerCase().includes(searchTerm)) &&
     (statusFilter === "all" || (statusFilter === "active" ? !l.contacted : l.contacted))
@@ -252,17 +266,18 @@ function renderRows(){
  const el=document.getElementById("rows");
  const rowHtml=l=>`
  <article class="row${l.id===selectedId?' selected':''}${l.contacted?' contacted':''}">
- <button type="button" class="row-heading" data-id="${escapeHtml(l.id)}" aria-expanded="${l.id===selectedId}">
+ <div class="row-summary"><button type="button" class="row-heading" data-id="${escapeHtml(l.id)}" aria-expanded="${l.id===selectedId}">
  <span class="dot" aria-hidden="true"></span><span class="row-body">
  <span class="row-top"><span class="row-company">${escapeHtml(l.company)}</span><span class="row-days">${l.id===selectedId?'−':'+'}</span></span>
  <span class="row-brief" style="display:block">${escapeHtml(l.companyDescription || l.brief)}</span>
  <span class="row-location">${escapeHtml(l.location || "Unknown location")}</span>
  ${l.training?'<span class="row-tags"><span class="tag">'+escapeHtml(l.training)+'</span></span>':''}
- </span></button>
+ </span></button><button type="button" class="favourite-star${favouriteSync.has(l)?' selected':''}" data-favourite-id="${escapeHtml(l.id)}" aria-pressed="${favouriteSync.has(l)}" ${favouriteSync.busy?'disabled':''} aria-label="${escapeHtml((favouriteSync.has(l)?'Remove ':'Favourite ')+l.company)}" title="${favouriteSync.loaded?(favouriteSync.has(l)?'Remove favourite':'Add favourite'):'Connect to view and save favourites'}"><svg width="19" height="19" viewBox="0 0 24 24" fill="${favouriteSync.has(l)?'currentColor':'none'}" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z"/></svg></button></div>
  ${l.id===selectedId?'<div class="row-detail" id="detail"></div>':''}
  </article>`;
- el.innerHTML=list.length ? list.map(rowHtml).join('') : '<div class="empty">'+(dataSource==='live'?'No leads match in this category.':'Could not load leads. Please refresh to try again.')+'</div>';
+ el.innerHTML=list.length ? list.map(rowHtml).join('') : '<div class="empty">'+(dataSource==='live'?(favouritesOnly&&!favouriteSync.loaded?'Connect favourites to load your shared shortlist.':'No leads match in this category.'):'Could not load leads. Please refresh to try again.')+'</div>';
  document.querySelectorAll("[data-id]").forEach(b=>b.onclick=()=>{const id=leads.find(l=>String(l.id)===b.dataset.id)?.id;selectedId=selectedId===id?null:id;renderRows();});
+ document.querySelectorAll('[data-favourite-id]').forEach(button=>button.onclick=()=>{const lead=leads.find(l=>String(l.id)===button.dataset.favouriteId);if(lead)favouriteSync.toggle(lead);});
  renderDetail();
 }
 const icons = {
@@ -315,6 +330,7 @@ function renderDetail(){
       </div>
     </div>
 
+    ${(l.contacts?.length||l.companyLinkedIn)?`<div class="section"><div class="section-label">Additional published business routes</div>${safeWebUrl(l.companyLinkedIn)?`<a class="source-link" href="${escapeHtml(safeWebUrl(l.companyLinkedIn))}" target="_blank" rel="noopener">Company LinkedIn</a>`:''}${extraContactHTML(l)}<p class="contact-note">Published company routes may reach a different employee. Confirm named contacts’ current roles before outreach.</p></div>`:''}
     <div class="section">
       <div class="section-label">Source</div>
       <a class="source-link" href="${escapeHtml(l.sourceUrl)}" target="_blank" rel="noopener">${icons.link}${escapeHtml(l.sourceLabel)}</a>
@@ -346,6 +362,7 @@ async function init(){
   await loadLiveLeads();
   badge.textContent = dataSource === "live" ? "Live briefing" : "Unavailable";
   selectedId = null;
+  renderFavouriteControls();
   refreshIndustries();
   renderCategoryNav();
   renderRegionFilter();

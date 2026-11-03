@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-11-02",
+  "checkedAt": "2026-11-04",
   "monthlyTarget": 100,
   "month": "2026-11",
-  "newReadyThisMonth": 7,
-  "shortfall": 93,
-  "totalReady": 152,
-  "totalProspects": 477,
+  "newReadyThisMonth": 62,
+  "shortfall": 38,
+  "totalReady": 207,
+  "totalProspects": 561,
   "newPriorityResearchCandidates": [
     "Benithem Sdn Bhd",
     "Eskayvie Sdn Bhd",
@@ -32,27 +32,26 @@
     "Email delivery or telephone response",
     "HRD Corp employer registration or available levy balance"
   ],
-  "status": "7/100 new ready leads for November. Historical E50 2022 discovery supplemented with current public SME evidence; unresolved companies stay research-only.",
+  "status": "62/100 new ready leads for November; prioritising Selangor and Kuala Lumpur. More leads are welcome beyond the target.",
   "hrdCorpRequired": false,
   "hrdCorpRole": "Optional side bonus",
   "providerExclusionsReopened": 6,
   "totalResearchQueue": 305,
   "totalExcluded": 20,
-  "trainingProviderPartners": 39,
+  "trainingProviderPartners": 53,
   "qualificationScope": "Public-source screening only; these are potential prospects, not confirmed buyers.",
-  "totalSMEQualified": 157,
+  "totalSMEQualified": 212,
   "unresolvedSMEEvidence": 300,
   "lastRun": {
-    "date": "2026-11-02",
-    "discoveredNew": 44,
-    "newDiscoveredSMEQualified": 8,
-    "existingProspectsNewlySMEQualified": 0,
-    "newHandoffReady": 7,
-    "discoverySourceUrl": "https://www.e50.com.my/en/alumni-e50-en/",
-    "discoverySourceYear": 2022,
-    "latestCohortReviewed": 2024,
+    "date": "2026-11-04",
+    "discoveredNew": 84,
+    "newDiscoveredSMEQualified": 55,
+    "newHandoffReady": 55,
+    "existingCompaniesContactEnriched": 32,
+    "newContactEntries": 71,
+    "existingPromoted": [],
     "levyUnknownBlockedCount": 0,
-    "note": "2024 cohort already present. Discovered 2022 alumni, merged shared GSE operating domain, qualified current public evidence, preserved all existing JSON records and CSV rows. No app/CRM code changes or outreach."
+    "note": "Current company pages and company-owned public profiles screened. Stable IDs and existing records preserved. No outreach or deliverability test."
   },
   "unresolvedSMEEvidenceNote": "Research-only entries require current sector-appropriate size/turnover and ownership support; historical awards alone do not qualify.",
   "shortfallCauses": [
@@ -64,5 +63,10 @@
     "newReadyThisMonth": 145,
     "shortfall": 0,
     "totalReady": 145
-  }
+  },
+  "geographicPriority": [
+    "Selangor",
+    "Kuala Lumpur"
+  ],
+  "totalQualifiedBriefingLeads": 212
 }

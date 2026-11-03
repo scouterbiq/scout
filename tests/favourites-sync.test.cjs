@@ -1,0 +1,22 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const vm=require('node:vm');
+const channel='biq-scout-favourites-v1',origin='https://biq-training-hq.gillinterprise.chatgpt.site';
+const listeners={},intervals=[],saved=new Set(['lead-a']);
+let requests=[];
+const popup={closed:false,postMessage(message,target){assert.equal(target,origin);requests.push(message);if(message.action==='set'){message.favourite?saved.add(message.leadId):saved.delete(message.leadId);}queueMicrotask(()=>listeners.message({origin,source:popup,data:{channel,type:'result',requestId:message.requestId,ok:true,favourites:[...saved].map(leadId=>({leadId,company:'Company A'})),checkedAt:'2026-11-04'}}));}};
+const window={addEventListener(name,fn){listeners[name]=fn;},open(url){assert.equal(url,origin+'/scout-sync');return popup;}};
+const context={window,console,Map,Date,Promise,setTimeout,clearTimeout,setInterval(fn,ms){intervals.push({fn,ms});return intervals.length;}};
+vm.runInNewContext(fs.readFileSync('dashboard/favourites.js','utf8'),context);
+const sync=window.createScoutFavouriteSync(()=>{}),lead={id:'lead-a',company:'Company A'};
+const settle=()=>new Promise(resolve=>setImmediate(resolve));
+(async()=>{
+ sync.toggle(lead);assert.equal(requests.length,0,'Wait for authenticated ready before reading or writing');
+ await listeners.message({origin:'https://untrusted.example',source:popup,data:{channel,type:'ready'}});assert.equal(requests.length,0,'Reject messages from a different origin');
+ await listeners.message({origin,source:popup,data:{channel,type:'ready'}});await settle();
+ assert.equal(saved.has(lead.id),false,'Read shared state before applying a queued toggle');assert.equal(sync.has(lead),false);
+ sync.toggle(lead);await settle();assert.equal(saved.has(lead.id),true);assert.equal(sync.has(lead),true);
+ saved.clear();sync.connect();await settle();assert.equal(sync.has(lead),false,'Refresh sees favourites changed in the dashboard');
+ popup.closed=true;intervals.find(i=>i.ms===1000).fn();assert.equal(sync.connected,false);assert.match(sync.state,/reconnect/i);
+ console.log('Favourite bridge passed: trusted-origin messages, authenticated handshake, queued toggle, dashboard refresh and reconnect.');
+})().catch(error=>{console.error(error);process.exitCode=1;});

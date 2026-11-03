@@ -27,6 +27,9 @@ def _news_feed(query):
 
 
 ALERT_FEEDS = [
+    _news_feed(f'{area} SME (employees OR expansion OR hiring OR training) when:7d')
+    for area in ('Selangor', '"Kuala Lumpur"')
+] + [
     _news_feed(f'Malaysia {sector} ({signal}) when:7d')
     for sector in ('SME', 'manufacturer', 'logistics', 'software company', 'engineering company', 'private healthcare')
     for signal in ('"employees"', '"expansion"', '"hiring"', '"staff training"', '"HRD Corp"')
@@ -59,6 +62,7 @@ TRAINING_LINES = [
 
 # The exact columns Scout's dashboard expects.
 LEAD_FIELDS = [
+    "location", "domain", "website", "leadType", "companyLinkedIn", "contacts", "contactsCheckedAt",
     "id",
     "company",
     "industry",

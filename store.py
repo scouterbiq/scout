@@ -65,7 +65,7 @@ def save_all(leads):
         writer = csv.DictWriter(f, fieldnames=LEAD_FIELDS)
         writer.writeheader()
         for lead in leads:
-            writer.writerow({k: lead.get(k, "") for k in LEAD_FIELDS})
+            writer.writerow({k: (json.dumps(lead.get(k), ensure_ascii=False) if isinstance(lead.get(k), (list, dict)) else lead.get(k, "")) for k in LEAD_FIELDS})
 
 
 def merge_new_leads(new_leads, added_by="auto"):

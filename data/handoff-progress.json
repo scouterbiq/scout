@@ -2,10 +2,10 @@
   "checkedAt": "2026-11-04",
   "monthlyTarget": 100,
   "month": "2026-11",
-  "newReadyThisMonth": 62,
-  "shortfall": 38,
-  "totalReady": 207,
-  "totalProspects": 561,
+  "newReadyThisMonth": 94,
+  "shortfall": 6,
+  "totalReady": 239,
+  "totalProspects": 603,
   "newPriorityResearchCandidates": [
     "Benithem Sdn Bhd",
     "Eskayvie Sdn Bhd",
@@ -32,30 +32,48 @@
     "Email delivery or telephone response",
     "HRD Corp employer registration or available levy balance"
   ],
-  "status": "62/100 new ready leads for November; prioritising Selangor and Kuala Lumpur. More leads are welcome beyond the target.",
+  "status": "94/100 new ready leads for November; continue prioritising Selangor and Kuala Lumpur beyond the target.",
   "hrdCorpRequired": false,
   "hrdCorpRole": "Optional side bonus",
   "providerExclusionsReopened": 6,
-  "totalResearchQueue": 305,
-  "totalExcluded": 20,
-  "trainingProviderPartners": 53,
+  "totalResearchQueue": 342,
+  "totalExcluded": 21,
+  "trainingProviderPartners": 59,
   "qualificationScope": "Public-source screening only; these are potential prospects, not confirmed buyers.",
-  "totalSMEQualified": 212,
-  "unresolvedSMEEvidence": 300,
+  "totalSMEQualified": 244,
+  "unresolvedSMEEvidence": 339,
   "lastRun": {
     "date": "2026-11-04",
-    "discoveredNew": 84,
-    "newDiscoveredSMEQualified": 55,
-    "newHandoffReady": 55,
-    "existingCompaniesContactEnriched": 32,
-    "newContactEntries": 71,
-    "existingPromoted": [],
+    "discoveredNew": 42,
+    "candidatesReviewed": 49,
+    "newSMEQualified": 32,
+    "newHandoffReady": 32,
+    "existingResearchPromoted": [
+      "TC Training Center Sdn Bhd",
+      "UpSkill Consulting Sdn Bhd",
+      "Benithem Sdn Bhd",
+      "Usaha Jana Sdn Bhd",
+      "Emerald Auto Parts Sdn Bhd"
+    ],
+    "existingCompaniesContactEnriched": 6,
+    "newContactEntries": 9,
+    "researchOnlyThisRun": 15,
+    "excludedThisRun": 2,
     "levyUnknownBlockedCount": 0,
-    "note": "Current company pages and company-owned public profiles screened. Stable IDs and existing records preserved. No outreach or deliverability test."
+    "note": "Data-only public research update; no outreach, app code changes, paid tools or private workspace changes.",
+    "newDiscoveredSMEQualified": 27,
+    "existingPromoted": [
+      "TC Training Center Sdn Bhd",
+      "UpSkill Consulting Sdn Bhd",
+      "Benithem Sdn Bhd",
+      "Usaha Jana Sdn Bhd",
+      "Emerald Auto Parts Sdn Bhd"
+    ],
+    "newDiscoveredSMEQualifiedNote": "New discoveries only; newSMEQualified additionally includes promotions from existing research."
   },
-  "unresolvedSMEEvidenceNote": "Research-only entries require current sector-appropriate size/turnover and ownership support; historical awards alone do not qualify.",
+  "unresolvedSMEEvidenceNote": "Research-only candidates retain exact unresolved reasons; current identity, ownership or usable company-contact evidence must be completed. Historical awards and legal suffix alone are insufficient.",
   "shortfallCauses": [
-    "Current SME size/turnover/ownership verification incomplete for research candidates; historical awards alone insufficient."
+    "Current identity/size/ownership or published business contact remains unresolved for research candidates; unknown levy status blocks nobody."
   ],
   "dataScope": "Repository public research only; browser CRM records untouched.",
   "previousMonthSummary": {
@@ -68,5 +86,6 @@
     "Selangor",
     "Kuala Lumpur"
   ],
-  "totalQualifiedBriefingLeads": 212
+  "totalQualifiedBriefingLeads": 244,
+  "unresolvedSMEEvidenceCountMethod": "Recalculated from all current unresolved/source-unavailable/historical-award/ownership statuses; contact-only pending records with supported SME size are counted separately."
 }

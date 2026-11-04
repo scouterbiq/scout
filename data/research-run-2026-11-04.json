@@ -1,0 +1,201 @@
+{
+  "date": "2026-11-04",
+  "baselineCommit": "950c7ffdc5e2e15bd443b79bf0fd443250075cc0",
+  "candidatesReviewed": 49,
+  "newCompaniesDiscovered": 42,
+  "newSMEQualified": 32,
+  "newReady": 32,
+  "newReadyCompanies": [
+    "Coach 2 Success Consultancy",
+    "CDC Consulting Sdn Bhd",
+    "Talent Camp Training Solution Sdn Bhd",
+    "TC Training Center Sdn Bhd",
+    "MESH Consultancy & Training Centre PLT",
+    "MHA Consultancy Services",
+    "CLJ Malaysia Sdn Bhd (Current Law Journal)",
+    "Uniqtrans Logistics Sdn Bhd",
+    "SSD International Logistics",
+    "CTE Group",
+    "Amerix Metal Machining Technology Sdn Bhd",
+    "K.K. Metal Processing Sdn Bhd",
+    "MCI Paint Sdn Bhd",
+    "UpSkill Consulting Sdn Bhd",
+    "Learndirect Training & Consultancy PLT",
+    "Benithem Sdn Bhd",
+    "Usaha Jana Sdn Bhd",
+    "Emerald Auto Parts Sdn Bhd",
+    "EAS Consultancy",
+    "RWC Malaysia",
+    "LC Tech Engineering Sdn Bhd",
+    "VELLD Power System Consult",
+    "SAIER Group",
+    "D2S Resources Sdn Bhd",
+    "Staffing 360",
+    "TalentConsult Sdn Bhd",
+    "TWY Search International Group",
+    "SP Juara Sdn Bhd",
+    "GFB Food Sdn Bhd",
+    "Srri Easwari Mills Sdn Bhd",
+    "Sumatraa Industries Sdn Bhd",
+    "AK Success Sdn Bhd"
+  ],
+  "newDiscoveredCompanies": [
+    "Coach 2 Success Consultancy",
+    "CDC Consulting Sdn Bhd",
+    "Talent Camp Training Solution Sdn Bhd",
+    "Skillfocus Consultancy Sdn Bhd",
+    "MESH Consultancy & Training Centre PLT",
+    "Richmark Training Sdn Bhd",
+    "Creative Beings Consultancy",
+    "KNR Biz Solution Sdn Bhd",
+    "AD Training & Consultancy (ADTAC)",
+    "MHA Consultancy Services",
+    "CLJ Malaysia Sdn Bhd (Current Law Journal)",
+    "Uniqtrans Logistics Sdn Bhd",
+    "KT Express Logistics Sdn Bhd",
+    "J One Logistics (M) Sdn Bhd",
+    "Sunggong Logistics (M) Sdn Bhd",
+    "SSD International Logistics",
+    "CTE Group",
+    "Amerix Metal Machining Technology Sdn Bhd",
+    "K.K. Metal Processing Sdn Bhd",
+    "MCI Paint Sdn Bhd",
+    "Learndirect Training & Consultancy PLT",
+    "Comsystem Solutions Sdn Bhd",
+    "EAS Consultancy",
+    "Bestar Consulting Sdn Bhd",
+    "RWC Malaysia",
+    "LC Tech Engineering Sdn Bhd",
+    "VELLD Power System Consult",
+    "SAIER Group",
+    "EPS Sepadu Sdn Bhd",
+    "D2S Resources Sdn Bhd",
+    "Staffing 360",
+    "TalentConsult Sdn Bhd",
+    "TWY Search International Group",
+    "ACETS Sdn Bhd",
+    "SP Juara Sdn Bhd",
+    "GFB Food Sdn Bhd",
+    "Srri Easwari Mills Sdn Bhd",
+    "Gogopasar",
+    "Sumatraa Industries Sdn Bhd",
+    "AK Success Sdn Bhd",
+    "Comprehensive Tax Services Sdn Bhd",
+    "Brightbit Solutions Sdn Bhd"
+  ],
+  "promotedExistingResearch": [
+    "TC Training Center Sdn Bhd",
+    "UpSkill Consulting Sdn Bhd",
+    "Benithem Sdn Bhd",
+    "Usaha Jana Sdn Bhd",
+    "Emerald Auto Parts Sdn Bhd"
+  ],
+  "existingCompaniesEnriched": [
+    "ArcNet Training & Development Sdn Bhd",
+    "ATTUNEÂ® Consultants",
+    "Agensi Pekerjaan Eternity Sdn Bhd",
+    "Bitlab Digital",
+    "Knowledge Group of Companies",
+    "RFY Group"
+  ],
+  "newExistingContactEntries": 9,
+  "monthlyTarget": 100,
+  "newReadyThisMonth": 94,
+  "shortfall": 6,
+  "researchOnlyCandidates": [
+    {
+      "company": "Skillfocus Consultancy Sdn Bhd",
+      "reasons": [
+        "Company profile uses Pte Ltd while listing Sdn Bhd in its title; Malaysian entity and any foreign parent relationship need clarification before handoff."
+      ]
+    },
+    {
+      "company": "Richmark Training Sdn Bhd",
+      "reasons": [
+        "Current website displays a generic template rather than verifiable active company/contact information."
+      ]
+    },
+    {
+      "company": "Creative Beings Consultancy",
+      "reasons": [
+        "Current website inaccessible; current activity and usable business contact remain unverified."
+      ]
+    },
+    {
+      "company": "KNR Biz Solution Sdn Bhd",
+      "reasons": [
+        "Published size range exists in indexed company profile, but ownership context and consistency of training versus advisory activities need review."
+      ]
+    },
+    {
+      "company": "AD Training & Consultancy (ADTAC)",
+      "reasons": [
+        "Small self-owned company evidence exists, but no company business email/phone verified through the JavaScript-only website in this run."
+      ]
+    },
+    {
+      "company": "KT Express Logistics Sdn Bhd",
+      "reasons": [
+        "Small-company profile exists, but current official website/contact access and recent growth need confirmation."
+      ]
+    },
+    {
+      "company": "J One Logistics (M) Sdn Bhd",
+      "reasons": [
+        "Small-company profile and Malaysian ownership statement exist, but current official website/contact access needs confirmation."
+      ]
+    },
+    {
+      "company": "Comsystem Solutions Sdn Bhd",
+      "reasons": [
+        "Legacy website has no usable company contact. Alternative company-branded site could not be fetched; current activity/contact needs confirmation."
+      ]
+    },
+    {
+      "company": "Bestar Consulting Sdn Bhd",
+      "reasons": [
+        "Bestar group operates across Singapore/Hong Kong/Malaysia; controlling ownership and multinational subsidiary eligibility remain unresolved."
+      ]
+    },
+    {
+      "company": "RNC Consulting Group",
+      "reasons": [
+        "Linked company domain currently shows unrelated foreign sports content. Do not use the unrelated contact routes; current website identity/contact needs confirmation."
+      ]
+    },
+    {
+      "company": "EPS Sepadu Sdn Bhd",
+      "reasons": [
+        "Small-company profile exists, but current company website/activity and usable business contact could not be verified."
+      ]
+    },
+    {
+      "company": "ACETS Sdn Bhd",
+      "reasons": [
+        "Small-company profile exists, but current website and company business contact were inaccessible."
+      ]
+    }
+  ],
+  "excludedCandidates": [
+    {
+      "company": "Sunggong Logistics (M) Sdn Bhd",
+      "reason": "Official Indonesian company page describes Malaysia as its overseas branch; exclude foreign multinational subsidiary/branch.",
+      "sourceUrl": "https://www.sunggonglogistics.id/About.html"
+    },
+    {
+      "company": "Gogopasar",
+      "reason": "FGV official release identifies Gogopasar as subsidiary of FGV Integrated Farming Holdings; exclude GLC/large-group subsidiary.",
+      "sourceUrl": "https://www.fgvholdings.com/press_release/fgv-ventures-into-end-to-end-e-commerce-ecosystem-with-gogopasar/"
+    }
+  ],
+  "levyUnknownBlocked": 0,
+  "limits": [
+    "No registry certification or exhaustive ownership audit",
+    "No deliverability or buying-interest test",
+    "No outreach",
+    "Public company contacts only; private favourites/notes/tasks/client relationships untouched"
+  ],
+  "unresolvedSMEEvidence": 339,
+  "newlyDiscoveredSMEQualified": 27,
+  "newReadySelangorKL": 31
+}

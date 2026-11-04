@@ -43,13 +43,13 @@
 
     </div>
     <div class="location-control"><label for="state-filter">State / federal territory</label><select id="state-filter" class="search"></select><span id="location-count" aria-live="polite"></span></div>
-<div class="favourite-controls"><button class="btn" type="button" id="favourite-filter" aria-pressed="false">☆ Favourites</button><button class="btn" type="button" id="connect-favourites">Connect favourites</button><span id="favourite-sync-status" role="status">Sign in to sync with Training HQ.</span></div>
+<div class="favourite-controls"><button class="btn" type="button" id="favourite-filter" aria-pressed="false">☆ Favourites</button><button class="btn" type="button" id="connect-favourites">Connect favourites</button><span id="favourite-sync-status" role="status">Star companies here. Connect favourites to sync with Training HQ.</span></div>
 <div class="status-toggle" id="status-toggle"></div>
     <div class="rows" id="rows"></div>
   </div>
 </div>
 
-<script type="application/scout-locked" data-scout-src="favourites.js"></script>
+<script type="application/scout-locked" data-scout-src="favourites.js?v=20261104-quiet"></script>
 <script type="application/scout-locked">
 // ---------- Live data config ----------
 // Paste your published Google Sheet CSV url here once it's set up.
@@ -66,7 +66,8 @@ let favouritesOnly=false;
 const favouriteSync=window.createScoutFavouriteSync(()=>{renderFavouriteControls();renderStatusToggle();renderRows();});
 function renderFavouriteControls(){const button=document.getElementById("favourite-filter");button.setAttribute("aria-pressed",String(favouritesOnly));button.classList.toggle("selected",favouritesOnly);document.getElementById("favourite-sync-status").textContent=favouriteSync.state;document.getElementById("connect-favourites").textContent=favouriteSync.connected?"Refresh favourites":"Connect favourites";}
 document.getElementById("connect-favourites").onclick=()=>favouriteSync.connect();
-document.getElementById("favourite-filter").onclick=()=>{favouritesOnly=!favouritesOnly;if(favouritesOnly&&!favouriteSync.loaded)favouriteSync.connect();selectedId=null;renderFavouriteControls();renderStatusToggle();renderRows();};
+document.getElementById("favourite-filter").onclick=()=>{favouritesOnly=!favouritesOnly;selectedId=null;renderFavouriteControls();renderStatusToggle();renderRows();};
+renderFavouriteControls();
 
 function parseCSV(text){
   const rows = [];
@@ -272,10 +273,10 @@ function renderRows(){
  <span class="row-brief" style="display:block">${escapeHtml(l.companyDescription || l.brief)}</span>
  <span class="row-location">${escapeHtml(l.location || "Unknown location")}</span>
  ${l.training?'<span class="row-tags"><span class="tag">'+escapeHtml(l.training)+'</span></span>':''}
- </span></button><button type="button" class="favourite-star${favouriteSync.has(l)?' selected':''}" data-favourite-id="${escapeHtml(l.id)}" aria-pressed="${favouriteSync.has(l)}" ${favouriteSync.busy?'disabled':''} aria-label="${escapeHtml((favouriteSync.has(l)?'Remove ':'Favourite ')+l.company)}" title="${favouriteSync.loaded?(favouriteSync.has(l)?'Remove favourite':'Add favourite'):'Connect to view and save favourites'}"><svg width="19" height="19" viewBox="0 0 24 24" fill="${favouriteSync.has(l)?'currentColor':'none'}" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z"/></svg></button></div>
+ </span></button><button type="button" class="favourite-star${favouriteSync.has(l)?' selected':''}" data-favourite-id="${escapeHtml(l.id)}" aria-pressed="${favouriteSync.has(l)}" ${favouriteSync.busy?'disabled':''} aria-label="${escapeHtml((favouriteSync.has(l)?'Remove ':'Favourite ')+l.company)}" title="${favouriteSync.has(l)?'Remove favourite':'Add favourite'}${favouriteSync.connected?'':' — saved on this device until you connect'}"><svg width="19" height="19" viewBox="0 0 24 24" fill="${favouriteSync.has(l)?'currentColor':'none'}" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z"/></svg></button></div>
  ${l.id===selectedId?'<div class="row-detail" id="detail"></div>':''}
  </article>`;
- el.innerHTML=list.length ? list.map(rowHtml).join('') : '<div class="empty">'+(dataSource==='live'?(favouritesOnly&&!favouriteSync.loaded?'Connect favourites to load your shared shortlist.':'No leads match in this category.'):'Could not load leads. Please refresh to try again.')+'</div>';
+ el.innerHTML=list.length ? list.map(rowHtml).join('') : '<div class="empty">'+(dataSource==='live'?(favouritesOnly&&!favouriteSync.loaded?'No favourites saved on this device yet. Star a company, or use Connect favourites to load your shared shortlist.':'No leads match in this category.'):'Could not load leads. Please refresh to try again.')+'</div>';
  document.querySelectorAll("[data-id]").forEach(b=>b.onclick=()=>{const id=leads.find(l=>String(l.id)===b.dataset.id)?.id;selectedId=selectedId===id?null:id;renderRows();});
  document.querySelectorAll('[data-favourite-id]').forEach(button=>button.onclick=()=>{const lead=leads.find(l=>String(l.id)===button.dataset.favouriteId);if(lead)favouriteSync.toggle(lead);});
  renderDetail();

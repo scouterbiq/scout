@@ -22505,5 +22505,33 @@
     "addedBy": "auto",
     "priorityTier": "unclassified",
     "qualificationStatus": "Needs verification \u2014 not qualified"
+  },
+  {
+    "company": "AIM",
+    "industry": "Micro-entrepreneurship support",
+    "training": "",
+    "score": 20,
+    "brief": "2,248 AIM micro-entrepreneurs scale up to SMEs this year",
+    "signal": "",
+    "fitNote": "AIM (Amanah Ikhtiar Malaysia) is a micro-credit organization, not an SME itself.",
+    "levySignal": "unclear",
+    "sizeTier": "Unknown",
+    "accessNote": "",
+    "contactName": "",
+    "contactRole": "",
+    "phone": "",
+    "email": "",
+    "sourceLabel": "The Sun Malaysia",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNOUtBUTRKQURnYVM5WlV2bndqckEtVmtUcGVJYzltRHA2aEZtc2JtMldYeHJVdDdNMHIwWTBZbElQM2Naem9lS2NwT1pwNndBeG5RcThBWWpsdzFsTmxlUGJaWUF2eS04RUJGalR4UkV4MHNBME1kYVVSMjVGRENPSw?oc=5",
+    "dealValue": "",
+    "fullBrief": "2,248 AIM micro-entrepreneurs scale up to SMEs this year",
+    "sizeEvidence": "",
+    "levyEvidence": "",
+    "id": "e7471a25f8",
+    "days": 0,
+    "_dateFound": "2026-11-05",
+    "addedBy": "auto",
+    "priorityTier": "unclassified",
+    "qualificationStatus": "Needs verification \u2014 not qualified"
   }
 ]

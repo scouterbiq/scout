@@ -66,7 +66,8 @@
       "verificationScope": "Published self-reported size/type and business contacts. No deliverability, buying interest, budget, registry ownership or levy balance tested.",
       "addedBy": "Scout public-source research",
       "score": 0,
-      "scoreStatus": "Not scored — no buying interest verified"
+      "scoreStatus": "Not scored — no buying interest verified",
+      "id": "d5b2791f0d343cad"
     },
     {
       "company": "Palladio Interiors Sdn Bhd",
@@ -133,7 +134,8 @@
       "verificationScope": "Published self-reported size/type and business contacts. No deliverability, buying interest, budget, registry ownership or levy balance tested.",
       "addedBy": "Scout public-source research",
       "score": 0,
-      "scoreStatus": "Not scored — no buying interest verified"
+      "scoreStatus": "Not scored — no buying interest verified",
+      "id": "6433f2dd25e1dd80"
     },
     {
       "company": "IRS Training Sdn Bhd",
@@ -206,7 +208,8 @@
       "verificationScope": "Published self-reported size/type and business contacts. No deliverability, buying interest, budget, registry ownership or levy balance tested.",
       "addedBy": "Scout public-source research",
       "score": 0,
-      "scoreStatus": "Not scored — no buying interest verified"
+      "scoreStatus": "Not scored — no buying interest verified",
+      "id": "eadfca4c0dedbdd1"
     },
     {
       "company": "GemRain Consulting Sdn Bhd",
@@ -280,7 +283,8 @@
       "addedBy": "Scout public-source research",
       "score": 0,
       "scoreStatus": "Not scored — no buying interest verified",
-      "partnershipEvidence": "Company site: \"welcomes experienced freelance and independent trainers\" (checked 2026-11-06); registration does not guarantee assignments."
+      "partnershipEvidence": "Company site: \"welcomes experienced freelance and independent trainers\" (checked 2026-11-06); registration does not guarantee assignments.",
+      "id": "fcf3d676f690e104"
     },
     {
       "company": "LHI Consulting",
@@ -347,7 +351,8 @@
       "verificationScope": "Published self-reported size/type and business contacts. No deliverability, buying interest, budget, registry ownership or levy balance tested.",
       "addedBy": "Scout public-source research",
       "score": 0,
-      "scoreStatus": "Not scored — no buying interest verified"
+      "scoreStatus": "Not scored — no buying interest verified",
+      "id": "4b45601a3710e4db"
     },
     {
       "company": "Efficient Frontier Consulting Sdn Bhd",
@@ -420,7 +425,8 @@
       "verificationScope": "Published self-reported size/type and business contacts. No deliverability, buying interest, budget, registry ownership or levy balance tested.",
       "addedBy": "Scout public-source research",
       "score": 0,
-      "scoreStatus": "Not scored — no buying interest verified"
+      "scoreStatus": "Not scored — no buying interest verified",
+      "id": "3da6101f808985c8"
     },
     {
       "company": "SkillVerve Events & Training Sdn. Bhd.",
@@ -487,7 +493,8 @@
       "verificationScope": "Published self-reported size/type and business contacts. No deliverability, buying interest, budget, registry ownership or levy balance tested.",
       "addedBy": "Scout public-source research",
       "score": 0,
-      "scoreStatus": "Not scored — no buying interest verified"
+      "scoreStatus": "Not scored — no buying interest verified",
+      "id": "5f73f997503616e4"
     }
   ],
   "research": [
@@ -509,7 +516,8 @@
       "levySignal": "unclear",
       "levyEvidence": "",
       "hrdCorpRequired": false,
-      "contacts": []
+      "contacts": [],
+      "id": "cb30d6a278f3710c"
     },
     {
       "company": "EXCEL MINDS CONSULTANCY SDN BHD",
@@ -529,7 +537,8 @@
       "levySignal": "unclear",
       "levyEvidence": "",
       "hrdCorpRequired": false,
-      "contacts": []
+      "contacts": [],
+      "id": "0652d12aeb5c4504"
     },
     {
       "company": "Etancy Consultant (M) Sdn Bhd",
@@ -549,7 +558,8 @@
       "levySignal": "unclear",
       "levyEvidence": "",
       "hrdCorpRequired": false,
-      "contacts": []
+      "contacts": [],
+      "id": "4ee27fe071534efa"
     },
     {
       "company": "Profess Consulting Group Sdn Bhd",
@@ -569,7 +579,8 @@
       "levySignal": "unclear",
       "levyEvidence": "",
       "hrdCorpRequired": false,
-      "contacts": []
+      "contacts": [],
+      "id": "0be728e61beb2414"
     },
     {
       "company": "Performance Insights Sdn Bhd",
@@ -589,7 +600,8 @@
       "levySignal": "unclear",
       "levyEvidence": "",
       "hrdCorpRequired": false,
-      "contacts": []
+      "contacts": [],
+      "id": "c4aa70df4214d5ff"
     },
     {
       "company": "GenBijakdotMy Sdn. Bhd.",
@@ -629,7 +641,8 @@
       "levySignal": "unclear",
       "levyEvidence": "",
       "hrdCorpRequired": false,
-      "contacts": []
+      "contacts": [],
+      "id": "c621de15ca23b981"
     },
     {
       "company": "Impian Helang",
@@ -649,7 +662,8 @@
       "levySignal": "unclear",
       "levyEvidence": "",
       "hrdCorpRequired": false,
-      "contacts": []
+      "contacts": [],
+      "id": "7b20626b20f4d75b"
     }
   ],
   "enrichmentReviewed": [
@@ -658,5 +672,97 @@
   "newContactRoutesExisting": 0,
   "note": "UpSkillingMinds official contact page checked; existing email/phone already recorded, no duplicate routes added. E50 2024 alumni source reviewed; no historical award alone used as current SME qualification.",
   "e50SourceUrl": "https://www.e50.com.my/alumni-e50/",
-  "e50SourceYear": 2024
+  "e50SourceYear": 2024,
+  "actual": {
+    "date": "2026-11-06",
+    "discoveredNew": 14,
+    "newSMEQualified": 7,
+    "newHandoffReady": 7,
+    "researchOnlyThisRun": 7,
+    "existingCompaniesContactEnriched": 0,
+    "newContactEntries": 0,
+    "existingCompaniesContactRechecked": 1,
+    "unverifiedNewsRecordsMovedToResearch": 69,
+    "levyUnknownBlockedCount": 0
+  },
+  "newReadyIDs": [
+    "d5b2791f0d343cad",
+    "6433f2dd25e1dd80",
+    "eadfca4c0dedbdd1",
+    "fcf3d676f690e104",
+    "4b45601a3710e4db",
+    "3da6101f808985c8",
+    "5f73f997503616e4"
+  ],
+  "movedNewsIDs": [
+    "92ad68cff7",
+    "0f30a67929",
+    "8ce3eee7c5",
+    "1a38ec87c3",
+    "87c0d342cf",
+    "533949566a",
+    "ff58faac13",
+    "1c17d59dee",
+    "5194262a8d",
+    "83d825a367",
+    "5d662a8b85",
+    "acd98be1bf",
+    "1a40d4272e",
+    "0701c02273",
+    "d372878fba",
+    "4bbe8c26e0",
+    "82bd96eddf",
+    "74015a0930",
+    "3953233512",
+    "dff9abe93e",
+    "951be8b071",
+    "13a9b721d0",
+    "4324b9d723",
+    "fa9b42fb86",
+    "9e43c08a66",
+    "34e532ea97",
+    "3e7d22b555",
+    "911dffa90e",
+    "8c4f0bf358",
+    "c3da6ca5d2",
+    "25b661d038",
+    "6741fe03cf",
+    "2bdff25f65",
+    "31a1f75f88",
+    "ef6a689f53",
+    "11f402ae04",
+    "5a255ac7ba",
+    "ff5ad72620",
+    "d4ffc9cd28",
+    "cc84e7311c",
+    "11ac901a46",
+    "7f9c51289a",
+    "36cd69746e",
+    "e94df24d74",
+    "b91a31c158",
+    "4a1ab78cb2",
+    "83477ed7e9",
+    "d9b0fc4be1",
+    "a2d36bdeb5",
+    "63c6c98773",
+    "425a45c0cb",
+    "c62e15e4ee",
+    "6fff14a193",
+    "893e9a024c",
+    "20774b2de4",
+    "03cb148b16",
+    "3b2d60d086",
+    "1fbc41d093",
+    "52d150e9d7",
+    "81132feb81",
+    "c68473d530",
+    "6dfade4e67",
+    "52f3e1ebcc",
+    "e4ca108d6a",
+    "88690fa9ff",
+    "5fc144ad35",
+    "3c60164c36",
+    "99f08961c4",
+    "e7471a25f8"
+  ]
 }

@@ -59,7 +59,8 @@
         "https://visionalliance.com.my/",
         "https://www.linkedin.com/company/vision-alliance-holdings"
       ],
-      "leadType": "SME training provider / potential partner"
+      "leadType": "SME training provider / potential partner",
+      "id": "c8dd372e2bf177cd"
     },
     {
       "company": "MIH Global Intelligence Sdn Bhd",
@@ -119,7 +120,8 @@
         "https://www.mindpower.com.my/",
         "https://www.linkedin.com/company/mindpowerglobal"
       ],
-      "leadType": "SME training provider / potential partner"
+      "leadType": "SME training provider / potential partner",
+      "id": "7857beb32769c639"
     },
     {
       "company": "Flexbe Sdn Bhd",
@@ -179,7 +181,8 @@
         "https://www.flexbe.com.my/contact/",
         "https://www.linkedin.com/company/flexbe-sdn-bhd"
       ],
-      "leadType": "SME training provider / potential partner"
+      "leadType": "SME training provider / potential partner",
+      "id": "7e6e02557d5a7dde"
     }
   ],
   "research": [
@@ -203,7 +206,8 @@
       "priorityTier": "unclassified",
       "levySignal": "unclear",
       "levyEvidence": "",
-      "hrdCorpRequired": false
+      "hrdCorpRequired": false,
+      "id": "21fff6e17481c403"
     },
     {
       "company": "PSV Academy / Platinum Shauffmantz Veritas Sdn Bhd",
@@ -224,7 +228,8 @@
       "priorityTier": "unclassified",
       "levySignal": "unclear",
       "levyEvidence": "",
-      "hrdCorpRequired": false
+      "hrdCorpRequired": false,
+      "id": "aa78e01b60ef9fc3"
     }
   ],
   "enrichments": [
@@ -240,5 +245,15 @@
   ],
   "e50SourceUrl": "https://www.e50.com.my/alumni-e50/",
   "e50SourceYear": 2024,
-  "note": "E50 alumni rechecked for discovery only; historical awards not current SME qualification. Lintramax and Global Psytech business routes rechecked without new distinct routes."
+  "note": "E50 alumni rechecked for discovery only; historical awards not current SME qualification. Lintramax and Global Psytech business routes rechecked without new distinct routes.",
+  "actual": {
+    "date": "2026-11-09",
+    "discoveredNew": 5,
+    "newSMEQualified": 3,
+    "newHandoffReady": 3,
+    "researchOnlyThisRun": 2,
+    "existingCompaniesContactEnriched": 1,
+    "newContactEntries": 1,
+    "levyUnknownBlockedCount": 0
+  }
 }

@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-11-06",
+  "checkedAt": "2026-11-09",
   "monthlyTarget": 100,
   "month": "2026-11",
-  "newReadyThisMonth": 101,
+  "newReadyThisMonth": 104,
   "shortfall": 0,
-  "totalReady": 246,
-  "totalProspects": 686,
+  "totalReady": 249,
+  "totalProspects": 691,
   "newPriorityResearchCandidates": [
     "Benithem Sdn Bhd",
     "Eskayvie Sdn Bhd",
@@ -32,7 +32,7 @@
     "Email delivery or telephone response",
     "HRD Corp employer registration or available levy balance"
   ],
-  "status": "101/100 new ready leads for November; continue Selangor/KL discovery beyond the target.",
+  "status": "104/100 new ready leads; continue prioritising Selangor and KL beyond target.",
   "hrdCorpRequired": false,
   "hrdCorpRole": "Optional side bonus",
   "providerExclusionsReopened": 6,
@@ -40,18 +40,16 @@
   "totalExcluded": 21,
   "trainingProviderPartners": 59,
   "qualificationScope": "Public-source screening only; these are potential prospects, not confirmed buyers.",
-  "totalSMEQualified": 247,
-  "unresolvedSMEEvidence": 434,
+  "totalSMEQualified": 250,
+  "unresolvedSMEEvidence": 436,
   "lastRun": {
-    "date": "2026-11-06",
-    "discoveredNew": 14,
-    "newSMEQualified": 7,
-    "newHandoffReady": 7,
-    "researchOnlyThisRun": 7,
-    "existingCompaniesContactEnriched": 0,
-    "newContactEntries": 0,
-    "existingCompaniesContactRechecked": 1,
-    "unverifiedNewsRecordsMovedToResearch": 69,
+    "date": "2026-11-09",
+    "discoveredNew": 5,
+    "newSMEQualified": 3,
+    "newHandoffReady": 3,
+    "researchOnlyThisRun": 2,
+    "existingCompaniesContactEnriched": 1,
+    "newContactEntries": 1,
     "levyUnknownBlockedCount": 0
   },
   "unresolvedSMEEvidenceNote": "Research-only candidates retain exact unresolved reasons; current identity, ownership or usable company-contact evidence must be completed. Historical awards and legal suffix alone are insufficient.",
@@ -67,6 +65,6 @@
     "Selangor",
     "Kuala Lumpur"
   ],
-  "totalQualifiedBriefingLeads": 247,
+  "totalQualifiedBriefingLeads": 250,
   "unresolvedSMEEvidenceCountMethod": "Recalculated from all current unresolved/source-unavailable/historical-award/ownership statuses; contact-only pending records with supported SME size are counted separately."
 }

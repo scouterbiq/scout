@@ -23584,6 +23584,12 @@
         "linkedin": "https://www.linkedin.com/company/genbijak-dotmy",
         "sourceUrl": "https://www.linkedin.com/company/genbijak-dotmy",
         "checkedAt": "2026-11-04"
+      },
+      {
+        "label": "Additional published business phone (legacy contact page; confirm current routing)",
+        "phone": "+60182094517",
+        "sourceUrl": "https://genbijak.my/contact/",
+        "checkedAt": "2026-11-09"
       }
     ],
     "reviewedSourceUrls": [
@@ -23600,7 +23606,7 @@
     "qualifiedAt": "2026-11-04",
     "handoffReadyAt": "2026-11-04",
     "evidenceCheckedAt": "2026-11-04",
-    "contactsCheckedAt": "2026-11-04",
+    "contactsCheckedAt": "2026-11-09",
     "phoneCheckedAt": "2026-11-04",
     "sizeTier": "SME",
     "sizeStatus": "public_source_supported",
@@ -35663,5 +35669,233 @@
     "researchOnlyReasons": [
       "Automated news entry lacks current public SME/ownership/business-contact verification; original fields retained."
     ]
+  },
+  {
+    "company": "Vision Alliance Holdings Sdn Bhd",
+    "domain": "visionalliance.com.my",
+    "website": "https://www.visionalliance.com.my",
+    "companyLinkedIn": "https://www.linkedin.com/company/vision-alliance-holdings",
+    "sourceUrl": "https://www.linkedin.com/company/vision-alliance-holdings",
+    "discoverySourceUrl": "https://www.linkedin.com/company/vision-alliance-holdings",
+    "discoveredAt": "2026-11-09",
+    "evidenceCheckedAt": "2026-11-09",
+    "sizeSourceUrl": "https://www.linkedin.com/company/vision-alliance-holdings",
+    "reportedEmployeeRange": "2-10 employees",
+    "sizeEvidence": "Company-owned LinkedIn exact excerpts: \"2-10 employees\"; \"Privately Held\". Public-source employee screening; not formal SME certification.",
+    "ownershipEvidence": "Company-owned profile describes privately held Malaysian training business. No listed/MNC/GLC parent identified in reviewed company sources; not a registry audit.",
+    "ownershipSourceUrl": "https://www.linkedin.com/company/vision-alliance-holdings",
+    "sizeTier": "SME",
+    "sizeStatus": "public_source_supported",
+    "priorityTier": "top",
+    "location": "Petaling Jaya, Selangor",
+    "industry": "Corporate training, coaching and people development",
+    "email": "",
+    "phone": "+60172228644",
+    "contactSourceUrl": "https://visionalliance.com.my/",
+    "emailSourceUrl": "https://visionalliance.com.my/",
+    "phoneSourceUrl": "https://visionalliance.com.my/",
+    "contacts": [
+      {
+        "label": "Published business enquiries",
+        "email": "",
+        "phone": "+60172228644",
+        "sourceUrl": "https://visionalliance.com.my/",
+        "checkedAt": "2026-11-09"
+      },
+      {
+        "label": "Company LinkedIn",
+        "linkedin": "https://www.linkedin.com/company/vision-alliance-holdings",
+        "sourceUrl": "https://www.linkedin.com/company/vision-alliance-holdings",
+        "checkedAt": "2026-11-09"
+      }
+    ],
+    "contactsCheckedAt": "2026-11-09",
+    "levySignal": "unclear",
+    "levyEvidence": "",
+    "hrdCorpRequired": false,
+    "handoffReady": true,
+    "handoffReadyAt": "2026-11-09",
+    "qualifiedAt": "2026-11-09",
+    "verificationStatus": "verified_public_sources",
+    "researchStatus": "handoff_ready",
+    "qualificationStatus": "Public-source SME screening; HRD participation optional",
+    "suggestedTrainingFit": "Suggested freelance trainer partnership for communication, business writing, critical thinking/problem solving or workplace AI; specific demand unconfirmed.",
+    "fitNote": "Suggested freelance trainer partnership; no buying interest or budget verified.",
+    "training": "Communication Skills; Professional Business Writing; Critical Thinking and Problem Solving; AI Tools for Workplace Productivity",
+    "brief": "Malaysian corporate learning business in Petaling Jaya, Selangor",
+    "verificationScope": "Published size/type and company work routes only. No deliverability, buying interest, ownership registry or levy balance verification.",
+    "reviewedSourceUrls": [
+      "https://visionalliance.com.my/",
+      "https://www.linkedin.com/company/vision-alliance-holdings"
+    ],
+    "leadType": "SME training provider / potential partner",
+    "id": "c8dd372e2bf177cd"
+  },
+  {
+    "company": "MIH Global Intelligence Sdn Bhd",
+    "domain": "mindpower.com.my",
+    "website": "https://www.mindpower.com.my",
+    "companyLinkedIn": "https://www.linkedin.com/company/mindpowerglobal",
+    "sourceUrl": "https://www.linkedin.com/company/mindpowerglobal",
+    "discoverySourceUrl": "https://www.linkedin.com/company/mindpowerglobal",
+    "discoveredAt": "2026-11-09",
+    "evidenceCheckedAt": "2026-11-09",
+    "sizeSourceUrl": "https://www.linkedin.com/company/mindpowerglobal",
+    "reportedEmployeeRange": "2-10 employees",
+    "sizeEvidence": "Company-owned LinkedIn exact excerpts: \"2-10 employees\"; \"Privately Held\". Public-source employee screening; not formal SME certification.",
+    "ownershipEvidence": "Company-owned profile describes privately held Malaysian training business. No listed/MNC/GLC parent identified in reviewed company sources; not a registry audit.",
+    "ownershipSourceUrl": "https://www.linkedin.com/company/mindpowerglobal",
+    "sizeTier": "SME",
+    "sizeStatus": "public_source_supported",
+    "priorityTier": "top",
+    "location": "Petaling Jaya, Selangor",
+    "industry": "Corporate training, coaching and people development",
+    "email": "anna.syazanna@mindpower.com.my",
+    "phone": "",
+    "contactSourceUrl": "https://www.mindpower.com.my/",
+    "emailSourceUrl": "https://www.mindpower.com.my/",
+    "phoneSourceUrl": "https://www.mindpower.com.my/",
+    "contacts": [
+      {
+        "label": "Published business enquiries",
+        "email": "anna.syazanna@mindpower.com.my",
+        "phone": "",
+        "sourceUrl": "https://www.mindpower.com.my/",
+        "checkedAt": "2026-11-09"
+      },
+      {
+        "label": "Company LinkedIn",
+        "linkedin": "https://www.linkedin.com/company/mindpowerglobal",
+        "sourceUrl": "https://www.linkedin.com/company/mindpowerglobal",
+        "checkedAt": "2026-11-09"
+      }
+    ],
+    "contactsCheckedAt": "2026-11-09",
+    "levySignal": "unclear",
+    "levyEvidence": "",
+    "hrdCorpRequired": false,
+    "handoffReady": true,
+    "handoffReadyAt": "2026-11-09",
+    "qualifiedAt": "2026-11-09",
+    "verificationStatus": "verified_public_sources",
+    "researchStatus": "handoff_ready",
+    "qualificationStatus": "Public-source SME screening; HRD participation optional",
+    "suggestedTrainingFit": "Suggested freelance trainer partnership for communication, business writing, critical thinking/problem solving or workplace AI; specific demand unconfirmed.",
+    "fitNote": "Suggested freelance trainer partnership; no buying interest or budget verified.",
+    "training": "Communication Skills; Professional Business Writing; Critical Thinking and Problem Solving; AI Tools for Workplace Productivity",
+    "brief": "Malaysian corporate learning business in Petaling Jaya, Selangor",
+    "verificationScope": "Published size/type and company work routes only. No deliverability, buying interest, ownership registry or levy balance verification.",
+    "reviewedSourceUrls": [
+      "https://www.mindpower.com.my/",
+      "https://www.linkedin.com/company/mindpowerglobal"
+    ],
+    "leadType": "SME training provider / potential partner",
+    "id": "7857beb32769c639"
+  },
+  {
+    "company": "Flexbe Sdn Bhd",
+    "domain": "flexbe.com.my",
+    "website": "https://www.flexbe.com.my",
+    "companyLinkedIn": "https://www.linkedin.com/company/flexbe-sdn-bhd",
+    "sourceUrl": "https://www.linkedin.com/company/flexbe-sdn-bhd",
+    "discoverySourceUrl": "https://www.linkedin.com/company/flexbe-sdn-bhd",
+    "discoveredAt": "2026-11-09",
+    "evidenceCheckedAt": "2026-11-09",
+    "sizeSourceUrl": "https://www.linkedin.com/company/flexbe-sdn-bhd",
+    "reportedEmployeeRange": "2-10 employees",
+    "sizeEvidence": "Company-owned LinkedIn exact excerpts: \"2-10 employees\"; \"Privately Held\". Public-source employee screening; not formal SME certification.",
+    "ownershipEvidence": "Company-owned profile describes privately held Malaysian training business. No listed/MNC/GLC parent identified in reviewed company sources; not a registry audit.",
+    "ownershipSourceUrl": "https://www.linkedin.com/company/flexbe-sdn-bhd",
+    "sizeTier": "SME",
+    "sizeStatus": "public_source_supported",
+    "priorityTier": "top",
+    "location": "Cheras, Kuala Lumpur",
+    "industry": "Corporate training, coaching and people development",
+    "email": "info@flexbe.com.my",
+    "phone": "+60197296141",
+    "contactSourceUrl": "https://www.flexbe.com.my/contact/",
+    "emailSourceUrl": "https://www.flexbe.com.my/contact/",
+    "phoneSourceUrl": "https://www.flexbe.com.my/contact/",
+    "contacts": [
+      {
+        "label": "Published business enquiries",
+        "email": "info@flexbe.com.my",
+        "phone": "+60197296141",
+        "sourceUrl": "https://www.flexbe.com.my/contact/",
+        "checkedAt": "2026-11-09"
+      },
+      {
+        "label": "Company LinkedIn",
+        "linkedin": "https://www.linkedin.com/company/flexbe-sdn-bhd",
+        "sourceUrl": "https://www.linkedin.com/company/flexbe-sdn-bhd",
+        "checkedAt": "2026-11-09"
+      }
+    ],
+    "contactsCheckedAt": "2026-11-09",
+    "levySignal": "unclear",
+    "levyEvidence": "",
+    "hrdCorpRequired": false,
+    "handoffReady": true,
+    "handoffReadyAt": "2026-11-09",
+    "qualifiedAt": "2026-11-09",
+    "verificationStatus": "verified_public_sources",
+    "researchStatus": "handoff_ready",
+    "qualificationStatus": "Public-source SME screening; HRD participation optional",
+    "suggestedTrainingFit": "Suggested freelance trainer partnership for communication, business writing, critical thinking/problem solving or workplace AI; specific demand unconfirmed.",
+    "fitNote": "Suggested freelance trainer partnership; no buying interest or budget verified.",
+    "training": "Communication Skills; Professional Business Writing; Critical Thinking and Problem Solving; AI Tools for Workplace Productivity",
+    "brief": "Malaysian corporate learning business in Cheras, Kuala Lumpur",
+    "verificationScope": "Published size/type and company work routes only. No deliverability, buying interest, ownership registry or levy balance verification.",
+    "reviewedSourceUrls": [
+      "https://www.flexbe.com.my/contact/",
+      "https://www.linkedin.com/company/flexbe-sdn-bhd"
+    ],
+    "leadType": "SME training provider / potential partner",
+    "id": "7e6e02557d5a7dde"
+  },
+  {
+    "company": "Fish Camp Learning Sdn Bhd",
+    "domain": "fishcamp.com.my",
+    "website": "https://fishcamp.com.my",
+    "sourceUrl": "https://www.linkedin.com/company/fishcamplearning",
+    "researchOnlyReasons": [
+      "Current LinkedIn reports 11-50 employees and privately held. PEOPLElogy reported disposing its former 30% stake on 24 August 2026; current buyer/control and consolidated SME ownership require confirmation."
+    ],
+    "ownershipSourceUrl": "https://www.klsescreener.com/v2/announcements/view/11653237",
+    "sizeSourceUrl": "https://www.linkedin.com/company/fishcamplearning",
+    "sizeEvidence": "Current company profile excerpt: \"11-50 employees\". Ownership still unresolved.",
+    "discoveredAt": "2026-11-09",
+    "evidenceCheckedAt": "2026-11-09",
+    "researchStatus": "research_only",
+    "handoffReady": false,
+    "sizeTier": "Unknown",
+    "sizeStatus": "needs_verification",
+    "priorityTier": "unclassified",
+    "levySignal": "unclear",
+    "levyEvidence": "",
+    "hrdCorpRequired": false,
+    "id": "21fff6e17481c403"
+  },
+  {
+    "company": "PSV Academy / Platinum Shauffmantz Veritas Sdn Bhd",
+    "domain": "psvinternational.com",
+    "website": "https://psvinternational.com",
+    "sourceUrl": "https://www.linkedin.com/company/psvi-academy",
+    "researchOnlyReasons": [
+      "Academy profile reports 2-10 employees, but consolidated operating company size and ownership need confirmation; do not qualify a division from its standalone profile."
+    ],
+    "contactSourceUrl": "https://psvinternational.com/contact-us/",
+    "phone": "+60355699793",
+    "discoveredAt": "2026-11-09",
+    "evidenceCheckedAt": "2026-11-09",
+    "researchStatus": "research_only",
+    "handoffReady": false,
+    "sizeTier": "Unknown",
+    "sizeStatus": "needs_verification",
+    "priorityTier": "unclassified",
+    "levySignal": "unclear",
+    "levyEvidence": "",
+    "hrdCorpRequired": false,
+    "id": "aa78e01b60ef9fc3"
   }
 ]

@@ -1,10 +1,12 @@
 {
-  "date": "2026-11-09",
-  "rawArticles": 294,
-  "uniqueArticles": 221,
-  "newEmployerRecords": 1,
+  "date": "2026-11-10",
+  "rawArticles": 277,
+  "uniqueArticles": 205,
+  "newEmployerRecords": 0,
   "uniqueEmployerNamesLast7Days": 4,
   "publicEvidenceShortlist": 250,
-  "screeningErrors": [],
+  "screeningErrors": [
+    "Gemini HTTP 503: This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+  ],
   "note": "SME evidence is required. HRD Corp participation is optional; confirm balance and delivery route only for levy-funded offers."
 }

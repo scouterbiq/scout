@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-10",
-  "rawArticles": 277,
-  "uniqueArticles": 205,
-  "newEmployerRecords": 0,
-  "uniqueEmployerNamesLast7Days": 4,
-  "publicEvidenceShortlist": 250,
+  "date": "2026-11-11",
+  "rawArticles": 255,
+  "uniqueArticles": 199,
+  "newEmployerRecords": 3,
+  "uniqueEmployerNamesLast7Days": 5,
+  "publicEvidenceShortlist": 253,
   "screeningErrors": [
     "Gemini HTTP 503: This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
   ],

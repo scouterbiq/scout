@@ -51,7 +51,8 @@
       "reviewedSourceUrls": [
         "https://www.linkedin.com/company/aeste-works-m-sdn-bhd",
         "https://web.aeste.my/contactus"
-      ]
+      ],
+      "id": "bcdead439be6ace5"
     },
     {
       "company": "Alton Controls Sdn Bhd",
@@ -115,7 +116,8 @@
       "reviewedSourceUrls": [
         "https://www.linkedin.com/company/altoncontrols",
         "https://sites.google.com/view/altoncontrols/contact-us"
-      ]
+      ],
+      "id": "6eb751cb4fe789e0"
     },
     {
       "company": "Cotier Sdn Bhd",
@@ -173,7 +175,8 @@
       "reviewedSourceUrls": [
         "https://www.linkedin.com/company/cotier-group",
         "https://www.cotier-group.com/"
-      ]
+      ],
+      "id": "35d5ef23106ae073"
     }
   ],
   "research": [
@@ -194,7 +197,8 @@
       "contacts": [],
       "levySignal": "unclear",
       "levyEvidence": "",
-      "hrdCorpRequired": false
+      "hrdCorpRequired": false,
+      "id": "3a1fdbb93d357bae"
     },
     {
       "company": "Sealand Cargo Sdn Bhd",
@@ -213,7 +217,8 @@
       "contacts": [],
       "levySignal": "unclear",
       "levyEvidence": "",
-      "hrdCorpRequired": false
+      "hrdCorpRequired": false,
+      "id": "41d45179fbb53c0a"
     },
     {
       "company": "CTF Logistics (M) Sdn Bhd",
@@ -232,7 +237,8 @@
       "contacts": [],
       "levySignal": "unclear",
       "levyEvidence": "",
-      "hrdCorpRequired": false
+      "hrdCorpRequired": false,
+      "id": "83bd0f1a60240829"
     },
     {
       "company": "Eastrex Logistics Sdn Bhd",
@@ -251,7 +257,8 @@
       "contacts": [],
       "levySignal": "unclear",
       "levyEvidence": "",
-      "hrdCorpRequired": false
+      "hrdCorpRequired": false,
+      "id": "d309c6308fe1e89c"
     },
     {
       "company": "Asia Global Total Logistics",
@@ -270,7 +277,8 @@
       "contacts": [],
       "levySignal": "unclear",
       "levyEvidence": "",
-      "hrdCorpRequired": false
+      "hrdCorpRequired": false,
+      "id": "024b67cff5893447"
     }
   ],
   "enrichments": [
@@ -286,5 +294,15 @@
   ],
   "e50SourceUrl": "https://www.e50.com.my/alumni-e50/",
   "e50SourceYear": 2024,
-  "note": "E50 source rechecked; historical award alone not used for qualification. ERALab contact/careers routes rechecked; already recorded, no duplicates added."
+  "note": "E50 source rechecked; historical award alone not used for qualification. ERALab contact/careers routes rechecked; already recorded, no duplicates added.",
+  "actual": {
+    "date": "2026-11-11",
+    "discoveredNew": 8,
+    "newSMEQualified": 3,
+    "newHandoffReady": 3,
+    "researchOnlyThisRun": 5,
+    "existingCompaniesContactEnriched": 1,
+    "newContactEntries": 1,
+    "levyUnknownBlockedCount": 0
+  }
 }

@@ -13237,7 +13237,16 @@
     "qualificationScope": "Public-source SME screening; no formal SME certification, confirmed budget or buying interest.",
     "handoffReadyAt": "2026-11-02",
     "readinessStatus": "Ready for introductory outreach — public-source screen",
-    "researchCaveat": "Job-board location is older; current company website location used. Public size band is a screen, not an exact audited headcount."
+    "researchCaveat": "Job-board location is older; current company website location used. Public size band is a screen, not an exact audited headcount.",
+    "contacts": [
+      {
+        "label": "Published export business enquiries",
+        "phone": "+60195702107",
+        "sourceUrl": "https://www.popsmalaya.com/pages/export",
+        "checkedAt": "2026-11-11"
+      }
+    ],
+    "contactsCheckedAt": "2026-11-11"
   },
   {
     "company": "Fiskal Jitu Sdn Bhd",
@@ -22086,5 +22095,182 @@
     ],
     "leadType": "SME training provider / potential partner",
     "id": "7e6e02557d5a7dde"
+  },
+  {
+    "company": "Aeste Works (M) Sdn Bhd",
+    "domain": "aeste.my",
+    "website": "https://web.aeste.my/",
+    "companyLinkedIn": "https://www.linkedin.com/company/aeste-works-m-sdn-bhd",
+    "sourceUrl": "https://www.linkedin.com/company/aeste-works-m-sdn-bhd",
+    "discoverySourceUrl": "https://www.linkedin.com/company/aeste-works-m-sdn-bhd",
+    "discoveredAt": "2026-11-11",
+    "evidenceCheckedAt": "2026-11-11",
+    "sizeTier": "SME",
+    "sizeStatus": "public_source_supported",
+    "priorityTier": "top",
+    "reportedEmployeeRange": "2-10 employees",
+    "sizeEvidence": "Company-owned LinkedIn exact excerpts: \"2-10 employees\"; \"Privately Held\". Conservative employee screen, not formal SME certification.",
+    "sizeSourceUrl": "https://www.linkedin.com/company/aeste-works-m-sdn-bhd",
+    "ownershipEvidence": "Company-owned public profile describes privately held Malaysian business. No listed/MNC/GLC parent identified in reviewed company sources and targeted acquisition searches; not a registry audit.",
+    "ownershipSourceUrl": "https://www.linkedin.com/company/aeste-works-m-sdn-bhd",
+    "location": "Kuala Lumpur",
+    "industry": "Computer hardware, embedded systems and software engineering",
+    "email": "",
+    "phone": "+60327717306",
+    "contactSourceUrl": "https://web.aeste.my/contactus",
+    "emailSourceUrl": "https://web.aeste.my/contactus",
+    "phoneSourceUrl": "https://web.aeste.my/contactus",
+    "contacts": [
+      {
+        "label": "Published business enquiries",
+        "email": "",
+        "phone": "+60327717306",
+        "sourceUrl": "https://web.aeste.my/contactus",
+        "checkedAt": "2026-11-11"
+      }
+    ],
+    "contactsCheckedAt": "2026-11-11",
+    "handoffReady": true,
+    "handoffReadyAt": "2026-11-11",
+    "qualifiedAt": "2026-11-11",
+    "researchStatus": "handoff_ready",
+    "verificationStatus": "verified_public_sources",
+    "qualificationStatus": "Public-source SME screening; HRD Corp optional",
+    "levySignal": "unclear",
+    "levyEvidence": "",
+    "hrdCorpRequired": false,
+    "suggestedTrainingFit": "Suggested fit: professional business writing for client reports and proposals; communication across project or operations teams; critical thinking/problem solving; responsible workplace AI. Needs and buying interest unconfirmed.",
+    "fitNote": "Suggested training fit only; no interest or budget tested.",
+    "brief": "Computer hardware, embedded systems and software engineering business in Kuala Lumpur",
+    "verificationScope": "Published self-reported size/type and business routes; no deliverability, registry, buying intent or levy-balance verification.",
+    "reviewedSourceUrls": [
+      "https://www.linkedin.com/company/aeste-works-m-sdn-bhd",
+      "https://web.aeste.my/contactus"
+    ],
+    "id": "bcdead439be6ace5"
+  },
+  {
+    "company": "Alton Controls Sdn Bhd",
+    "domain": "alton.com.my",
+    "website": "https://www.alton.com.my/",
+    "companyLinkedIn": "https://www.linkedin.com/company/altoncontrols",
+    "sourceUrl": "https://www.linkedin.com/company/altoncontrols",
+    "discoverySourceUrl": "https://www.linkedin.com/company/altoncontrols",
+    "discoveredAt": "2026-11-11",
+    "evidenceCheckedAt": "2026-11-11",
+    "sizeTier": "SME",
+    "sizeStatus": "public_source_supported",
+    "priorityTier": "top",
+    "reportedEmployeeRange": "2-10 employees",
+    "sizeEvidence": "Company-owned LinkedIn exact excerpts: \"2-10 employees\"; \"Privately Held\". Conservative employee screen, not formal SME certification.",
+    "sizeSourceUrl": "https://www.linkedin.com/company/altoncontrols",
+    "ownershipEvidence": "Company-owned public profile describes privately held Malaysian business. No listed/MNC/GLC parent identified in reviewed company sources and targeted acquisition searches; not a registry audit.",
+    "ownershipSourceUrl": "https://www.linkedin.com/company/altoncontrols",
+    "location": "Kuala Lumpur",
+    "industry": "Building controls and automation engineering",
+    "email": "info@alton.com.my",
+    "phone": "+60377812198",
+    "contactSourceUrl": "https://sites.google.com/view/altoncontrols/contact-us",
+    "emailSourceUrl": "https://sites.google.com/view/altoncontrols/contact-us",
+    "phoneSourceUrl": "https://sites.google.com/view/altoncontrols/contact-us",
+    "contacts": [
+      {
+        "label": "Published business enquiries",
+        "email": "info@alton.com.my",
+        "phone": "+60377812198",
+        "sourceUrl": "https://sites.google.com/view/altoncontrols/contact-us",
+        "checkedAt": "2026-11-11"
+      },
+      {
+        "label": "Business WhatsApp",
+        "phone": "+60123319088",
+        "sourceUrl": "https://sites.google.com/view/altoncontrols/contact-us",
+        "checkedAt": "2026-11-11"
+      },
+      {
+        "label": "Alternate published business email",
+        "email": "alton.website@gmail.com",
+        "sourceUrl": "https://sites.google.com/view/altoncontrols/contact-us",
+        "checkedAt": "2026-11-11"
+      }
+    ],
+    "contactsCheckedAt": "2026-11-11",
+    "handoffReady": true,
+    "handoffReadyAt": "2026-11-11",
+    "qualifiedAt": "2026-11-11",
+    "researchStatus": "handoff_ready",
+    "verificationStatus": "verified_public_sources",
+    "qualificationStatus": "Public-source SME screening; HRD Corp optional",
+    "levySignal": "unclear",
+    "levyEvidence": "",
+    "hrdCorpRequired": false,
+    "suggestedTrainingFit": "Suggested fit: professional business writing for client reports and proposals; communication across project or operations teams; critical thinking/problem solving; responsible workplace AI. Needs and buying interest unconfirmed.",
+    "fitNote": "Suggested training fit only; no interest or budget tested.",
+    "brief": "Building controls and automation engineering business in Kuala Lumpur",
+    "verificationScope": "Published self-reported size/type and business routes; no deliverability, registry, buying intent or levy-balance verification.",
+    "reviewedSourceUrls": [
+      "https://www.linkedin.com/company/altoncontrols",
+      "https://sites.google.com/view/altoncontrols/contact-us"
+    ],
+    "id": "6eb751cb4fe789e0"
+  },
+  {
+    "company": "Cotier Sdn Bhd",
+    "domain": "cotier-group.com",
+    "website": "https://www.cotier-group.com/",
+    "companyLinkedIn": "https://www.linkedin.com/company/cotier-group",
+    "sourceUrl": "https://www.linkedin.com/company/cotier-group",
+    "discoverySourceUrl": "https://www.linkedin.com/company/cotier-group",
+    "discoveredAt": "2026-11-11",
+    "evidenceCheckedAt": "2026-11-11",
+    "sizeTier": "SME",
+    "sizeStatus": "public_source_supported",
+    "priorityTier": "top",
+    "reportedEmployeeRange": "11-50 employees",
+    "sizeEvidence": "Company-owned LinkedIn exact excerpts: \"11-50 employees\"; \"Privately Held\". Conservative employee screen, not formal SME certification.",
+    "sizeSourceUrl": "https://www.linkedin.com/company/cotier-group",
+    "ownershipEvidence": "Company-owned public profile describes privately held Malaysian business. No listed/MNC/GLC parent identified in reviewed company sources and targeted acquisition searches; not a registry audit.",
+    "ownershipSourceUrl": "https://www.linkedin.com/company/cotier-group",
+    "location": "Klang, Selangor",
+    "industry": "Shipping and logistics",
+    "email": "sales@cotier-group.com",
+    "phone": "+60333596699",
+    "contactSourceUrl": "https://www.cotier-group.com/",
+    "emailSourceUrl": "https://www.cotier-group.com/",
+    "phoneSourceUrl": "https://www.cotier-group.com/",
+    "contacts": [
+      {
+        "label": "Published business enquiries",
+        "email": "sales@cotier-group.com",
+        "phone": "+60333596699",
+        "sourceUrl": "https://www.cotier-group.com/",
+        "checkedAt": "2026-11-11"
+      },
+      {
+        "label": "Alternate Klang office line",
+        "phone": "+60333580444",
+        "sourceUrl": "https://www.cotier-group.com/",
+        "checkedAt": "2026-11-11"
+      }
+    ],
+    "contactsCheckedAt": "2026-11-11",
+    "handoffReady": true,
+    "handoffReadyAt": "2026-11-11",
+    "qualifiedAt": "2026-11-11",
+    "researchStatus": "handoff_ready",
+    "verificationStatus": "verified_public_sources",
+    "qualificationStatus": "Public-source SME screening; HRD Corp optional",
+    "levySignal": "unclear",
+    "levyEvidence": "",
+    "hrdCorpRequired": false,
+    "suggestedTrainingFit": "Suggested fit: professional business writing for client reports and proposals; communication across project or operations teams; critical thinking/problem solving; responsible workplace AI. Needs and buying interest unconfirmed.",
+    "fitNote": "Suggested training fit only; no interest or budget tested.",
+    "brief": "Shipping and logistics business in Klang, Selangor",
+    "verificationScope": "Published self-reported size/type and business routes; no deliverability, registry, buying intent or levy-balance verification.",
+    "reviewedSourceUrls": [
+      "https://www.linkedin.com/company/cotier-group",
+      "https://www.cotier-group.com/"
+    ],
+    "id": "35d5ef23106ae073"
   }
 ]

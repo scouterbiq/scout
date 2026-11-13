@@ -62,7 +62,8 @@
       "reviewedSourceUrls": [
         "https://www.wks-h.com/",
         "https://www.linkedin.com/company/wks-holdings"
-      ]
+      ],
+      "id": "083fbcc228399fd8"
     },
     {
       "company": "Atech Design (M) Sdn Bhd",
@@ -119,7 +120,8 @@
       "reviewedSourceUrls": [
         "https://www.atechdesign.biz/contact-us",
         "https://www.linkedin.com/company/atech-design-m-sdn-bhd"
-      ]
+      ],
+      "id": "765461646171c557"
     }
   ],
   "research": [
@@ -141,7 +143,8 @@
       "contacts": [],
       "levySignal": "unclear",
       "levyEvidence": "",
-      "hrdCorpRequired": false
+      "hrdCorpRequired": false,
+      "id": "7f073176009b66ae"
     },
     {
       "company": "URUS AI Sdn Bhd",
@@ -161,7 +164,8 @@
       "contacts": [],
       "levySignal": "unclear",
       "levyEvidence": "",
-      "hrdCorpRequired": false
+      "hrdCorpRequired": false,
+      "id": "08273174f1aa4dee"
     },
     {
       "company": "ICOMS Malaysia Sdn Bhd",
@@ -181,7 +185,8 @@
       "contacts": [],
       "levySignal": "unclear",
       "levyEvidence": "",
-      "hrdCorpRequired": false
+      "hrdCorpRequired": false,
+      "id": "3f28037b15f3f885"
     },
     {
       "company": "AEE Services Sdn Bhd",
@@ -201,7 +206,8 @@
       "contacts": [],
       "levySignal": "unclear",
       "levyEvidence": "",
-      "hrdCorpRequired": false
+      "hrdCorpRequired": false,
+      "id": "211eea4234ea9e7d"
     }
   ],
   "enrichments": [
@@ -226,5 +232,15 @@
   ],
   "e50SourceUrl": "https://www.e50.com.my/alumni-e50/",
   "e50SourceYear": 2024,
-  "note": "E50 discovery rechecked, historical award alone not used for readiness."
+  "note": "E50 discovery rechecked, historical award alone not used for readiness.",
+  "actual": {
+    "date": "2026-11-13",
+    "discoveredNew": 6,
+    "newSMEQualified": 2,
+    "newHandoffReady": 2,
+    "researchOnlyThisRun": 4,
+    "existingCompaniesContactEnriched": 1,
+    "newContactEntries": 2,
+    "levyUnknownBlockedCount": 0
+  }
 }

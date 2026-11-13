@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-11-11",
+  "checkedAt": "2026-11-13",
   "monthlyTarget": 100,
   "month": "2026-11",
-  "newReadyThisMonth": 107,
+  "newReadyThisMonth": 109,
   "shortfall": 0,
-  "totalReady": 252,
-  "totalProspects": 699,
+  "totalReady": 254,
+  "totalProspects": 705,
   "newPriorityResearchCandidates": [
     "Benithem Sdn Bhd",
     "Eskayvie Sdn Bhd",
@@ -32,7 +32,7 @@
     "Email delivery or telephone response",
     "HRD Corp employer registration or available levy balance"
   ],
-  "status": "107/100 new ready leads; continue prioritising Selangor/KL beyond target.",
+  "status": "109/100 new ready leads; continue prioritising Selangor/KL beyond target.",
   "hrdCorpRequired": false,
   "hrdCorpRole": "Optional side bonus",
   "providerExclusionsReopened": 6,
@@ -40,16 +40,16 @@
   "totalExcluded": 21,
   "trainingProviderPartners": 59,
   "qualificationScope": "Public-source screening only; these are potential prospects, not confirmed buyers.",
-  "totalSMEQualified": 253,
-  "unresolvedSMEEvidence": 441,
+  "totalSMEQualified": 255,
+  "unresolvedSMEEvidence": 445,
   "lastRun": {
-    "date": "2026-11-11",
-    "discoveredNew": 8,
-    "newSMEQualified": 3,
-    "newHandoffReady": 3,
-    "researchOnlyThisRun": 5,
+    "date": "2026-11-13",
+    "discoveredNew": 6,
+    "newSMEQualified": 2,
+    "newHandoffReady": 2,
+    "researchOnlyThisRun": 4,
     "existingCompaniesContactEnriched": 1,
-    "newContactEntries": 1,
+    "newContactEntries": 2,
     "levyUnknownBlockedCount": 0
   },
   "unresolvedSMEEvidenceNote": "Research-only candidates retain exact unresolved reasons; current identity, ownership or usable company-contact evidence must be completed. Historical awards and legal suffix alone are insufficient.",
@@ -65,6 +65,6 @@
     "Selangor",
     "Kuala Lumpur"
   ],
-  "totalQualifiedBriefingLeads": 253,
+  "totalQualifiedBriefingLeads": 255,
   "unresolvedSMEEvidenceCountMethod": "Recalculated from all current unresolved/source-unavailable/historical-award/ownership statuses; contact-only pending records with supported SME size are counted separately."
 }

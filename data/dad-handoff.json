@@ -21456,9 +21456,21 @@
         "linkedin": "https://www.linkedin.com/company/delitea",
         "sourceUrl": "https://www.linkedin.com/company/delitea",
         "checkedAt": "2026-11-06"
+      },
+      {
+        "label": "Johor branch business enquiries",
+        "phone": "+60162257004",
+        "sourceUrl": "https://www.delitea.com.my/contactus/",
+        "checkedAt": "2026-11-13"
+      },
+      {
+        "label": "Miri / Kuching branch business enquiries",
+        "phone": "+60165410511",
+        "sourceUrl": "https://www.delitea.com.my/contactus/",
+        "checkedAt": "2026-11-13"
       }
     ],
-    "contactsCheckedAt": "2026-11-06",
+    "contactsCheckedAt": "2026-11-13",
     "levySignal": "unclear",
     "levyEvidence": "",
     "hrdCorpRequired": false,
@@ -22272,5 +22284,127 @@
       "https://www.cotier-group.com/"
     ],
     "id": "35d5ef23106ae073"
+  },
+  {
+    "company": "WKS Holdings Sdn Bhd",
+    "domain": "wks-h.com",
+    "website": "https://www.wks-h.com",
+    "companyLinkedIn": "https://www.linkedin.com/company/wks-holdings",
+    "sourceUrl": "https://www.linkedin.com/company/wks-holdings",
+    "discoverySourceUrl": "https://www.linkedin.com/company/wks-holdings",
+    "discoveredAt": "2026-11-13",
+    "evidenceCheckedAt": "2026-11-13",
+    "sizeTier": "SME",
+    "sizeStatus": "public_source_supported",
+    "priorityTier": "top",
+    "reportedEmployeeRange": "2-10 employees",
+    "sizeEvidence": "Company-owned LinkedIn exact excerpts: \"2-10 employees\"; \"Privately Held\". Public-source employee screen, not formal SME certification.",
+    "sizeSourceUrl": "https://www.linkedin.com/company/wks-holdings",
+    "ownershipEvidence": "Company-owned profile identifies privately held Malaysian business. No listed/MNC/GLC parent identified in reviewed company sources and targeted ownership searches; not a registry ownership audit.",
+    "ownershipSourceUrl": "https://www.linkedin.com/company/wks-holdings",
+    "location": "Petaling Jaya, Selangor",
+    "industry": "Training and consulting",
+    "email": "admin@wks-h.com",
+    "phone": "+60378038188",
+    "emailSourceUrl": "https://www.wks-h.com/",
+    "phoneSourceUrl": "https://www.wks-h.com/",
+    "contactSourceUrl": "https://www.wks-h.com/",
+    "contacts": [
+      {
+        "label": "Published business enquiries",
+        "email": "admin@wks-h.com",
+        "phone": "+60378038188",
+        "sourceUrl": "https://www.wks-h.com/",
+        "checkedAt": "2026-11-13"
+      },
+      {
+        "label": "Company LinkedIn",
+        "linkedin": "https://www.linkedin.com/company/wks-holdings",
+        "sourceUrl": "https://www.linkedin.com/company/wks-holdings",
+        "checkedAt": "2026-11-13"
+      },
+      {
+        "label": "Alternate office line",
+        "phone": "+60378039188",
+        "sourceUrl": "https://www.wks-h.com/",
+        "checkedAt": "2026-11-13"
+      }
+    ],
+    "contactsCheckedAt": "2026-11-13",
+    "handoffReady": true,
+    "handoffReadyAt": "2026-11-13",
+    "qualifiedAt": "2026-11-13",
+    "researchStatus": "handoff_ready",
+    "verificationStatus": "verified_public_sources",
+    "qualificationStatus": "Public-source SME screening; HRD Corp optional",
+    "levySignal": "unclear",
+    "levyEvidence": "",
+    "hrdCorpRequired": false,
+    "suggestedTrainingFit": "Suggested fit: communication, professional business writing, critical thinking/problem solving and workplace AI for training delivery or technical client proposals; demand unconfirmed.",
+    "fitNote": "Suggested fit only; no buying interest, budget or deliverability tested.",
+    "brief": "Training and consulting business in Petaling Jaya, Selangor",
+    "reviewedSourceUrls": [
+      "https://www.wks-h.com/",
+      "https://www.linkedin.com/company/wks-holdings"
+    ],
+    "id": "083fbcc228399fd8"
+  },
+  {
+    "company": "Atech Design (M) Sdn Bhd",
+    "domain": "atechdesign.biz",
+    "website": "https://www.atechdesign.biz",
+    "companyLinkedIn": "https://www.linkedin.com/company/atech-design-m-sdn-bhd",
+    "sourceUrl": "https://www.linkedin.com/company/atech-design-m-sdn-bhd",
+    "discoverySourceUrl": "https://www.linkedin.com/company/atech-design-m-sdn-bhd",
+    "discoveredAt": "2026-11-13",
+    "evidenceCheckedAt": "2026-11-13",
+    "sizeTier": "SME",
+    "sizeStatus": "public_source_supported",
+    "priorityTier": "top",
+    "reportedEmployeeRange": "2-10 employees",
+    "sizeEvidence": "Company-owned LinkedIn exact excerpts: \"2-10 employees\"; \"Privately Held\". Public-source employee screen, not formal SME certification.",
+    "sizeSourceUrl": "https://www.linkedin.com/company/atech-design-m-sdn-bhd",
+    "ownershipEvidence": "Company-owned profile identifies privately held Malaysian business. No listed/MNC/GLC parent identified in reviewed company sources and targeted ownership searches; not a registry ownership audit.",
+    "ownershipSourceUrl": "https://www.linkedin.com/company/atech-design-m-sdn-bhd",
+    "location": "Balakong / Seri Kembangan, Selangor",
+    "industry": "Computational design and structural engineering",
+    "email": "contact@atechdesign.biz",
+    "phone": "+60389649131",
+    "emailSourceUrl": "https://www.atechdesign.biz/contact-us",
+    "phoneSourceUrl": "https://www.atechdesign.biz/contact-us",
+    "contactSourceUrl": "https://www.atechdesign.biz/contact-us",
+    "contacts": [
+      {
+        "label": "Published business enquiries",
+        "email": "contact@atechdesign.biz",
+        "phone": "+60389649131",
+        "sourceUrl": "https://www.atechdesign.biz/contact-us",
+        "checkedAt": "2026-11-13"
+      },
+      {
+        "label": "Company LinkedIn",
+        "linkedin": "https://www.linkedin.com/company/atech-design-m-sdn-bhd",
+        "sourceUrl": "https://www.linkedin.com/company/atech-design-m-sdn-bhd",
+        "checkedAt": "2026-11-13"
+      }
+    ],
+    "contactsCheckedAt": "2026-11-13",
+    "handoffReady": true,
+    "handoffReadyAt": "2026-11-13",
+    "qualifiedAt": "2026-11-13",
+    "researchStatus": "handoff_ready",
+    "verificationStatus": "verified_public_sources",
+    "qualificationStatus": "Public-source SME screening; HRD Corp optional",
+    "levySignal": "unclear",
+    "levyEvidence": "",
+    "hrdCorpRequired": false,
+    "suggestedTrainingFit": "Suggested fit: communication, professional business writing, critical thinking/problem solving and workplace AI for training delivery or technical client proposals; demand unconfirmed.",
+    "fitNote": "Suggested fit only; no buying interest, budget or deliverability tested.",
+    "brief": "Computational design and structural engineering business in Balakong / Seri Kembangan, Selangor",
+    "reviewedSourceUrls": [
+      "https://www.atechdesign.biz/contact-us",
+      "https://www.linkedin.com/company/atech-design-m-sdn-bhd"
+    ],
+    "id": "765461646171c557"
   }
 ]

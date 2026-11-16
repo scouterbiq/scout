@@ -7,7 +7,7 @@
   "newLeadRecords": 16,
   "newHandoffRecords": 15,
   "newProspects": 26,
-  "existingCompaniesContactEnriched": 7,
+  "existingCompaniesContactEnriched": 10,
   "enrichedCompanies": [
     "Global Psytech Sdn. Bhd.",
     "Avialite Sdn. Bhd.",
@@ -15,10 +15,13 @@
     "OSD Consultants (M) Sdn. Bhd.",
     "Innoveam Sdn. Bhd.",
     "Avernoble Sdn. Bhd.",
-    "Markaids (Malaysia) Sdn. Bhd."
+    "Markaids (Malaysia) Sdn. Bhd.",
+    "Magnus Games Studio Sdn Bhd",
+    "Cause Effect Digital",
+    "Bio Tree Biotechnology Sdn Bhd"
   ],
-  "newContactEntries": 9,
-  "companyLinkedInProfilesAdded": 6,
+  "newContactEntries": 13,
+  "companyLinkedInProfilesAdded": 8,
   "monthlyTarget": 100,
   "monthlyNewReadyBefore": 114,
   "monthlyNewReadyAfter": 129,
@@ -65,7 +68,7 @@
   ],
   "privateDataBoundary": "Only public research files were changed. Browser CRM favourites, notes, tasks and client relationships were not accessed or changed. No outreach was sent.",
   "existingResearchRecordsUpdated": 7,
-  "notes": "16 new SME-qualified records were added, of which 15 have a published company business contact and are handoff-ready; Dedinet is qualified but awaits a verified business contact. Nine candidates remain research-only due unresolved size, legal identity or ownership. Jentrakel was excluded because it is a wholly owned subsidiary of Bursa-listed Warisan TC Holdings Berhad. Seven existing Selangor/KL SMEs were enriched with nine new distinct public business routes and six company LinkedIn profiles. No levy-status gate, paid lookup or outreach.",
+  "notes": "16 new SME-qualified records were added, of which 15 have a published company business contact and are handoff-ready; Dedinet is qualified but awaits a verified business contact. Nine candidates remain research-only due unresolved size, legal identity or ownership. Jentrakel was excluded because it is a wholly owned subsidiary of Bursa-listed Warisan TC Holdings Berhad. Seven existing Selangor/KL SMEs were enriched with nine new distinct public business routes and six company LinkedIn profiles. No levy-status gate, paid lookup or outreach. Legacy cleanup: 16 unqualified lead rows were moved to prospects/exclusions with IDs and sources preserved; 7 duplicate news records were flagged and linked to canonical prospects. Three older handoff records were rechecked and now have published company contact routes.",
   "excludedThisRun": 1,
   "qualifiedButNotHandoffReady": 1,
   "newHandoffReadyCompanies": [
@@ -108,5 +111,55 @@
     "https://www.jentrakel.com.my/about-jentrakel/corporate-information/",
     "https://www.warisantc.com/about-us/corporate-information-2/",
     "https://www.warisantc.com/wp-content/uploads/2023/12/Warisan-TC-Annual-Report-2022.pdf"
-  ]
+  ],
+  "legacyReclassification": {
+    "legacyLeadRowsMoved": 16,
+    "uniqueCompanies": 11,
+    "researchOnlyUniqueCompanies": [
+      "Media Mulia",
+      "MCorp",
+      "Econili",
+      "Nexawork AI",
+      "Cropmate",
+      "PMW International",
+      "Empire Sushi",
+      "FOZ One",
+      "uParcel"
+    ],
+    "excludedCompanies": [
+      "Eco-Shop Marketing Bhd",
+      "Pos Malaysia"
+    ],
+    "duplicateRecordsFlagged": 7,
+    "stableIdsAndOriginalSourcesPreserved": true
+  },
+  "handoffReadinessAudit": {
+    "records": 274,
+    "failuresAfterUpdate": 0,
+    "contactGapRecordsUpdated": [
+      "Magnus Games Studio Sdn Bhd",
+      "Cause Effect Digital",
+      "Bio Tree Biotechnology Sdn Bhd"
+    ]
+  },
+  "leadQualificationAudit": {
+    "records": 276,
+    "allPassSizeTierSME": true,
+    "allHaveNonemptySizeEvidence": true,
+    "allHavePriorityTierTop": true,
+    "failures": 0
+  },
+  "finalCounts": {
+    "leads": 276,
+    "prospects": 751,
+    "handoff": 274,
+    "totalSMEQualified": 276,
+    "totalReady": 274,
+    "newReadyThisMonth": 129,
+    "monthlyTarget": 100,
+    "shortfall": 0,
+    "totalResearchQueue": 359,
+    "unresolvedSMEEvidence": 464,
+    "totalExcluded": 24
+  }
 }

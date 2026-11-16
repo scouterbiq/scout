@@ -7,16 +7,19 @@
     "OSD Consultants (M) Sdn. Bhd.",
     "Innoveam Sdn. Bhd.",
     "Avernoble Sdn. Bhd.",
-    "Markaids (Malaysia) Sdn. Bhd."
+    "Markaids (Malaysia) Sdn. Bhd.",
+    "Magnus Games Studio Sdn Bhd",
+    "Cause Effect Digital",
+    "Bio Tree Biotechnology Sdn Bhd"
   ],
-  "newDistinctBusinessRoutes": 9,
-  "companyLinkedInProfilesAdded": 6,
+  "newDistinctBusinessRoutes": 13,
+  "companyLinkedInProfilesAdded": 8,
   "routes": [
     "Company-published email, phone and enquiry-form routes only; no private personal contacts added."
   ],
   "limitations": [
     "Deliverability and response not tested.",
-    "Primary contact fields preserved.",
+    "Primary contact fields were preserved where already populated.",
     "No private dashboard favourites, notes, tasks or client relationships were changed."
   ],
   "privateCRMUntouched": true

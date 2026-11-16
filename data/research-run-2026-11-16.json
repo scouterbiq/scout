@@ -1,0 +1,115 @@
+{
+  "date": "2026-11-16",
+  "discoveredNew": 4,
+  "newSMEQualified": 5,
+  "newHandoffReady": 5,
+  "qualifiedButNotHandoffReady": 0,
+  "researchOnlyCandidatesReviewed": 10,
+  "existingCompaniesContactEnriched": [
+    "UpSkillingMinds Sdn Bhd",
+    "Sales Ninja Training",
+    "Ventura IOT Sdn. Bhd."
+  ],
+  "newContactEntries": 4,
+  "levyUnknownBlockedCount": 0,
+  "apollo": "Not used; no explicitly free connected lookup was available. No paid lookup, API credits or enrichment credits used.",
+  "outreachSent": false,
+  "privateCRMChanged": false,
+  "sources": [
+    {
+      "company": "ADEV Ventures Sdn. Bhd.",
+      "sizeSourceUrl": "https://www.linkedin.com/company/adev-ventures-sdn-bhd",
+      "contactSourceUrl": "https://vimigo.io/about-us",
+      "discoverySourceUrl": "https://www.e50.com.my/en/alumni-e50-en/",
+      "decision": "SME-qualified and handoff-ready; 11-50 employees, privately held, company-owned site identifies ADEV Ventures Sdn. Bhd. (201701033720) and publishes email/WhatsApp business routes."
+    },
+    {
+      "company": "MindTRAC Consulting Sdn. Bhd.",
+      "sizeSourceUrl": "https://www.linkedin.com/company/mindtraclearning",
+      "contactSourceUrl": "https://www.mindtraclearning.com/let-s-connect",
+      "additionalContactSourceUrl": "https://etris.my/training-provider/mindtrac-consulting-sdn-bhd/",
+      "decision": "SME-qualified and handoff-ready; 2-10 employees, privately held, company contact form and public directory business routes."
+    },
+    {
+      "company": "BizLocate Malaysia",
+      "sizeSourceUrl": "https://www.linkedin.com/company/bizlocate-malaysia/",
+      "contactSourceUrl": "https://bizlocate.com.my/contact-us/",
+      "decision": "Research only; 2-10 employees and privately held on company LinkedIn, but legal SSM entity registration not verified."
+    },
+    {
+      "company": "Advantage Marine Services (Malaysia) Sdn. Bhd.",
+      "sizeSourceUrl": "https://www.linkedin.com/company/advantage-marine-services-malaysia-sdn-bhd",
+      "contactSourceUrl": "https://www.advantagemarine.com.my/reach-us/",
+      "decision": "Research only; 51-200 employee range crosses services screen; public-company type/listing status unresolved."
+    },
+    {
+      "company": "Planworth Global Factoring Sdn. Bhd.",
+      "sizeSourceUrl": "https://my.jobstreet.com/companies/planworth-global-factoring-168552661645815",
+      "contactSourceUrl": "https://planworthfinance.com/contact-us/",
+      "decision": "Research only; 51-100 employee range crosses services screen; turnover unknown."
+    },
+    {
+      "company": "Nasi Lemak Saleha Sdn. Bhd.",
+      "sizeSourceUrl": "https://www.signalhire.com/companies/nasi-lemak-saleha",
+      "contactSourceUrl": "https://nasilemaksaleha.oddle.me/en_SG/stores",
+      "decision": "Research only; reported 100-200 employees exceeds services screen; turnover unknown."
+    },
+    {
+      "company": "Dwi Makmur Food Sdn. Bhd.",
+      "sizeSourceUrl": "https://www.e50.com.my/en/alumni-e50-en/",
+      "contactSourceUrl": "https://m.newpages.com.my/en/company/733045/services/10472/53068/BS-Freshmart----Pasaraya-BS.html",
+      "decision": "Research only; current contact and activity found; current size evidence missing."
+    },
+    {
+      "company": "YKL Multi Sdn. Bhd.",
+      "sizeSourceUrl": "https://www.e50.com.my/en/alumni-e50-en/",
+      "contactSourceUrl": "https://www.halal.gov.my/directory/slm_viewdetail.php?comp_code=COMP-20101129-172520&ty=CO&type=C",
+      "decision": "Research only; current company contact/activity found; current size evidence missing."
+    },
+    {
+      "company": "Winner Foods Consolidated Sdn. Bhd.",
+      "sizeSourceUrl": "https://www.e50.com.my/en/alumni-e50-en/",
+      "contactSourceUrl": "https://www.halal.gov.my/directory/slm_viewdetail.php?comp_code=COMP-20130410-144256&ty=CO&type=C",
+      "decision": "Research only; current company contact/activity found; current size evidence missing."
+    },
+    {
+      "company": "Billion Prima Sdn. Bhd.",
+      "sizeSourceUrl": "https://www.linkedin.com/company/billion-prima-sdn-bhd/",
+      "contactSourceUrl": "https://billionprima.com.my/newbillion/contact-us/",
+      "decision": "Research only; 51-200 manufacturing employee range but public-company type and parent ownership/listing status unresolved."
+    },
+    {
+      "company": "KPS Dentalcare Team Sdn. Bhd.",
+      "sizeSourceUrl": "https://www.e50.com.my/en/alumni-e50-en/",
+      "contactSourceUrl": "https://kpsdentalcare.com/contact/",
+      "decision": "Research only; current business contact found; current size evidence missing."
+    },
+    {
+      "company": "Beyond Limits Consultancy Sdn Bhd",
+      "sizeSourceUrl": "https://www.linkedin.com/company/beyondlimits-consultancy",
+      "contactSourceUrl": "https://beyondlimits.com.my/",
+      "decision": "Research only; legal SSM entity registration not verified and website returned HTTP 500."
+    },
+    {
+      "company": "Access Ideas (M) Sdn Bhd",
+      "sizeSourceUrl": "https://gh.linkedin.com/company/accessideasmalaysia",
+      "contactSourceUrl": "https://www.accessideas.com.my/contact-us/",
+      "decision": "SME-qualified and handoff-ready; 2-10 employees, privately held, company-owned contact page identifies registration 201401037859 (1114005-D) and publishes office phone/form."
+    },
+    {
+      "company": "Digital Marketing Consultancy Sdn. Bhd.",
+      "sizeSourceUrl": "https://www.linkedin.com/company/dmctraininghub",
+      "contactSourceUrl": "https://www.dmhubtraining.com/contact-us/",
+      "decision": "SME-qualified and handoff-ready; 11-50 employees, company-owned contact page identifies registration 201601016775 (1187706-T) and publishes office phone/email/form. LinkedIn Type field says Partnership; no excluded parent identified, shareholding not audited."
+    },
+    {
+      "company": "Brand 360 Degree Sdn Bhd",
+      "sizeSourceUrl": "https://www.linkedin.com/company/brand-360-degree/",
+      "contactSourceUrl": "https://www.brand360.com.my/contact-us/",
+      "decision": "SME-qualified and handoff-ready; 11-50 employees, privately held, company-owned site identifies registration 200701034906 (792935-U) and publishes office phone/email/training form."
+    }
+  ],
+  "newProspects": 4,
+  "existingProspectsPromoted": 2,
+  "trainingProviderPartnersAdded": 3
+}

@@ -2,10 +2,10 @@
   "checkedAt": "2026-11-16",
   "monthlyTarget": 100,
   "month": "2026-11",
-  "newReadyThisMonth": 114,
+  "newReadyThisMonth": 129,
   "shortfall": 0,
-  "totalReady": 259,
-  "totalProspects": 709,
+  "totalReady": 274,
+  "totalProspects": 735,
   "newPriorityResearchCandidates": [
     "Benithem Sdn Bhd",
     "Eskayvie Sdn Bhd",
@@ -18,7 +18,16 @@
     "FUSIPIM Sdn Bhd",
     "Usaha Jana Sdn Bhd",
     "Emerald Auto Parts Sdn Bhd",
-    "Bio Harvest Sdn Bhd"
+    "Bio Harvest Sdn Bhd",
+    "Agrotech Holdings Sdn Bhd",
+    "Agritech Enterprise Sdn Bhd",
+    "Glass & Plastic Packaging Sdn Bhd",
+    "WPCP Sdn Bhd",
+    "Acclaira",
+    "Y&K Vorteil Trading (ShangZhan Academy)",
+    "Richworks Corporate Training Sdn Bhd",
+    "Alpha Instrumentation Sdn Bhd",
+    "Equipinc Sdn Bhd"
   ],
   "readinessRequirements": [
     "Published public SME-size and ownership context",
@@ -32,33 +41,92 @@
     "Email delivery or telephone response",
     "HRD Corp employer registration or available levy balance"
   ],
-  "status": "114/100 new handoff-ready SME leads; target met, continue prioritising Selangor/KL beyond target.",
+  "status": "129/100 new handoff-ready SME leads; target met, continue prioritising Selangor/KL beyond target.",
   "hrdCorpRequired": false,
   "hrdCorpRole": "Optional side bonus",
   "providerExclusionsReopened": 6,
-  "totalResearchQueue": 341,
-  "totalExcluded": 21,
-  "trainingProviderPartners": 62,
+  "totalResearchQueue": 350,
+  "totalExcluded": 22,
+  "trainingProviderPartners": 67,
   "qualificationScope": "Public-source screening only; these are potential prospects, not confirmed buyers.",
-  "totalSMEQualified": 260,
-  "unresolvedSMEEvidence": 446,
+  "totalSMEQualified": 276,
+  "unresolvedSMEEvidence": 455,
   "lastRun": {
     "date": "2026-11-16",
-    "discoveredNew": 4,
-    "newSMEQualified": 5,
-    "newHandoffReady": 5,
-    "researchOnlyThisRun": 10,
-    "existingCompaniesContactEnriched": 3,
-    "newContactEntries": 4,
+    "discoveredNew": 26,
+    "newSMEQualified": 16,
+    "newHandoffReady": 15,
+    "researchOnlyThisRun": 9,
+    "existingCompaniesContactEnriched": 7,
+    "newContactEntries": 9,
+    "companyLinkedInProfilesAdded": 6,
     "levyUnknownBlockedCount": 0,
-    "existingResearchRecordsUpdated": 10,
-    "qualifiedButNotHandoffReady": 0,
-    "newProspects": 4,
-    "existingProspectsPromoted": 2,
-    "trainingProviderPartnersAdded": 3,
-    "notes": "Five new SME-qualified/handoff-ready records this run: ADEV Ventures and MindTRAC promoted from existing research; Access Ideas (Putrajaya), Digital Marketing Consultancy (Petaling Jaya) and Brand 360 Degree (Kuala Lumpur) added after current employee-size, legal-entity and company-contact checks. Beyond Limits and BizLocate remain research-only pending legal-entity verification."
+    "existingResearchRecordsUpdated": 7,
+    "qualifiedButNotHandoffReady": 1,
+    "newProspects": 26,
+    "existingProspectsPromoted": 0,
+    "trainingProviderPartnersAdded": 5,
+    "notes": "16 new SME-qualified records were added, of which 15 have a published company business contact and are handoff-ready; Dedinet is qualified but awaits a verified business contact. Nine candidates remain research-only due unresolved size, legal identity or ownership. Jentrakel was excluded because it is a wholly owned subsidiary of Bursa-listed Warisan TC Holdings Berhad. Seven existing Selangor/KL SMEs were enriched with nine new distinct public business routes and six company LinkedIn profiles. No levy-status gate, paid lookup or outreach.",
+    "excludedThisRun": 1,
+    "newLeadRecords": 16,
+    "newHandoffRecords": 15,
+    "newSMEQualifiedCompanies": [
+      "GTG Industries Sdn. Bhd.",
+      "Method Enterprise Sdn Bhd",
+      "Allied Calibration Engineering Services Sdn Bhd",
+      "Gourmet Ingredients Sdn. Bhd.",
+      "Mittric Sdn Bhd",
+      "Ricwil (Malaysia) Sdn Bhd",
+      "Training Zone Dot Com Sdn Bhd",
+      "Taming Tech Sdn Bhd",
+      "Envolve Alliance Sdn Bhd",
+      "ErgoPRIMA Sdn Bhd",
+      "Life Redesigned",
+      "Airflux Malaysia Sdn Bhd",
+      "Matlamat Anggun Sdn Bhd",
+      "Mitcom Sdn Bhd",
+      "Exquisite Resources Sdn Bhd",
+      "Dedinet (Malaysia) Sdn Bhd"
+    ],
+    "newHandoffReadyCompanies": [
+      "GTG Industries Sdn. Bhd.",
+      "Method Enterprise Sdn Bhd",
+      "Allied Calibration Engineering Services Sdn Bhd",
+      "Gourmet Ingredients Sdn. Bhd.",
+      "Mittric Sdn Bhd",
+      "Ricwil (Malaysia) Sdn Bhd",
+      "Training Zone Dot Com Sdn Bhd",
+      "Taming Tech Sdn Bhd",
+      "Envolve Alliance Sdn Bhd",
+      "ErgoPRIMA Sdn Bhd",
+      "Life Redesigned",
+      "Airflux Malaysia Sdn Bhd",
+      "Matlamat Anggun Sdn Bhd",
+      "Mitcom Sdn Bhd",
+      "Exquisite Resources Sdn Bhd"
+    ],
+    "researchOnlyCompanies": [
+      "Agrotech Holdings Sdn Bhd",
+      "Agritech Enterprise Sdn Bhd",
+      "Glass & Plastic Packaging Sdn Bhd",
+      "WPCP Sdn Bhd",
+      "Acclaira",
+      "Y&K Vorteil Trading (ShangZhan Academy)",
+      "Richworks Corporate Training Sdn Bhd",
+      "Alpha Instrumentation Sdn Bhd",
+      "Equipinc Sdn Bhd"
+    ],
+    "qualifiedButNotHandoffReadyCompanies": [
+      "Dedinet (Malaysia) Sdn Bhd"
+    ],
+    "excludedCompanies": [
+      "Jentrakel Sdn Bhd"
+    ],
+    "monthlyNewReadyBefore": 114,
+    "monthlyNewReadyAfter": 129,
+    "monthlyShortfall": 0
   },
-  "unresolvedSMEEvidenceNote": "Research-only candidates retain exact unresolved reasons. This run kept Advantage Marine (51-200 services range/public-company type conflict), Planworth (51-100 services range), Nasi Lemak Saleha (100-200 services range), Dwi Makmur, YKL Multi, Winner Foods and KPS Dentalcare (current size evidence missing), Billion Prima (ownership/listing conflict), BizLocate (legal SSM entity unverified) and Beyond Limits (legal SSM entity unverified; website unavailable) in research. Unknown levy status did not block any lead.",
+  "unresolvedSMEEvidenceNote": "Research-only candidates retain exact unresolved reasons. This run kept Advantage Marine (51-200 services range/public-company type conflict), Planworth (51-100 services range), Nasi Lemak Saleha (100-200 services range), Dwi Makmur, YKL Multi, Winner Foods and KPS Dentalcare (current size evidence missing), Billion Prima (ownership/listing conflict), BizLocate (legal SSM entity unverified) and Beyond Limits (legal SSM entity unverified; website unavailable) in research. Unknown levy status did not block any lead. This run kept Agrotech Holdings (conflicting size/capital/ownership sources), Agritech Enterprise (no current size evidence), Glass & Plastic Packaging (related legal-entity alignment unresolved), WPCP (possible Italian parent/affiliate), Acclaira (legal entity and size unresolved), Y&K Vorteil Trading / ShangZhan Academy (no current size evidence) and Richworks Corporate Training (group ownership unresolved) in research only. This run additionally kept Alpha Instrumentation (conflicting public size/capital/shareholder indicators) and Equipinc (Equipinc Sdn Bhd vs Equipinc AWP Sdn Bhd legal-entity alignment) in research only. Dedinet is SME-qualified but not handoff-ready pending a published company contact. Jentrakel was excluded as a wholly owned subsidiary of listed Warisan TC Holdings Berhad.",
   "shortfallCauses": [],
   "dataScope": "Repository public research only; browser CRM records, favourites, notes, tasks and client relationships untouched.",
   "previousMonthSummary": {
@@ -71,6 +139,12 @@
     "Selangor",
     "Kuala Lumpur"
   ],
-  "totalQualifiedBriefingLeads": 260,
-  "unresolvedSMEEvidenceCountMethod": "Recalculated from all current unresolved/source-unavailable/historical-award/ownership statuses; contact-only pending records with supported SME size are counted separately."
+  "totalQualifiedBriefingLeads": 276,
+  "unresolvedSMEEvidenceCountMethod": "Recalculated from all current unresolved/source-unavailable/historical-award/ownership statuses; contact-only pending records with supported SME size are counted separately.",
+  "qualifiedWithoutPublishedContact": [
+    "Dedinet (Malaysia) Sdn Bhd"
+  ],
+  "excludedThisRun": [
+    "Jentrakel Sdn Bhd"
+  ]
 }

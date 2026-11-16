@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-16",
+  "companiesEnriched": [
+    "Global Psytech Sdn. Bhd.",
+    "Avialite Sdn. Bhd.",
+    "Ventura IOT Sdn. Bhd.",
+    "OSD Consultants (M) Sdn. Bhd.",
+    "Innoveam Sdn. Bhd.",
+    "Avernoble Sdn. Bhd.",
+    "Markaids (Malaysia) Sdn. Bhd."
+  ],
+  "newDistinctBusinessRoutes": 9,
+  "companyLinkedInProfilesAdded": 6,
+  "routes": [
+    "Company-published email, phone and enquiry-form routes only; no private personal contacts added."
+  ],
+  "limitations": [
+    "Deliverability and response not tested.",
+    "Primary contact fields preserved.",
+    "No private dashboard favourites, notes, tasks or client relationships were changed."
+  ],
+  "privateCRMUntouched": true
+}

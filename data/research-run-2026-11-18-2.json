@@ -104,5 +104,7 @@
     "failures": 0,
     "rule": "Every leads.json row has sizeTier=SME, nonempty sizeEvidence and sizeSourceUrl, sizeStatus, priorityTier=top and an SME qualification status."
   },
-  "newProspects": 13
+  "newProspects": 13,
+  "existingContactFormsVerified": 1,
+  "handoffReadinessAuditFailuresAfterUpdate": 0
 }

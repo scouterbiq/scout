@@ -10676,25 +10676,25 @@
     "companyDescription": "Privately held Malaysian indie game studio developing original game intellectual property for global audiences.",
     "companyDescriptionSourceUrl": "https://www.magnusgamesstudio.com/",
     "contactLinkedIn": "",
-    "contactEvidenceStatus": "Published company contact form and/or business email/phone; submission, deliverability and response not tested.",
+    "contactEvidenceStatus": "published_company_contact_form",
     "phoneType": "",
     "phoneSourceUrl": "",
-    "contactProfileStatus": "company_business_route_only",
-    "contactRouteNote": "Published company business route; no personal contact details added. Delivery and response not tested.",
+    "contactProfileStatus": "company_owned_contact_form",
+    "contactRouteNote": "Published company enquiry form; no public email/phone; form delivery not tested.",
     "_dateFound": "2026-10-12",
     "sizeStatus": "public_source_supported",
     "levyStatus": "unverified",
     "evidenceCheckedAt": "2026-10-12",
     "verificationScope": "Public-source SME screening; current size range and ownership context reviewed. Potential prospect only; interest, budget, contact deliverability and response untested. Full registry ownership and statutory SME certification not verified.",
     "verificationStatus": "verified_public_sources",
-    "verificationReason": "Current public SME-size evidence and company-published business contact corroborated.",
+    "verificationReason": "Current public SME-size evidence and company-published business contact corroborated. Official contact page was rechecked on 2026-11-18 and contains a company-owned enquiry form; no public email or phone was inferred. Form delivery not tested.",
     "verificationErrors": [],
     "websiteRecheckedAt": "2026-10-12",
     "websiteRecheckStatus": "usable",
     "qualifiedAt": "2026-10-12",
     "handoffReadyAt": "2026-10-12",
     "handoffReady": true,
-    "readinessStatus": "Ready — public SME-size evidence and company business contact",
+    "readinessStatus": "Ready — public SME-size evidence and published company-owned enquiry form",
     "suggestedTrainingFit": "Suggested fit (inference): communication, professional business writing, critical thinking/problem solving or workplace AI training for staff. Training demand, budget and buying interest not confirmed.",
     "hrdCorpRequired": false,
     "qualificationScope": "Public-source SME screening; current size range and ownership context reviewed. Potential prospect only; interest, budget, contact deliverability and response untested. Full registry ownership and statutory SME certification not verified.",
@@ -10717,7 +10717,7 @@
       "https://www.magnusgamesstudio.com/",
       "https://www.linkedin.com/company/magnus-games-studio"
     ],
-    "contactEvidence": "General enquiries:   https://www.magnusgamesstudio.com/contact.php",
+    "contactEvidence": "Official contact page includes an ENQUIRIES form with Subject, Name and Email Address fields and publishes the company Kuala Lumpur address; no public email or phone is listed. Form delivery has not been tested.",
     "phoneCheckedAt": "2026-10-12",
     "leadType": "Malaysian SME / potential employer client",
     "reviewedSourceUrls": [
@@ -10735,21 +10735,22 @@
     "discoveredAt": "2026-10-12",
     "contacts": [
       {
-        "label": "General enquiries",
+        "label": "Official company enquiry form",
         "name": "",
         "role": "Company-owned enquiry form",
         "email": "",
         "phone": "",
         "linkedin": "",
         "sourceUrl": "https://www.magnusgamesstudio.com/contact.php",
-        "checkedAt": "2026-11-16"
+        "checkedAt": "2026-11-18"
       }
     ],
-    "contactsCheckedAt": "2026-11-16",
+    "contactsCheckedAt": "2026-11-18",
     "checkedAt": "2026-11-16",
     "contactEnrichmentScope": "Rechecked company-owned website, public company profile and/or official industry/business directory; published company routes only. Deliverability not tested.",
     "contactFormUrl": "https://www.magnusgamesstudio.com/contact.php",
-    "sizeEvidenceExcerpt": "Today, Magnus Games employs 40 like-minded people."
+    "sizeEvidenceExcerpt": "Today, Magnus Games employs 40 like-minded people.",
+    "contactSourceType": "company_website_form"
   },
   {
     "id": "895821b628f3ac33",

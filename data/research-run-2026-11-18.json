@@ -1,0 +1,425 @@
+{
+  "runDate": "2026-11-18",
+  "repository": "scouterbiq/scout",
+  "scope": "Public Malaysian SME discovery and existing Selangor/KL contact/profile enrichment",
+  "counts": {
+    "discoveredNew": 19,
+    "smeQualified": 16,
+    "handoffReady": 13,
+    "qualifiedNotHandoffReady": 3,
+    "researchOnly": 3,
+    "existingCompanyProfilesEnriched": 11,
+    "existingCompaniesContactEnriched": 6,
+    "newContactEntries": 26,
+    "newDistinctContactRoutes": 21,
+    "companyLinkedInProfilesAdded": 29
+  },
+  "monthlyProgress": {
+    "target": 100,
+    "previousActual": 129,
+    "actualAfterRun": 142,
+    "shortfall": 0,
+    "aboveTarget": 42
+  },
+  "newSMEQualifiedCompanies": [
+    "MYS Engineering Sdn Bhd",
+    "IPSEC Engineering Sdn Bhd",
+    "TKG Engineering (M) Sdn Bhd",
+    "Centrix Engineering (M) Sdn Bhd",
+    "Straits Consulting Engineers Sdn Bhd",
+    "Controls Handling Engineering Sdn Bhd",
+    "Amantronic Sdn Bhd",
+    "Mesia Engineering Sdn Bhd",
+    "Exceed Excellence Sdn Bhd",
+    "OTC Training Centre Sdn Bhd",
+    "JET Engineering Solutions Sdn Bhd",
+    "Essential Engineering Solution Sdn Bhd",
+    "City Thermoplastic Engineering Sdn Bhd",
+    "MERCU Oilfield Supplies & Services Sdn Bhd",
+    "Samalaju Engineering Sdn Bhd",
+    "Zelleco Engineering Sdn Bhd"
+  ],
+  "newHandoffReadyCompanies": [
+    "MYS Engineering Sdn Bhd",
+    "IPSEC Engineering Sdn Bhd",
+    "TKG Engineering (M) Sdn Bhd",
+    "Centrix Engineering (M) Sdn Bhd",
+    "Straits Consulting Engineers Sdn Bhd",
+    "Controls Handling Engineering Sdn Bhd",
+    "Amantronic Sdn Bhd",
+    "Mesia Engineering Sdn Bhd",
+    "Exceed Excellence Sdn Bhd",
+    "OTC Training Centre Sdn Bhd",
+    "Essential Engineering Solution Sdn Bhd",
+    "City Thermoplastic Engineering Sdn Bhd",
+    "MERCU Oilfield Supplies & Services Sdn Bhd"
+  ],
+  "qualifiedButNotHandoffReadyCompanies": [
+    "JET Engineering Solutions Sdn Bhd",
+    "Samalaju Engineering Sdn Bhd",
+    "Zelleco Engineering Sdn Bhd"
+  ],
+  "researchOnlyCompanies": [
+    "Pusaco Industrial Supplies Sdn Bhd",
+    "Major Engineering Sdn Bhd",
+    "Best Wide Engineering (M) Sdn Bhd"
+  ],
+  "trainingProviderPartnersAdded": [
+    "Exceed Excellence Sdn Bhd",
+    "OTC Training Centre Sdn Bhd"
+  ],
+  "trainingFacilitySMEsAdded": [
+    "MERCU Oilfield Supplies & Services Sdn Bhd"
+  ],
+  "e50Audit": {
+    "sourceYear": 2024,
+    "officialCohortSize": 50,
+    "alreadyPresentInScout": 50,
+    "newE50LeadsAdded": 0,
+    "existingCurrentSizeAuditsUpdated": 5,
+    "sourceUrl": "https://www.e50.com.my/alumni-e50/",
+    "note": "Historical award year was not treated as current SME proof."
+  },
+  "policy": {
+    "smeRequired": true,
+    "hrdCorpEmployerLevyOptional": true,
+    "unknownLevyBlocked": 0,
+    "levySignalForNewSMEs": "unclear",
+    "levyEvidenceForNewSMEs": "",
+    "paidSearchesUsed": 0,
+    "paidApiCreditsUsed": 0,
+    "outreachSent": false,
+    "contactDeliverabilityTested": false,
+    "buyingInterestConfirmed": false,
+    "personalContactInformationAdded": false,
+    "privateCRMChanged": false,
+    "appCodeChanged": false
+  },
+  "sourceEvidence": [
+    {
+      "company": "MYS Engineering Sdn Bhd",
+      "evidenceType": "SME size and ownership",
+      "sourceUrl": "https://www.linkedin.com/company/mysengineering",
+      "excerpt": "“nearly 50 full-time employees”; “Company size 11-50 employees”; “Type Privately Held”.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "MYS Engineering Sdn Bhd",
+      "evidenceType": "Published company contact",
+      "sourceUrl": "https://mys-eng.com/green-technology/",
+      "excerpt": "Company website lists info@mys-eng.com and the Petaling Jaya office telephone numbers.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "IPSEC Engineering Sdn Bhd",
+      "evidenceType": "SME size and ownership",
+      "sourceUrl": "https://www.linkedin.com/company/ipsec2017",
+      "excerpt": "“today we have 26 full time staff and 2 offices”; LinkedIn “11-50 employees”; “Privately Held”.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "IPSEC Engineering Sdn Bhd",
+      "evidenceType": "Published company contact",
+      "sourceUrl": "https://www.ipsec.com.my/contact-us/",
+      "excerpt": "Official contact page publishes general enquiries and sales routes; email and phone not tested for deliverability.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "TKG Engineering (M) Sdn Bhd",
+      "evidenceType": "SME size and ownership",
+      "sourceUrl": "https://www.linkedin.com/company/tkg-engineering-sdn-bhd",
+      "excerpt": "“Company size 11-50 employees”; “Type Privately Held”.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "TKG Engineering (M) Sdn Bhd",
+      "evidenceType": "Published company contact",
+      "sourceUrl": "https://www.tkg.my/contacts",
+      "excerpt": "Company website product/contact pages publish enquiry@tkg.com.my and two company telephone lines.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Centrix Engineering (M) Sdn Bhd",
+      "evidenceType": "SME size and ownership",
+      "sourceUrl": "https://www.linkedin.com/company/ce-eng",
+      "excerpt": "LinkedIn profile for Critical Engineering (M) Sdn Bhd: “11-50 employees”; “Privately Held”.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Centrix Engineering (M) Sdn Bhd",
+      "evidenceType": "Published company contact",
+      "sourceUrl": "https://ce-eng.com.my/contact-us/",
+      "excerpt": "Current company contact page publishes admin@ce-eng.com.my and the Shah Alam telephone number.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Straits Consulting Engineers Sdn Bhd",
+      "evidenceType": "SME size and ownership",
+      "sourceUrl": "https://www.linkedin.com/company/straits-consulting-engineers",
+      "excerpt": "“Company size 11-50 employees”; “Type Privately Held”.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Straits Consulting Engineers Sdn Bhd",
+      "evidenceType": "Published company contact",
+      "sourceUrl": "https://straits-engineers.com/contact/",
+      "excerpt": "Company contact page publishes info@straits-engineers.com.my and the Petaling Jaya office line.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Controls Handling Engineering Sdn Bhd",
+      "evidenceType": "SME size and ownership",
+      "sourceUrl": "https://www.linkedin.com/company/controls-handling-engineering-sdn-bhd/",
+      "excerpt": "“Company size 11-50 employees”; “Type Privately Held”.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Controls Handling Engineering Sdn Bhd",
+      "evidenceType": "Published company contact",
+      "sourceUrl": "https://www.controls.com.my/contactus",
+      "excerpt": "Company contact page publishes sales@controls.com.my and the Shah Alam telephone line.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Amantronic Sdn Bhd",
+      "evidenceType": "SME size and ownership",
+      "sourceUrl": "https://www.linkedin.com/company/amantronic-sdn-bhd",
+      "excerpt": "“Company size 11-50 employees”; “Type Privately Held”.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Amantronic Sdn Bhd",
+      "evidenceType": "Published company contact",
+      "sourceUrl": "https://amantronic.com/contacts/",
+      "excerpt": "Company-owned contact page publishes contact@amantronic.com and a company contact number.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Mesia Engineering Sdn Bhd",
+      "evidenceType": "SME size and ownership",
+      "sourceUrl": "https://www.linkedin.com/company/mesia-engineering-sdn-bhd",
+      "excerpt": "“Company size 11-50 employees”; “Type Privately Held”.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Mesia Engineering Sdn Bhd",
+      "evidenceType": "Published company contact",
+      "sourceUrl": "https://www.bizmalay.com/en/mesia-engineering-sdn-bhd-03-8768-8826",
+      "excerpt": "Public business directory lists Mesia Engineering Sdn Bhd at the Dengkil address and telephone 03-8768 8826; directory route not tested for deliverability.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Exceed Excellence Sdn Bhd",
+      "evidenceType": "SME size and ownership",
+      "sourceUrl": "https://www.linkedin.com/company/exceed-excellence-sdn-bhd/",
+      "excerpt": "“Company size 2-10 employees”; “Type Privately Held”.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Exceed Excellence Sdn Bhd",
+      "evidenceType": "Published company contact",
+      "sourceUrl": "https://www.exceed-excellence.com/contact-us/",
+      "excerpt": "Company contact page publishes info@exceed-excellence.com, phone 603-20359277 and WhatsApp 6012-8041883.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "OTC Training Centre Sdn Bhd",
+      "evidenceType": "SME size and ownership",
+      "sourceUrl": "https://my.linkedin.com/company/otctrainingcentresb",
+      "excerpt": "“Saiz syarikat 11-50 pekerja”; “Jenis Milik Persendirian”.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "OTC Training Centre Sdn Bhd",
+      "evidenceType": "Published company contact",
+      "sourceUrl": "https://otc.com.my/understanding-the-personal-data-protection-act-2010/",
+      "excerpt": "OTC company website publishes info@otc.com.my and +6012-588 2263; company profile lists a Subang Jaya, Selangor location.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "JET Engineering Solutions Sdn Bhd",
+      "evidenceType": "SME size and ownership",
+      "sourceUrl": "https://www.linkedin.com/company/jet-engineering-solutions-sdn-bhd",
+      "excerpt": "“Company size 11-50 employees”; “Type Privately Held”.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "JET Engineering Solutions Sdn Bhd",
+      "evidenceType": "Published company contact",
+      "sourceUrl": "https://www.linkedin.com/posts/jet-engineering-solutions-sdn-bhd_hiring-internship-activity-7266867888978829312-u2ZU",
+      "excerpt": "A company-published recruitment post says to email resumes to info@jetengsolutions.com. This is a published company email but its purpose is recruitment; no general business enquiry route was verified.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Essential Engineering Solution Sdn Bhd",
+      "evidenceType": "SME size and ownership",
+      "sourceUrl": "https://www.linkedin.com/company/essential-engineering-solution-sdn-bhd",
+      "excerpt": "“Company size 11-50 employees”; “Type Privately Held”.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Essential Engineering Solution Sdn Bhd",
+      "evidenceType": "Published company contact",
+      "sourceUrl": "https://www.essentialgroup.com.my/contact/",
+      "excerpt": "Official contact page lists a Petaling Jaya central office, general@essentialgroup.com.my, +603 5887 3699 and a company WhatsApp line.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "City Thermoplastic Engineering Sdn Bhd",
+      "evidenceType": "SME size and ownership",
+      "sourceUrl": "https://www.linkedin.com/company/city-thermoplastic-engineering-sdn-bhd",
+      "excerpt": "“Company size 11-50 employees”; “Type Privately Held”.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "City Thermoplastic Engineering Sdn Bhd",
+      "evidenceType": "Published company contact",
+      "sourceUrl": "https://www.cte.com.my/contact-us/",
+      "excerpt": "Official company contact page publishes general@cte.com.my and four Balakong telephone lines.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "MERCU Oilfield Supplies & Services Sdn Bhd",
+      "evidenceType": "SME size and ownership",
+      "sourceUrl": "https://www.linkedin.com/company/mercu-oilfield-supplies-services",
+      "excerpt": "“Company size 11-50 employees”; “Type Privately Held”.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "MERCU Oilfield Supplies & Services Sdn Bhd",
+      "evidenceType": "Published company contact",
+      "sourceUrl": "https://www.linkedin.com/company/mercu-oilfield-supplies-services",
+      "excerpt": "Company post states “Contact our Sales Team: sales@mercuoilfield.com”; no personal contact details copied.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Samalaju Engineering Sdn Bhd",
+      "evidenceType": "SME size and ownership",
+      "sourceUrl": "https://www.linkedin.com/company/samalajuengineering",
+      "excerpt": "“Company size 11-50 employees”; “Type Privately Held”.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Zelleco Engineering Sdn Bhd",
+      "evidenceType": "SME size and ownership",
+      "sourceUrl": "https://www.linkedin.com/company/zelleco-engineering-sdn-bhd",
+      "excerpt": "“Company size 11-50 employees”; “Type Privately Held”.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Pusaco Industrial Supplies Sdn Bhd",
+      "evidenceType": "Unresolved SME/ownership evidence",
+      "sourceUrl": "https://my.linkedin.com/company/pusaco",
+      "excerpt": "Company LinkedIn profile lists “51-200 employees” and type “Self-employed”. As a distributor/services business, the conservative employee screen is ≤75; this range crosses the threshold. No current turnover evidence found. Checked 2026-11-18.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Pusaco Industrial Supplies Sdn Bhd",
+      "evidenceType": "Published research contact",
+      "sourceUrl": "https://www.infopages.net.my/companies/pusaco-industrial-supplies-sdn-bhd-1187",
+      "excerpt": "Public business directory lists pusaco@pusaco.com.my and a company telephone; not tested for deliverability.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Major Engineering Sdn Bhd",
+      "evidenceType": "Published research contact",
+      "sourceUrl": "https://www.major.com.my/contactus.html",
+      "excerpt": "Official company contact page publishes sales@major.com.my and a Klang office telephone; not tested for deliverability.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Best Wide Engineering (M) Sdn Bhd",
+      "evidenceType": "Unresolved SME/ownership evidence",
+      "sourceUrl": "https://www.linkedin.com/company/best-wide-engineering-m-sdn-bhd",
+      "excerpt": "Company LinkedIn profile lists “11-50 employees” and “Privately Held”; a 2024 company recruitment document states “about 35 multi-discipline staff”. The size screen appears to pass, but ownership/group context is unresolved. Checked 2026-11-18.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Best Wide Engineering (M) Sdn Bhd",
+      "evidenceType": "Published research contact",
+      "sourceUrl": "https://bestwidegroup.com/contact-us/",
+      "excerpt": "Official contact page publishes bwe_enquiry@bestwidegroup.com and the Kuala Lumpur office telephone; not tested for deliverability.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "SME definition",
+      "evidenceType": "Official qualification rule",
+      "sourceUrl": "https://smecorp.gov.my/index.php/en/policies/2020-02-11-08-01-24/sme-definition",
+      "excerpt": "Manufacturing: turnover ≤RM50m OR full-time employees ≤200; services and other sectors: turnover ≤RM20m OR full-time employees ≤75; listed-company/MNC/GLC subsidiaries excluded.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Enterprise 50 alumni",
+      "evidenceType": "Historical discovery/dedup source",
+      "sourceUrl": "https://www.e50.com.my/alumni-e50/",
+      "excerpt": "Official alumni page lists the 2024 cohort as 50 companies; all 50 names were matched to existing Scout leads/prospects during this run.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Harel Technologies Sdn. Bhd.",
+      "evidenceType": "Current size and ownership refresh; E50 award year historical only",
+      "sourceUrl": "https://www.linkedin.com/company/harel-technologies-sdn-bhd",
+      "excerpt": "Company LinkedIn profile lists “11-50 employees” and “Privately Held”; current company website confirms active industrial-equipment business. Checked 2026-11-18. Company LinkedIn profile lists Type: Privately Held; no listed/MNC/GLC parent identified in sources reviewed. No SSM shareholder audit performed.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Malgaz Industries Sdn. Bhd.",
+      "evidenceType": "Current size and ownership refresh; E50 award year historical only",
+      "sourceUrl": "https://my.linkedin.com/company/malgaz",
+      "excerpt": "Company LinkedIn profile lists “11-50 employees” and “Privately Held”; current company website has 2026 activity and references its 2024 E50 placement and SME Corp SCORE recognition. Checked 2026-11-18. Company LinkedIn profile lists Type: Privately Held; current company website confirms active Shah Alam operations. No listed/MNC/GLC parent identified in sources reviewed; no SSM shareholder audit.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Flow Studios Sdn. Bhd.",
+      "evidenceType": "Current size and ownership refresh; E50 award year historical only",
+      "sourceUrl": "https://www.linkedin.com/company/flow-studios-sdn-bhd",
+      "excerpt": "Company LinkedIn profile lists “2-10 employees” and type “Partnership”; current company website confirms active Flow Studios Sdn Bhd business. Checked 2026-11-18. LinkedIn lists type Partnership; no listed/MNC/GLC parent identified in sources reviewed. Current shareholding was not independently audited.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "TMK Industries Sdn. Bhd.",
+      "evidenceType": "Current size and ownership refresh; E50 award year historical only",
+      "sourceUrl": "https://www.linkedin.com/company/tmk-industries-sdn-bhd",
+      "excerpt": "Company LinkedIn profile lists “11-50 employees” and type “Self-Owned”; current website confirms active company operations. Checked 2026-11-18. LinkedIn lists type Self-Owned; no listed/MNC/GLC parent identified in sources reviewed. Current shareholding was not independently audited.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Victorious Step Sdn. Bhd.",
+      "evidenceType": "Current size and ownership refresh; E50 award year historical only",
+      "sourceUrl": "https://www.linkedin.com/company/victoriousstepsdnbhd",
+      "excerpt": "Company LinkedIn profile lists “51-200 employees” and “Privately Held”; current company website confirms plastic-product manufacturing activity. Checked 2026-11-18. Company LinkedIn profile lists Type: Privately Held; no listed/MNC/GLC parent identified in sources reviewed. No SSM shareholder audit performed.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Mango Training and Consultancy Sdn Bhd",
+      "evidenceType": "Existing published business contact structured in contacts array",
+      "sourceUrl": "https://my.linkedin.com/in/marktraining",
+      "excerpt": "Existing primary company email/phone preserved and structured in contacts array; checked 2026-11-18.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "SEMARAK Training",
+      "evidenceType": "Existing published business contact structured in contacts array",
+      "sourceUrl": "https://my.linkedin.com/in/faiz-latip-44a50555",
+      "excerpt": "Existing primary company email/phone preserved and structured in contacts array; checked 2026-11-18.",
+      "checkedAt": "2026-11-18"
+    },
+    {
+      "company": "Training Minds Sdn Bhd",
+      "evidenceType": "Additional company-published email",
+      "sourceUrl": "https://www.linkedin.com/company/training-minds-sdn-bhd",
+      "excerpt": "Company profile publishes info@trainingminds.com.my; added as an additional business email route, primary email preserved.",
+      "checkedAt": "2026-11-18"
+    }
+  ],
+  "limitations": [
+    "LinkedIn employee ranges are self-reported and not payroll-audited.",
+    "Mesia's phone is from a public business directory, not its own website.",
+    "OTC profile lists 11-50 employees but also displays 73 employee profiles; exact payroll headcount is not audited.",
+    "JET's published email is in a recruitment post, so it remains outside dad-handoff.",
+    "Samalaju and Zelleco have no current published company business contact verified.",
+    "Pusaco's 51-200 range crosses the 75-employee services threshold.",
+    "Major Engineering has no current public employee/turnover evidence.",
+    "Best Wide Engineering has unresolved Propel group/subsidiary ownership context."
+  ]
+}

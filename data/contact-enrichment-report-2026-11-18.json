@@ -1,0 +1,421 @@
+{
+  "runDate": "2026-11-18",
+  "existingCompaniesProfileEnriched": 11,
+  "existingCompaniesContactEnriched": 6,
+  "newContactEntries": 6,
+  "updates": [
+    {
+      "company": "ArcNet Training & Development Sdn Bhd",
+      "companyLinkedIn": "https://www.linkedin.com/company/arcnethq",
+      "contactRoutesAdded": 0,
+      "change": "Added company LinkedIn profile; existing contact records preserved.",
+      "contactSourceUrls": [
+        "http://arcnettraining.com"
+      ],
+      "contactsCheckedAt": "2026-11-18"
+    },
+    {
+      "company": "Mango Training and Consultancy Sdn Bhd",
+      "companyLinkedIn": "https://www.linkedin.com/company/mango-training-and-consultancy-sdn-bhd",
+      "contactRoutesAdded": 1,
+      "change": "Added structured general-enquiries entry from existing published primary email/phone; primary fields preserved.",
+      "contactSourceUrls": [
+        "https://my.linkedin.com/in/marktraining"
+      ],
+      "contactsCheckedAt": "2026-11-18"
+    },
+    {
+      "company": "MMT UNIVERSAL ACADEMY SDN BHD",
+      "companyLinkedIn": "https://www.linkedin.com/company/mmt-universal-academy",
+      "contactRoutesAdded": 0,
+      "change": "Added company LinkedIn profile; existing contacts array preserved.",
+      "contactSourceUrls": [
+        "https://mmt.my/wp-content/uploads/WTCC2025-Brochure.pdf",
+        "https://mmt.my/contact-us/"
+      ],
+      "contactsCheckedAt": "2026-11-18"
+    },
+    {
+      "company": "UpSkillingMinds Sdn Bhd",
+      "companyLinkedIn": "https://www.linkedin.com/company/upskilingminds/",
+      "contactRoutesAdded": 0,
+      "change": "Added company LinkedIn profile; existing contacts array preserved.",
+      "contactSourceUrls": [
+        "https://upskilltraining.com.my/contact-us/"
+      ],
+      "contactsCheckedAt": "2026-11-18"
+    },
+    {
+      "company": "SEMARAK Training",
+      "companyLinkedIn": "https://www.linkedin.com/company/semaraktraining",
+      "contactRoutesAdded": 1,
+      "change": "Added structured general-enquiries entry from existing published primary email/phone; primary fields preserved.",
+      "contactSourceUrls": [
+        "https://my.linkedin.com/in/faiz-latip-44a50555"
+      ],
+      "contactsCheckedAt": "2026-11-18"
+    },
+    {
+      "company": "Training Minds Sdn Bhd",
+      "companyLinkedIn": "https://www.linkedin.com/company/training-minds-sdn-bhd",
+      "contactRoutesAdded": 1,
+      "change": "Added distinct company-published general email info@trainingminds.com.my; existing primary email preserved.",
+      "contactSourceUrls": [
+        "https://www.linkedin.com/company/training-minds-sdn-bhd"
+      ],
+      "contactsCheckedAt": "2026-11-18"
+    },
+    {
+      "company": "Harel Technologies Sdn. Bhd.",
+      "companyLinkedIn": "https://www.linkedin.com/company/harel-technologies-sdn-bhd",
+      "contactRoutesAdded": 0,
+      "change": "Refreshed current 11-50 employee/private profile evidence and recorded 2024 E50 historical source year.",
+      "contactSourceUrls": [
+        "https://harel.com.my/contact/"
+      ],
+      "contactsCheckedAt": "2026-11-18"
+    },
+    {
+      "company": "Malgaz Industries Sdn. Bhd.",
+      "companyLinkedIn": "https://my.linkedin.com/company/malgaz",
+      "contactRoutesAdded": 0,
+      "change": "Refreshed current 11-50 employee/private profile evidence and recorded 2024 E50 historical source year; existing current website contact preserved.",
+      "contactSourceUrls": [
+        "https://www.malgaz.com.my/contact/"
+      ],
+      "contactsCheckedAt": "2026-11-18"
+    },
+    {
+      "company": "Flow Studios Sdn. Bhd.",
+      "companyLinkedIn": "https://www.linkedin.com/company/flow-studios-sdn-bhd",
+      "contactRoutesAdded": 1,
+      "change": "Added structured general-enquiries entry from existing published primary contact; recorded 2024 E50 historical source year.",
+      "contactSourceUrls": [
+        "https://flowstudios.com.my/refund_returns/"
+      ],
+      "contactsCheckedAt": "2026-11-18"
+    },
+    {
+      "company": "TMK Industries Sdn. Bhd.",
+      "companyLinkedIn": "https://www.linkedin.com/company/tmk-industries-sdn-bhd",
+      "contactRoutesAdded": 1,
+      "change": "Added structured general-enquiries entry from existing published primary contact; recorded 2024 E50 historical source year.",
+      "contactSourceUrls": [
+        "https://m.newpages.com.my/en/company/826377/TMK-Industries-Sdn-Bhd.html"
+      ],
+      "contactsCheckedAt": "2026-11-18"
+    },
+    {
+      "company": "Victorious Step Sdn. Bhd.",
+      "companyLinkedIn": "https://www.linkedin.com/company/victoriousstepsdnbhd",
+      "contactRoutesAdded": 1,
+      "change": "Added structured general-enquiries entry from existing published primary contact; recorded 2024 E50 historical source year.",
+      "contactSourceUrls": [
+        "https://www.victoriousstep.com/"
+      ],
+      "contactsCheckedAt": "2026-11-18"
+    }
+  ],
+  "policy": "Only company-level public profiles and published business routes were added; no personal contact details, private CRM notes, favourites, tasks or client relationships were changed. No deliverability testing or outreach was performed.",
+  "newDistinctContactRoutes": 1,
+  "companyLinkedInProfilesAdded": 29,
+  "newLeadContactRoutesAdded": [
+    {
+      "company": "MYS Engineering Sdn Bhd",
+      "contacts": [
+        {
+          "label": "General business enquiries",
+          "name": "",
+          "role": "General enquiries",
+          "email": "info@mys-eng.com",
+          "phone": "+603 7887 0104 / +603 7887 0105",
+          "linkedin": "https://www.linkedin.com/company/mysengineering",
+          "sourceUrl": "https://mys-eng.com/green-technology/",
+          "checkedAt": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "company": "IPSEC Engineering Sdn Bhd",
+      "contacts": [
+        {
+          "label": "General business enquiries",
+          "name": "",
+          "role": "General enquiries",
+          "email": "info@ipsec.com.my",
+          "phone": "+603 8603 1195",
+          "linkedin": "https://www.linkedin.com/company/ipsec2017",
+          "sourceUrl": "https://www.ipsec.com.my/contact-us/",
+          "checkedAt": "2026-11-18"
+        },
+        {
+          "label": "Sales enquiries",
+          "name": "",
+          "role": "Sales enquiries",
+          "email": "sales@ipsecgroup.com",
+          "phone": "+6017 299 6500",
+          "linkedin": "https://www.linkedin.com/company/ipsec2017",
+          "sourceUrl": "https://www.ipsec.com.my/contact-us/",
+          "checkedAt": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "company": "TKG Engineering (M) Sdn Bhd",
+      "contacts": [
+        {
+          "label": "General enquiries",
+          "name": "",
+          "role": "General enquiries",
+          "email": "enquiry@tkg.com.my",
+          "phone": "+603 3291 9339",
+          "linkedin": "https://www.linkedin.com/company/tkg-engineering-sdn-bhd",
+          "sourceUrl": "https://www.tkg.my/contacts",
+          "checkedAt": "2026-11-18"
+        },
+        {
+          "label": "Additional published company line",
+          "name": "",
+          "role": "Business telephone",
+          "email": "+60 16 774 8339",
+          "phone": "",
+          "linkedin": "https://www.linkedin.com/company/tkg-engineering-sdn-bhd",
+          "sourceUrl": "https://www.tkg.my/contacts",
+          "checkedAt": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "company": "Centrix Engineering (M) Sdn Bhd",
+      "contacts": [
+        {
+          "label": "General business enquiries",
+          "name": "",
+          "role": "General enquiries",
+          "email": "admin@ce-eng.com.my",
+          "phone": "+603 7831 8133",
+          "linkedin": "https://www.linkedin.com/company/ce-eng",
+          "sourceUrl": "https://ce-eng.com.my/contact-us/",
+          "checkedAt": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "company": "Straits Consulting Engineers Sdn Bhd",
+      "contacts": [
+        {
+          "label": "General business enquiries",
+          "name": "",
+          "role": "General enquiries",
+          "email": "info@straits-engineers.com.my",
+          "phone": "+603 7885 0891",
+          "linkedin": "https://www.linkedin.com/company/straits-consulting-engineers",
+          "sourceUrl": "https://straits-engineers.com/contact/",
+          "checkedAt": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "company": "Controls Handling Engineering Sdn Bhd",
+      "contacts": [
+        {
+          "label": "Sales enquiries",
+          "name": "",
+          "role": "Sales enquiries",
+          "email": "sales@controls.com.my",
+          "phone": "+603 5638 1166",
+          "linkedin": "https://www.linkedin.com/company/controls-handling-engineering-sdn-bhd/",
+          "sourceUrl": "https://www.controls.com.my/contactus",
+          "checkedAt": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "company": "Amantronic Sdn Bhd",
+      "contacts": [
+        {
+          "label": "General business enquiries",
+          "name": "",
+          "role": "General enquiries",
+          "email": "contact@amantronic.com",
+          "phone": "+6011 2340 5429",
+          "linkedin": "https://www.linkedin.com/company/amantronic-sdn-bhd",
+          "sourceUrl": "https://amantronic.com/contacts/",
+          "checkedAt": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "company": "Mesia Engineering Sdn Bhd",
+      "contacts": [
+        {
+          "label": "Published business directory telephone",
+          "name": "",
+          "role": "General business enquiries",
+          "email": "",
+          "phone": "+603 8768 8826",
+          "linkedin": "https://www.linkedin.com/company/mesia-engineering-sdn-bhd",
+          "sourceUrl": "https://www.bizmalay.com/en/mesia-engineering-sdn-bhd-03-8768-8826",
+          "checkedAt": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "company": "Exceed Excellence Sdn Bhd",
+      "contacts": [
+        {
+          "label": "General programme enquiries",
+          "name": "",
+          "role": "Training programme enquiries",
+          "email": "info@exceed-excellence.com",
+          "phone": "+603 2035 9277",
+          "linkedin": "https://www.linkedin.com/company/exceed-excellence-sdn-bhd/",
+          "sourceUrl": "https://www.exceed-excellence.com/contact-us/",
+          "checkedAt": "2026-11-18"
+        },
+        {
+          "label": "WhatsApp business contact",
+          "name": "",
+          "role": "Business WhatsApp",
+          "email": "",
+          "phone": "+6012 804 1883",
+          "linkedin": "https://www.linkedin.com/company/exceed-excellence-sdn-bhd/",
+          "sourceUrl": "https://www.exceed-excellence.com/contact-us/",
+          "checkedAt": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "company": "OTC Training Centre Sdn Bhd",
+      "contacts": [
+        {
+          "label": "General programme enquiries",
+          "name": "",
+          "role": "Training programme enquiries",
+          "email": "info@otc.com.my",
+          "phone": "+6012 588 2263",
+          "linkedin": "https://my.linkedin.com/company/otctrainingcentresb",
+          "sourceUrl": "https://otc.com.my/understanding-the-personal-data-protection-act-2010/",
+          "checkedAt": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "company": "JET Engineering Solutions Sdn Bhd",
+      "contacts": [
+        {
+          "label": "Published recruitment email",
+          "name": "",
+          "role": "Recruitment enquiries — not confirmed for general business enquiries",
+          "email": "info@jetengsolutions.com",
+          "phone": "",
+          "linkedin": "https://www.linkedin.com/company/jet-engineering-solutions-sdn-bhd",
+          "sourceUrl": "https://www.linkedin.com/posts/jet-engineering-solutions-sdn-bhd_hiring-internship-activity-7266867888978829312-u2ZU",
+          "checkedAt": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "company": "Essential Engineering Solution Sdn Bhd",
+      "contacts": [
+        {
+          "label": "General business enquiries",
+          "name": "",
+          "role": "General enquiries",
+          "email": "general@essentialgroup.com.my",
+          "phone": "+603 5887 3699",
+          "linkedin": "https://www.linkedin.com/company/essential-engineering-solution-sdn-bhd",
+          "sourceUrl": "https://www.essentialgroup.com.my/contact/",
+          "checkedAt": "2026-11-18"
+        },
+        {
+          "label": "WhatsApp business contact",
+          "name": "",
+          "role": "Business WhatsApp",
+          "email": "",
+          "phone": "+6012 4826 108",
+          "linkedin": "https://www.linkedin.com/company/essential-engineering-solution-sdn-bhd",
+          "sourceUrl": "https://www.essentialgroup.com.my/contact/",
+          "checkedAt": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "company": "City Thermoplastic Engineering Sdn Bhd",
+      "contacts": [
+        {
+          "label": "General business enquiries",
+          "name": "",
+          "role": "General enquiries",
+          "email": "general@cte.com.my",
+          "phone": "+603 8961 7446 / +603 8961 7448 / +603 8961 9330 / +603 8961 9331",
+          "linkedin": "https://www.linkedin.com/company/city-thermoplastic-engineering-sdn-bhd",
+          "sourceUrl": "https://www.cte.com.my/contact-us/",
+          "checkedAt": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "company": "MERCU Oilfield Supplies & Services Sdn Bhd",
+      "contacts": [
+        {
+          "label": "Sales team enquiries",
+          "name": "",
+          "role": "Sales team",
+          "email": "sales@mercuoilfield.com",
+          "phone": "",
+          "linkedin": "https://www.linkedin.com/company/mercu-oilfield-supplies-services",
+          "sourceUrl": "https://www.linkedin.com/company/mercu-oilfield-supplies-services",
+          "checkedAt": "2026-11-18"
+        }
+      ]
+    }
+  ],
+  "newResearchContactRoutesAdded": [
+    {
+      "company": "Pusaco Industrial Supplies Sdn Bhd",
+      "contacts": [
+        {
+          "label": "Published business directory contact",
+          "name": "",
+          "role": "General business enquiries",
+          "email": "pusaco@pusaco.com.my",
+          "phone": "+603 7880 8899",
+          "linkedin": "https://my.linkedin.com/company/pusaco",
+          "sourceUrl": "https://www.infopages.net.my/companies/pusaco-industrial-supplies-sdn-bhd-1187",
+          "checkedAt": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "company": "Major Engineering Sdn Bhd",
+      "contacts": [
+        {
+          "label": "Sales enquiries",
+          "name": "",
+          "role": "Sales enquiries",
+          "email": "sales@major.com.my",
+          "phone": "+603 3292 0026",
+          "linkedin": "",
+          "sourceUrl": "https://www.major.com.my/contactus.html",
+          "checkedAt": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "company": "Best Wide Engineering (M) Sdn Bhd",
+      "contacts": [
+        {
+          "label": "General business enquiries",
+          "name": "",
+          "role": "General enquiries",
+          "email": "bwe_enquiry@bestwidegroup.com",
+          "phone": "+603 2722 0230",
+          "linkedin": "https://www.linkedin.com/company/best-wide-engineering-m-sdn-bhd",
+          "sourceUrl": "https://bestwidegroup.com/contact-us/",
+          "checkedAt": "2026-11-18"
+        }
+      ]
+    }
+  ]
+}

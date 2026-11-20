@@ -28522,5 +28522,33 @@
     "addedBy": "auto",
     "priorityTier": "unclassified",
     "qualificationStatus": "Needs verification \u2014 not qualified"
+  },
+  {
+    "company": "AMS Advanced Material",
+    "industry": "Manufacturing",
+    "training": "",
+    "score": 40,
+    "brief": "AMS Advanced Material is mentioned as riding the chip boom and moving up the value chain in the semiconductor sector.",
+    "signal": "",
+    "fitNote": "Independent manufacturing business; size not explicitly stated but fits the profile of a potential SME in the semiconductor supply chain.",
+    "levySignal": "unclear",
+    "sizeTier": "Unknown",
+    "accessNote": "",
+    "contactName": "",
+    "contactRole": "",
+    "phone": "",
+    "email": "",
+    "sourceLabel": "The Edge Malaysia",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9oTjBEbW1wcnhTT3pOQUVkaWdtbGthTDAxOVdUcHRINkFrQ2VjTUZreXliTXdqRE5Ba29hN0t2M0gzMVEyT3VrOTQ0RzJHNzJK?oc=5",
+    "dealValue": "",
+    "fullBrief": "AMS Advanced Material rides chip boom to move up value chain",
+    "sizeEvidence": "",
+    "levyEvidence": "",
+    "id": "a601df59c3",
+    "days": 0,
+    "_dateFound": "2026-11-20",
+    "addedBy": "auto",
+    "priorityTier": "unclassified",
+    "qualificationStatus": "Needs verification \u2014 not qualified"
   }
 ]
